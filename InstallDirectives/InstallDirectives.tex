@@ -1,0 +1,111 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx,xcolor,epstopdf,tgtermes,pdflscape,float,amsmath,amssymb,amsthm,textcomp,enumerate,multicol,tikz,geometry,fancyhdr,lastpage,hyperref}
+\pdfminorversion=4
+
+\input{InstructionsMacros.tex} % Loading the macros 
+
+\geometry{total={210mm,297mm},
+left=25mm,right=25mm,%
+bindingoffset=0mm, top=20mm,bottom=20mm}
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+\makeatletter
+\renewcommand{\maketitle}{
+\begin{center}
+\vspace{2ex}
+{\huge \textsc{\@title}}
+\vspace{1ex}
+\\
+\linia\\
+\@author \hfill \@date
+\vspace{4ex}
+\end{center}
+}
+\makeatother
+
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{Laval Methods Workshop}
+\cfoot{}
+\rfoot{Page \thepage\ /\ \pageref*{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%----------%%%----------%%%----------%%%----------%%%
+%%%----------%%%----------%%%----------%%%----------%%%
+
+\begin{document}
+
+\title{\R + \LaTeX: A Very Brief Introduction\\ Short guide for installation}
+\author{Yannick Dufresne, Ph.D.}
+\date{ }
+\maketitle
+
+\section{Necessary software installations for the workshop} % (fold)
+%\label{sec: installation_des_logiciels_n_cessaires_pour_le_tp_et_le_reste_du_cours_}
+
+    \subsection*{Install \LaTeX} % (fold)
+        \begin{itemize}
+          \item Go to the web page \url{http://latex-project.org/ftp.html} and download the version of \LaTeX relevant for your operating system. Install the software downloaded.
+        \end{itemize}
+
+    \subsection*{Install \R} % (fold)
+        \begin{itemize}
+          \item Go to the web page \url{http://cran.rstudio.com/} and download the version of \R relevant for your operating system. Install the software downloaded.
+        \end{itemize}
+
+    \subsection*{Install RStudio} % (fold)
+        \begin{itemize}
+          \item Go to the web page \url{http://www.rstudio.com/products/rstudio/download/} and download the version of RStudio relevant for your operating system in section ``\textbf{Installers for Supported Platforms}'' at the bottom of the page. Install the software downloaded.
+        \end{itemize}
+        
+\newpage
+
+\section{Open the necessary files in RStudio} % (fold)
+\label{sec:rstudio}
+
+    \subsection{The file containing the .R code} % (fold)
+    %\label{sub:le_document_}
+        % subsection le_document_ (end)
+        \begin{enumerate}
+          \item In RStudio, open the file named \textbf{``''} that you have previously received by email.          
+          \item Do not modify anything in the file for now.
+        \end{enumerate}
+
+    \subsection{The file containing the .tex code} % (fold)
+    %\label{sub:le_document_latex_contenant_le_fichier_}
+        \begin{enumerate}
+            \item In RStudio, open the file named \textbf{``''} that you have previously received by email.          
+            \item Do not modify anything in the file for now.
+
+            \begin{tips}
+                To open a file in RStudio, click on ``File' and then ``Open File'' and choose the location where you have unzip the file \R on your hardware.
+                \begin{figure}[H]
+                	\centering
+                	\includegraphics[width=0.3\textwidth]{open}
+                \end{figure}
+                You could also use the the shortcut ``CTRL+o'' on Windows or ``CMD+o'' on Mac OS.
+            \end{tips}
+        \end{enumerate}
+    % section rstudio (end)
+
+\newpage
+
+    In the window located at the top left of the RStudio interface, you should see two new tabs that emerged from the opening of the two files ``\textbf{}'' and ``\textbf{}''.
+
+    \begin{enumerate}
+        \item Click on ``\textbf{}'' to display the content of the \R file.
+
+        \begin{tips}
+            All the lines that are begining with ``\#'' are considered as comments in a code written in \R language. It is important to pay attention to those specific characters to be able to better understand the code and modify it more easily.
+        \end{tips}
+        
+\section{\R Code: Let the fun begin...} % (fold)
+%\label{sec:jouer_avec_le_code_r}
+
+\end{document}

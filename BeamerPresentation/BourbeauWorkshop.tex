@@ -1,0 +1,691 @@
+%!TEX program = xelatex
+\documentclass{beamer}
+\input{../_BeamerMacros/BeamerMacros.tex} % Loading the macros 
+\usetheme{Cement_WorkshopR}
+
+\title{\R + \LaTeX}
+\subtitle{A Very Brief Introduction}
+\author{Yannick Dufresne, Ph.D.}
+\date{31 octobre 2017}
+
+%\setcounter{showSlideNumbers}{1}
+
+\begin{document}
+%     \setcounter{showProgressBar}{0}
+% 	\setcounter{showSlideNumbers}{0}
+
+	\frame{\titlepage}
+
+%     \setcounter{framenumber}{0}
+% 	\setcounter{showProgressBar}{1}
+% 	\setcounter{showSlideNumbers}{0}
+
+%%% BEGINNING OF THE PRESENTATION
+
+    \begin{frame}
+        \frametitle{Objectives \& Philosophy}
+        \begin{itemize}
+            \item<2-> Installation:  RStudio + \R + \LaTeX
+            \item<3-> Overview: \R and \LaTeX
+                      \begin{enumerate} 
+                        \item The World of Open Source
+                        \item Some Bases of \R Programming
+                        \item Making graphs in \R and using \LaTeX 
+                      \end{enumerate}
+            \item<4-> Philosophy: Tools \emph{before} methods
+        \end{itemize}
+    \end{frame}
+
+   \begin{frame}
+            \frametitle{Installation \\ \vspace{0.2cm} 2 Languages, 1 Software}
+            \vspace{0.5cm}
+            \begin{center}
+              \includegraphics[width=0.4\textwidth]{../_Graphs/RStudio-Logo-Blue-Gradient}
+            \end{center} 
+            \begin{enumerate}
+                \item<2-> \R: www.cran.rstudio.com
+                \item<3-> \LaTeX: www.latex-project.org/get/
+                \item<4-> RStudio: www.rstudio.com/products/rstudio/download/
+            \end{enumerate}
+    \end{frame}
+    
+    \begin{frame}
+            \frametitle{Installation \\ \vspace{0.2cm} 2 Languages, 1 Software}
+            \vspace{2.3cm}
+            \begin{center}
+              \includegraphics[width=0.97\textwidth]{../_Graphs/RStudio-Screenshot}
+            \end{center} 
+    \end{frame}
+
+
+
+
+
+
+\section{The World \vspace{0.3cm} of Open Source}
+
+    \begin{frame}
+        \frametitle{Why \R?}  \vspace{1.2cm}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Why \R?}  \vspace{1.2cm}
+        \begin{center}
+            \includegraphics[width=0.85\textwidth]{../_Graphs/statPackage-evolution3}
+        \end{center} 
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Why \R? Reasons to Love}
+        \begin{enumerate}
+            \item{Free}
+            \item{Available for all OS}
+            \item{Graphs + \LaTeX}
+            \item{Popularity + Packages}
+            \item{\emph{Open source}: Developed by and for academics}
+        \end{enumerate}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Why \R? Reasons to Hate}
+        \begin{enumerate}
+            \item{Programming code = Steep learning curve}
+            \item{Eclectic development. At times, chaotic}
+        \end{enumerate}
+    \end{frame}
+    
+
+
+    \begin{frame}
+        \frametitle{Why \LaTeX?} \vspace{1cm}   
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Why \LaTeX? Reasons to Love} \vspace{1cm}
+        \begin{itemize}
+           \item{Bibliography: \BibTeX}
+           \item{Table of content, tables, etc.}
+           \item{Deals automatically with stuff like tables, figures, etc.}
+           \item{Pretty templates}
+           \item{Code + \emph{Open source} = A large expert community on the web}
+        \end{itemize} 
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Why \LaTeX? Reasons to Hate} \vspace{1cm}
+        \begin{itemize}
+           \item{Tough to learn... I mean very tough. But the basics are easy}
+           \item{Incompatible with MS Word}
+           \item{\sout{No spell checker}}
+           \item{No ``Change trackers'' and stuff like that}
+           \item{Final document available only after code compilation}
+           \item{Some journals do not accept \LaTeX{} submission... others strongly encourage it}
+        \end{itemize} 
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{\LaTeX: A Nice Table} \vspace{1cm}   
+            \begin{table}
+              \centering
+              \normalsize
+              \caption{\large{Table 1. Length of Bananas and Apples}}
+              \begin{tabular}{lrr}
+                  Quantile & Bananas & Apples\\\hline 
+                  0\% & 59 & 44\\
+                  50\% &69&64\\
+                  100\% & 77 & 71\\
+              \end{tabular}
+              \label{tab:bananespommes}
+            \end{table}  
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{\LaTeX: The Nice Table Code} \vspace{1cm}   
+        \begin{center}
+           \includegraphics[width=0.95\textwidth]{../_Graphs/LaTeX-TableauCodeENG}
+        \end{center}  
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{\LaTeX: It's a joke, right?!} \vspace{1cm}   
+        \begin{center}
+           \includegraphics[width=0.4\textwidth]{../_Graphs/EmoticonConfused.png}
+        \end{center}  
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{\LaTeX: Nope} \vspace{1cm}   
+        \begin{center}
+           \includegraphics[width=0.85\textwidth]{../_Graphs/DesperateImage.png}
+        \end{center}  
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{\LaTeX} \vspace{1cm}   
+        \begin{center}
+           \includegraphics[width=0.8\textwidth]{../_Graphs/ComplexTableLaTeX}
+        \end{center}  
+    \end{frame}
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{\LaTeX: Code (Part 1)} \vspace{0.5cm} 
+        \begin{code}
+% Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, Jan 07, 2015 - 22:20:00
+\begin{table}[!htbp] \centering 
+  \caption{Tests des hypothèses} 
+  \label{} 
+\scriptsize 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline \\[-1.8ex] 
+\\[-1.8ex] & \multicolumn{7}{c}{Vote pour le NPD} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7)\\ 
+\hline \\[-1.8ex] 
+  Évaluation du chef NPD &  &  &  &  & 3.87$^{***}$ & 3.81$^{***}$ & 3.17$^{***}$ \\ 
+  &  &  &  &  & (0.22) & (0.24) & (0.52) \\ 
+  Droite idéologique &  &  & $-$2.86$^{***}$ & $-$3.24$^{***}$ &  &  & $-$2.66$^{***}$ \\ 
+  &  &  & (0.46) & (0.53) &  &  & (0.57) \\ 
+  Québec & 0.69$^{***}$ & 0.61$^{***}$ &  & 0.92$^{**}$ &  & 0.56$^{**}$ & 0.93$^{**}$ \\ 
+  & (0.09) & (0.16) &  & (0.34) &  & (0.17) & (0.35) \\ 
+  Femme &  & 0.05 &  & $-$0.08 &  & $-$0.03 & $-$0.08 \\ 
+  &  & (0.09) &  & (0.19) &  & (0.10) & (0.20) \\ 
+  Francophone &  & $-$0.02 &  & $-$0.37 &  & $-$0.29 & $-$0.63 \\ 
+  &  & (0.17) &  & (0.35) &  & (0.18) & (0.37) \\ 
+  Allophone &  & $-$0.17 &  & $-$0.38 &  & $-$0.18 & $-$0.22 \\ 
+  &  & (0.15) &  & (0.34) &  & (0.17) & (0.36) \\ 
+        \end{code}
+    \end{frame}   
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{\LaTeX: Code (Part 2)} \vspace{0.5cm} 
+        \begin{code}
+  Moins de 34 ans &  & $-$0.03 &  & $-$0.17 &  & $-$0.13 & $-$0.26 \\ 
+  &  & (0.15) &  & (0.34) &  & (0.16) & (0.36) \\ 
+  Plus de 55 ans &  & $-$0.23$^{*}$ &  & $-$0.33 &  & $-$0.24$^{*}$ & $-$0.23 \\ 
+  &  & (0.10) &  & (0.21) &  & (0.11) & (0.22) \\ 
+  Haut revenu &  & $-$0.33$^{**}$ &  & $-$0.36 &  & $-$0.30$^{*}$ & $-$0.32 \\ 
+  &  & (0.12) &  & (0.24) &  & (0.13) & (0.25) \\ 
+  Faible revenu &  & 0.30$^{*}$ &  & 0.33 &  & 0.40$^{*}$ & 0.49 \\ 
+  &  & (0.15) &  & (0.31) &  & (0.17) & (0.33) \\ 
+  Pas de diplôme secondaire &  & $-$0.23 &  & 0.04 &  & $-$0.12 & 0.03 \\ 
+  &  & (0.15) &  & (0.36) &  & (0.17) & (0.38) \\ 
+  Diplôme universitaire &  & 0.13 &  & $-$0.61$^{**}$ &  & $-$0.12 & $-$0.79$^{***}$ \\ 
+  &  & (0.10) &  & (0.21) &  & (0.11) & (0.22) \\ 
+  \_constante & $-$1.05$^{***}$ & $-$0.86$^{***}$ & 0.34 & 0.96$^{**}$ & $-$3.17$^{***}$ & $-$2.95$^{***}$ & $-$1.21$^{*}$ \\ 
+  & (0.05) & (0.11) & (0.20) & (0.35) & (0.15) & (0.19) & (0.51) \\ 
+ N & 2,745 & 2,464 & 655 & 610 & 2,636 & 2,381 & 602 \\ 
+Log Likelihood & $-$1,650.11 & $-$1,487.30 & $-$383.02 & $-$346.16 & $-$1,412.88 & $-$1,276.31 & $-$317.77 \\ 
+AIC & 3,304.22 & 2,996.60 & 770.04 & 716.31 & 2,829.77 & 2,576.62 & 661.54 \\ 
+\hline \\[-1.8ex] 
+\multicolumn{8}{l}{\emph{Source}: Étude électorale canadienne, 2011.} \\ 
+\multicolumn{8}{l}{\emph{Note}: Régression logistique binomiale.} \\ 
+\multicolumn{8}{l}{$^{*}$p$<$0.05; $^{**}$p$<$0.01; $^{***}$p$<$0.001} \\ 
+\end{tabular} 
+\end{table} 
+        \end{code}
+    \end{frame} 
+    
+    \begin{frame}
+        \frametitle{\LaTeX} \vspace{1cm}   
+        \begin{center}
+           \includegraphics[width=0.85\textwidth]{../_Graphs/LaTeX-MsWordHug.pdf}
+        \end{center}  
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{\LaTeX} \vspace{1cm}
+        \begin{center}
+           \includegraphics[width=0.75\textwidth]{../_Graphs/LaTeX-wordvslatexENG}
+        \end{center} 
+    \end{frame}
+ 
+    \begin{frame}[fragile=singleslide]
+        \frametitle{\R + \LaTeX} \vspace{0.5cm} 
+        \begin{code}
+stargazer(model1, model2, model3, model4, model5, model6, model7)
+        \end{code}
+    \end{frame}   
+
+    \begin{frame}
+        \frametitle{\R + \LaTeX} \vspace{1cm}   
+        \begin{center}
+           \includegraphics[width=0.8\textwidth]{../_Graphs/ComplexTableLaTeX}
+        \end{center}  
+    \end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{\R {} Programming Bases}
+
+    \begin{frame}
+        \frametitle{\R $=$ Programming Language}
+        \begin{itemize}
+            \item Calculation operators
+            \item Assignment operators
+            \item Logical operators
+            \item Control instructions
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Calculation Operators}
+        \begin{itemize}
+            \item $+$
+            \item $-$
+            \item $/$
+            \item $\%\%$ 
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Logical Operators}
+        \begin{itemize}
+            \item $==$
+            \item $!=$
+            \item $>=$
+            \item $<=$
+            \item $<$
+            \item $>$
+            \item $\&$
+            \item $|$
+            \item \%in\%
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Control Instructions}
+        \begin{itemize}
+            \item if... else
+            \item for loop
+        \end{itemize}
+    \end{frame}
+
+
+
+
+
+
+
+
+
+\section{\R {} Data Structure}
+
+    \begin{frame}
+        \frametitle{Data Structure}
+        \begin{itemize}
+            \item<1-> Constants
+            \item<2-> Vectors
+            \item<3-> Data frames
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{Constants}
+        \begin{code}
+variableString <- "Banana"
+variableNumerical <- 1492
+variableBoolean <- TRUE
+        \end{code}
+    \end{frame}
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{Vecteurs}
+        \begin{code}
+vecteurString <- c(variableString, "Apple", "Orange", "Sand Paper")
+vecteurNumerical <- c(variableNumerical, 1604, 2011, 0328424)
+vecteurBoolean <- c(variableBoolean, FALSE, TRUE, TRUE)
+        \end{code}
+    \end{frame}
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{Data Frames}
+        \begin{code}
+Data <- data.frame(vectorString, vectorNumerical, vectorBoolean, c(23,17,32,56))
+        \end{code}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{} \vspace{0.7cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_Graphs/DataStructures0.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{} \vspace{0.7cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_Graphs/DataStructures1.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{} \vspace{0.7cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_Graphs/DataStructures2.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{} \vspace{0.7cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_Graphs/DataStructures3.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{\texttt{aFruit <- ``banana"}} \vspace{0.6cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_Graphs/DataStructures4.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{\texttt{fruits\lbrack 1\rbrack <- ``banana"}} \vspace{0.6cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_Graphs/DataStructures5.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{\texttt{Data\lbrack 1,1\rbrack  <- ``banana"}} \vspace{0.6cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_Graphs/DataStructures6.pdf}
+        \end{center}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{\texttt{Data\$fruits\lbrack 1\rbrack <- ``banana"}} \vspace{0.6cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_Graphs/DataStructures6.pdf}
+        \end{center}
+    \end{frame}
+
+
+
+
+\section{Functions}
+
+    \begin{frame}
+        \frametitle{\R Base Functions}
+        \begin{itemize}
+            \item length()
+            \item min()
+            \item max()
+            \item sum()
+            \item median()
+            \item mean()
+        \end{itemize}
+    \end{frame}
+        
+    \begin{frame}[fragile=singleslide]
+        \frametitle{\R Function: mean()}
+        \begin{code}
+mean(yourVector)
+        \end{code}
+    \end{frame}
+    
+    % \begin{frame}
+    %     \frametitle{\R Function: mean ()} \vspace{0.2cm}
+    %     \begin{tips}
+    %         To get more information on a function and its \emph{arguments},
+    %         we can write a ? in front of the function name in the RStudio console \\ 
+    %         \texttt{> ?mean} \\ \vspace{0.2cm}
+    %         When a \emph{package} is not installed on the computer,
+    %         it is necessary to write two ? \\ \vspace{0.2cm}
+    %         \texttt{> ??copy\_to} \\
+    %     \end{tips}
+    % \end{frame}
+
+    \begin{frame}[fragile=singleslide]
+        \frametitle{Creating a Function in \R}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{\R Function: meanGirls()} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=0.56\textwidth]{../_Graphs/meanGirls.pdf}
+        \end{center}
+    \end{frame}
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{\R Function: meanGirls()}
+        \begin{code}
+meanGirls <- function(Data){
+    result <- sum(Data$age[Data$woman==1])/length(Data$age[Data$woman==1])
+    return(result)
+}
+        \end{code}
+    \end{frame}
+
+
+    \begin{frame}[fragile=singleslide]
+        \frametitle{\R Function: meanGirlsPlus()}
+        \begin{code}
+meanGirlsPlus <- function(Data, star=FALSE){
+    if(star == FALSE){
+        result <- sum(Data$age[Data$woman==1])/length(Data$age[Data$woman==1])
+    } else {
+        result <- sum(Data$age[Data$woman==1])/length(Data$age[Data$woman==1])
+        result <- paste("*****", result, "*****")
+    }    
+    return(result)
+}
+        \end{code}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Then?} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_Graphs/packageEvolution0.pdf}
+        \end{center}
+    \end{frame} 
+    
+    \begin{frame}
+        \frametitle{Then? More \R Functions...} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_Graphs/packageEvolution1.pdf}
+        \end{center}
+    \end{frame} 
+    
+    \begin{frame}
+        \frametitle{Then? A \R Package} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_Graphs/packageEvolution2.pdf}
+        \end{center}
+    \end{frame} 
+    
+    \begin{frame}
+        \frametitle{Then? Package Publication} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_Graphs/packageEvolution3.pdf}
+        \end{center}
+    \end{frame} 
+    
+    \begin{frame}
+        \frametitle{Then? Diffusion to the Community} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_Graphs/packageEvolution4.pdf}
+        \end{center}
+    \end{frame} 
+    
+    \begin{frame}
+        \frametitle{\R Community} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_Graphs/MrX0.pdf}
+        \end{center}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Mr. X} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_Graphs/MrX1.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}[fragile=singleslide]
+        \frametitle{Then? Mr. X Installs the Package}
+        \begin{code}
+install.packages("MeanSexPak")
+        \end{code}
+    \end{frame}
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{Ensuite? Mr. X Uses the Package}
+        \begin{code}
+library(MeanSexPak)
+
+# Calculate the mean age of the girls
+girlsMeanAge <- meanGirls(MrXOwnData)
+        \end{code}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Number of \R Packages}  \vspace{1.2cm}
+        \begin{center}
+            \includegraphics[width=0.65\textwidth]{../_Graphs/OpenSource-TS-RPackages2}
+        \end{center} 
+    \end{frame}
+   
+\section{Enough blabla... Let's Code!} 
+  
+%     \begin{frame}[fragile=singleslide]
+%         \frametitle{Let's code! \\\vspace{0.2cm} Install and load some \emph{packages}...}
+%         \begin{code}
+% # 0. Install the packages (To do ONLY the first time we use the package)
+%   # install.packages("ggplot2")   # To create beautiful graphs
+%   # install.packages("stargazer") # To output LaTeX regression tables from R
+%   # install.packages("maptools")  # To combine spatial data
+%   # install.packages("rworldmap") # To map global data
+%   # install.packages("ggthemes")  # Cool premade ggplot themes
+% 
+% 
+% # 1. Load the packages 
+%   library(ggplot2)   # To create beautiful graphs ("gg" means "Grammar of Graphics")
+%   library(stargazer) # To output LaTeX regression tables from R
+%   library(maptools)  # To combine spatial data
+%   library(rworldmap) # To map global data
+%   library(ggthemes)  # Cool premade ggplot themes
+%         \end{code}
+%     \end{frame}
+%     
+%   
+% 
+%     \begin{frame}[fragile=singleslide]
+%         \frametitle{Let's code! \\\vspace{0.2cm} Load a dataset...}
+%         \begin{code}
+% # 2. Load some data
+%   Data <- read.csv(".../RWorkshop/Data/AlcoholDataWHO.csv")
+%   
+% # 3. Explore the dataframe
+%   names(Data) # To see the variables in the dataframe
+%   head(Data)  # To see the first couple of rows in the dataframe
+%         \end{code}
+%     \end{frame}
+%     
+%     
+%     
+% 
+% \section{Create and Clean Variables}
+% 
+% 
+%     \begin{frame}[fragile=singleslide]
+%         \frametitle{Let's code! \\\vspace{0.2cm} Coding a Variable (Dummy)}
+%         \begin{code}
+% # 4. Create new variables
+%   # An area variable
+%   Data$geoArea <- 0
+%   Data$geoArea[Data$country == "Canada"] <- 1
+%         \end{code}
+%     \end{frame}
+%     
+%     \begin{frame}[fragile=singleslide]
+%         \frametitle{Let's code! \\\vspace{0.2cm} Coding a Variable (Three Categories)}
+%         \begin{code}
+% # 4. Create new variables
+%   # An area variable
+%   Data$geoArea <- 0
+%   Data$geoArea[Data$country == "Canada"] <- 1
+%   Data$geoArea[Data$country == "France" | 
+%                Data$country == "UK" |
+%                Data$country == "Spain" | 
+%                Data$country == "Italy" |
+%                Data$country == "Germany" |
+%                Data$country == "Belgium"] <- 2
+%         \end{code}
+%     \end{frame}
+% 
+%     \begin{frame}
+%         \frametitle{Coding a Variable}
+%         \begin{tips}
+%             Conditions between \texttt{[ ]} can be interpreted a bit like a \texttt{if...else}.
+%         \end{tips}
+%     \end{frame}
+%     
+% 
+%     \begin{frame}[fragile=singleslide]
+%         \frametitle{Let's code! \\\vspace{0.2cm} Coding a Variable (Additive Scale)}
+%         \begin{code}
+% # Build an additive scale
+%   Data$alcoholTotal <- Data$beer_servings + Data$spirit_servings + Data$wine_servings
+% # Look at the new variable
+%   table(Data$alcoholTotal)
+%   summary(Data$alcoholTotal)
+%         \end{code}
+%     \end{frame}
+%     
+%     \begin{frame}
+%         \frametitle{Coding Nicely}
+%             \begin{tips}
+%                 Choosing clear and neat names for \R objects is very important. \\
+%                 Some conventions exist that helps the open source development of \R
+%                 to be less chaotic.
+%                 \begin{enumerate} 
+%                     \item<1-> CamelCase
+%                     \item<1-> Dataframes names: Uppercase
+%                     \item<1-> Vector names (Variables): Lowercase
+%                 \end{enumerate}
+%             \end{tips}
+%     \end{frame}
+% 
+% 
+% 
+% 
+% \section{\R Graphics and a Pinch of \LaTeX}
+% 
+%     \begin{frame}[fragile=singleslide]
+%         \frametitle{Let's code! Creating a Histogram}
+%         \begin{code}
+% # 5. Make a histogram
+% ggplot(DataWHO, aes(y=alcoholTotal, x=reorder(country, alcoholTotal), 
+%                     fill=as.factor(geoArea))) +
+%       geom_bar(stat = "identity", width=0.5) +
+%       scale_fill_manual(values=c("0"="grey", "1"="red", "2"="blue"), 
+%                         labels=c("0"="Others", "1"="Canada", "2"="Europe")) +
+%       theme_wsj() +
+%       theme(legend.title=element_blank(),
+%             axis.text.x=element_text(angle=45, vjust=1, hjust=1, size=4),
+%             axis.title=element_blank()) 
+%         \end{code}
+%     \end{frame}
+% 
+% 
+% 
+% 
+% 
+% 
+% \section{End.}
+
+
+\end{document}
