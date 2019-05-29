@@ -1,3 +1,7 @@
+# Shared/Private folders
+_SharedFolder*
+_PrivateFolder*
+
 # History files
 .Rhistory
 .Rapp.history
