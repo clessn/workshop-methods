@@ -1,5 +1,0 @@
-\beamer@sectionintoc {1}{The World \vspace {0.3cm} of Open Source}{11}{0}{1}
-\beamer@sectionintoc {2}{{$\mathbb {R}$ }{} Programming Bases}{30}{0}{2}
-\beamer@sectionintoc {3}{{$\mathbb {R}$ }{} Data Structure}{35}{0}{3}
-\beamer@sectionintoc {4}{Functions}{50}{0}{4}
-\beamer@sectionintoc {5}{Enough blabla... Let's Code!}{67}{0}{5}
