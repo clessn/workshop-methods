@@ -1,0 +1,528 @@
+---
+title: "R Markdown"
+author: "Maxime Blanchard"
+date: "2019-06-10"
+output:
+  xaringan::moon_reader:
+    seal: false
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: inverse, center, middle
+
+<style type="text/css">
+body, td {
+   font-size: 14px;
+}
+code.r{
+  font-size: 11px;
+}
+pre {
+  font-size: 20px
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+<img src="figures/rmarkdown-200x232@2x.png" width="150px"/>
+
+# R Markdown
+
+.large[Maxime Blanchard | Workshop CLESSN | 10 juin 2019]
+
+---
+class: left, top
+
+.center[
+# C'est quoi?
+]
+
+---
+class: left, top
+
+.center[
+# C'est quoi?
+]
+
+.pull-left[
+```{r}
+library(DiagrammeR)
+
+grViz("
+digraph boxes_and_circles {
+
+  # a 'graph' statement
+  graph [overlap = true, fontsize = 4]
+
+  # several 'node' statements
+  node [shape = box,
+        fontname = Helvetica]
+  R; LaTeX; CSS; HTML; Texte; HTML_; PDF; Word
+
+  node [shape = circle,
+        fixedsize = true,
+        width = 0.9] // sets as circles
+  Rmd
+
+  # several 'edge' statements
+  R->Rmd LaTeX->Rmd CSS->Rmd HTML->Rmd Texte->Rmd
+  Rmd->PDF Rmd->HTML_  Rmd->Word
+}
+")
+```
+]
+
+--
+
+.pull-right[
+### Concrètement, ça donne quoi?
+]
+
+---
+class: left, top
+
+.center[
+# C'est quoi?
+]
+
+.pull-left[
+```{r}
+library(DiagrammeR)
+
+grViz("
+digraph boxes_and_circles {
+
+  # a 'graph' statement
+  graph [overlap = true, fontsize = 4]
+
+  # several 'node' statements
+  node [shape = box,
+        fontname = Helvetica]
+  R; LaTeX; CSS; HTML; Texte; HTML_; PDF; Word
+
+  node [shape = circle,
+        fixedsize = true,
+        width = 0.9] // sets as circles
+  Rmd
+
+  # several 'edge' statements
+  R->Rmd LaTeX->Rmd CSS->Rmd HTML->Rmd Texte->Rmd
+  Rmd->PDF Rmd->HTML_  Rmd->Word
+}
+")
+```
+]
+
+.pull-right[
+### Concrètement, ça donne quoi?
+
+- Permet de centraliser la recherche
+]
+
+---
+class: left, top
+
+.center[
+# C'est quoi?
+]
+
+.pull-left[
+```{r}
+library(DiagrammeR)
+
+grViz("
+digraph boxes_and_circles {
+
+  # a 'graph' statement
+  graph [overlap = true, fontsize = 4]
+
+  # several 'node' statements
+  node [shape = box,
+        fontname = Helvetica]
+  R; LaTeX; CSS; HTML; Texte; HTML_; PDF; Word
+
+  node [shape = circle,
+        fixedsize = true,
+        width = 0.9] // sets as circles
+  Rmd
+
+  # several 'edge' statements
+  R->Rmd LaTeX->Rmd CSS->Rmd HTML->Rmd Texte->Rmd
+  Rmd->PDF Rmd->HTML_  Rmd->Word
+}
+")
+```
+]
+
+.pull-right[
+### Concrètement, ça donne quoi?
+
+- Permet de centraliser la recherche
+
+- Offre une flexibilité incomparable
+]
+
+---
+class: left, top
+
+.center[
+# C'est quoi?
+]
+
+.pull-left[
+```{r}
+library(DiagrammeR)
+
+grViz("
+digraph boxes_and_circles {
+
+  # a 'graph' statement
+  graph [overlap = true, fontsize = 4]
+
+  # several 'node' statements
+  node [shape = box,
+        fontname = Helvetica]
+  R; LaTeX; CSS; HTML; Texte; HTML_; PDF; Word
+
+  node [shape = circle,
+        fixedsize = true,
+        width = 0.9] // sets as circles
+  Rmd
+
+  # several 'edge' statements
+  R->Rmd LaTeX->Rmd CSS->Rmd HTML->Rmd Texte->Rmd
+  Rmd->PDF Rmd->HTML_  Rmd->Word
+}
+")
+```
+]
+
+.pull-right[
+### Concrètement, ça donne quoi?
+
+- Permet de centraliser la recherche
+
+- Offre une flexibilité incomparable
+
+- La lecture des manuscripts est simplifiée/rendue plus rapide
+]
+
+---
+class: left, top
+
+.center[
+# C'est quoi?
+]
+
+.pull-left[
+```{r}
+library(DiagrammeR)
+
+grViz("
+digraph boxes_and_circles {
+
+  # a 'graph' statement
+  graph [overlap = true, fontsize = 4]
+
+  # several 'node' statements
+  node [shape = box,
+        fontname = Helvetica]
+  R; LaTeX; CSS; HTML; Texte; HTML_; PDF; Word
+
+  node [shape = circle,
+        fixedsize = true,
+        width = 0.9] // sets as circles
+  Rmd
+
+  # several 'edge' statements
+  R->Rmd LaTeX->Rmd CSS->Rmd HTML->Rmd Texte->Rmd
+  Rmd->PDF Rmd->HTML_  Rmd->Word
+}
+")
+```
+]
+
+.pull-right[
+### Concrètement, ça donne quoi?
+
+- Permet de centraliser la recherche
+
+- Offre une flexibilité incomparable
+
+- La lecture des manuscripts est simplifiée/rendue plus rapide
+
+### Le principal avantage
+
+- _"Submissions are only accepted in Microsoft Word format"_... ne soyez plus **jamais** pris au dépourvu!
+]
+
+---
+class: center, top
+
+# Plus compliqué que LaTeX?
+
+--
+
+```{r fig.width=8, fig.height=5, fig.retina=4}
+library(ggplot2)
+complexM <- c(0,15,30,45,60,75,90,105,120,130,138,145,155)
+complexL <- c(0,15,30,45,60,75,90,105,120,135)
+latexDiff <- c(0,30,60,90,120,150,180,210,240,270)
+markDiff <- c(0,2.5,5,7.5,12.5,15,22.5,42.5,95,180,290,380,520)
+latex <- c(0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+mark <- c(1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+Latex <- cbind(complexL, latexDiff, latex)
+Mark <- cbind(complexM, markDiff, mark)
+colnames(Mark)[colnames(Mark)=="markDiff"] <- "diff"
+colnames(Mark)[colnames(Mark)=="complexM"] <- "complex"
+colnames(Latex)[colnames(Latex)=="latexDiff"] <- "diff"
+colnames(Latex)[colnames(Latex)=="latex"] <- "mark"
+colnames(Latex)[colnames(Latex)=="complexL"] <- "complex"
+MarkVsLatex <- as.data.frame(rbind(Mark, Latex))
+MarkVsLatex$mark <- as.factor(MarkVsLatex$mark)
+
+ggplot(MarkVsLatex, aes(y=diff, x=complex, color=mark)) +
+  geom_point(shape=21, size=2, stroke=1.2) +
+  labs(x="Complexité\n(conceptuellement)", y="Difficulté\n(programmation)") +
+  scale_color_manual(values=c("black", "red"), labels=c("LaTeX", "Markdown")) +
+  scale_x_continuous(limits=c(0,160)) +
+  theme_bw() +
+  theme(panel.grid=element_blank(),
+        legend.title=element_blank(),
+        axis.ticks=element_blank(),
+        axis.text=element_blank(),
+        axis.title=element_text(size=16),
+        legend.text=element_text(size=14))
+```
+
+---
+class: inverse, center, middle
+
+# Un (très) bref exemple
+
+---
+class: left, top
+
+# Et la courbe d'apprentissage?
+
+--
+
+### Pour les débutants
+
+- Plus simple que d'apprendre LaTeX
+
+--
+
+### Pour ceux qui connaissent LaTeX
+
+- Simplement l'apprentissage d'un nouveau language, mais...
+
+--
+
+- ... les connaissances de LaTeX s'exportent dans Markdown...
+
+--
+
+- ... et la logique est similaire.
+
+---
+class: left, top
+
+# Et les désavantages?
+
+--
+
+- La communauté est beaucoup plus petite
+
+--
+
+- Moins de _packages_ disponibles afin de polir l'esthétique des documents...
+
+--
+
+- ... donc il faut se salir les mains un peu!
+
+---
+class: center, middle, inverse
+
+# Vous n'êtes pas encore convaincu-e-s?
+
+---
+class: center, middle, inverse
+
+# Bonus
+
+---
+class: center, top
+
+## Pourquoi pas présenter une carte?
+
+--
+
+.left-column[
+.large[Université Laval]
+]
+
+.right-column[
+```{r}
+library(leaflet)
+leaflet() %>% addTiles() %>% setView(lat = 46.781849, lng = -71.274217, zoom = 17)
+```
+]
+
+---
+class: left, top
+
+## Code + output, pour enseigner?
+
+.pull-left[
+```r
+fun.1 <- function(x) x
+fun.2 <- function(x) x^2
+
+ggplot(data=data.frame(x=0), mapping=aes(x=x)) +
+  stat_function(fun=fun.1, color="grey60") +
+  stat_function(fun=fun.2) +
+  scale_y_continuous(limits=c(0,2)) +
+  scale_x_continuous(limits=c(0,2)) +
+  labs(x="Real Distance", y="Perceived\nDistance") +
+  annotate("text", x=1.8, y=1.5, label="True\nrelationship", size=2.7) +
+  annotate("text", x=1.1, y=1.95, label="Expected\nrelationship", size=2.7) +
+  theme_classic() +
+  theme(axis.ticks=element_blank(),
+        axis.text=element_blank(),
+        axis.title=element_text(size=10),
+        axis.title.y=element_text(angle=0, vjust=1),
+        axis.title.x=element_text(angle=0, hjust=1))
+```
+]
+
+---
+class: left, top
+
+## Code + output, pour enseigner?
+
+.pull-left[
+```r
+fun.1 <- function(x) x
+fun.2 <- function(x) x^2
+
+ggplot(data=data.frame(x=0), mapping=aes(x=x)) +
+  stat_function(fun=fun.1, color="grey60") +
+  stat_function(fun=fun.2) +
+  scale_y_continuous(limits=c(0,2)) +
+  scale_x_continuous(limits=c(0,2)) +
+  labs(x="Real Distance", y="Perceived\nDistance") +
+  annotate("text", x=1.8, y=1.5, label="True\nrelationship", size=2.7) +
+  annotate("text", x=1.1, y=1.95, label="Expected\nrelationship", size=2.7) +
+  theme_classic() +
+  theme(axis.ticks=element_blank(),
+        axis.text=element_blank(),
+        axis.title=element_text(size=10),
+        axis.title.y=element_text(angle=0, vjust=1),
+        axis.title.x=element_text(angle=0, hjust=1))
+```
+]
+
+.pull-right[
+```{r, fig.height=4.5, fig.width=5, fig.retina=10}
+library(ggrepel)
+library(ggpubr)
+
+fun.1 <- function(x) x
+fun.2 <- function(x) x^2
+    
+    ggplot(data=data.frame(x=0), mapping=aes(x=x)) +
+      stat_function(fun=fun.1, color="grey60") +
+      stat_function(fun=fun.2) +
+      scale_y_continuous(limits=c(0,2)) +
+      scale_x_continuous(limits=c(0,2)) +
+      labs(x="Real Distance", y="Perceived\nDistance") +
+      annotate("text", x=1.8, y=1.5, label="True\nrelationship", size=2.7) +
+      annotate("text", x=1.1, y=1.95, label="Expected\nrelationship", size=2.7) +
+      theme_classic() +
+      theme(axis.ticks=element_blank(),
+            axis.text=element_blank(),
+            axis.title=element_text(size=10),
+            axis.title.y=element_text(angle=0, vjust=1),
+            axis.title.x=element_text(angle=0, hjust=1))
+```
+]
+
+---
+class: left, top
+
+## Code + output, pour enseigner?
+
+.pull-left[
+```r
+*fun.1 <- function(x) x
+*fun.2 <- function(x) x^2
+
+ggplot(data=data.frame(x=0), mapping=aes(x=x)) +
+* stat_function(fun=fun.1, color="grey60") +
+* stat_function(fun=fun.2) +
+  scale_y_continuous(limits=c(0,2)) +
+  scale_x_continuous(limits=c(0,2)) +
+  labs(x="Real Distance", y="Perceived\nDistance") +
+  annotate("text", x=1.8, y=1.5, label="True\nrelationship", size=2.7) +
+  annotate("text", x=1.1, y=1.95, label="Expected\nrelationship", size=2.7) +
+  theme_classic() +
+  theme(axis.ticks=element_blank(),
+        axis.text=element_blank(),
+        axis.title=element_text(size=10),
+        axis.title.y=element_text(angle=0, vjust=1),
+        axis.title.x=element_text(angle=0, hjust=1))
+```
+]
+
+.pull-right[
+```{r, fig.height=4.5, fig.width=5, fig.retina=10}
+library(ggrepel)
+library(ggpubr)
+
+fun.1 <- function(x) x
+fun.2 <- function(x) x^2
+    
+    ggplot(data=data.frame(x=0), mapping=aes(x=x)) +
+      stat_function(fun=fun.1, color="grey60") +
+      stat_function(fun=fun.2) +
+      scale_y_continuous(limits=c(0,2)) +
+      scale_x_continuous(limits=c(0,2)) +
+      labs(x="Real Distance", y="Perceived\nDistance") +
+      annotate("text", x=1.8, y=1.5, label="True\nrelationship", size=2.7) +
+      annotate("text", x=1.1, y=1.95, label="Expected\nrelationship", size=2.7) +
+      theme_classic() +
+      theme(axis.ticks=element_blank(),
+            axis.text=element_blank(),
+            axis.title=element_text(size=10),
+            axis.title.y=element_text(angle=0, vjust=1),
+            axis.title.x=element_text(angle=0, hjust=1))
+```
+]
+
+---
+class: top, left
+
+## Pourquoi pas présenter une base de données?
+
+```{r}
+library(DT)
+Bol <- readRDS("Data/LapopForAnalysis.rds")
+myvars <- c("male", "age", "educPostSec", "indigenous", "cct", "citySize", "voteRefNo")
+Bol_display <- Bol[myvars]
+Bol_display <- Bol_display[which(Bol_display$age>18), ]
+Bol_display %>%
+  datatable()
+```
+
+---
+class: inverse, center, middle
+
+# Vous verrez, on y prend goût!
