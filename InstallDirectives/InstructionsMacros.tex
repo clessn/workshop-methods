@@ -1,0 +1,96 @@
+\usepackage{blindtext}
+\usepackage{amsmath} % For math formulas: Useing \[ and \]
+\usepackage{tikz}
+\usepackage{wasysym}
+\usepackage{soul}
+\usepackage{texnames} 
+\usepackage{etoolbox}
+\usepackage{framed,color} % For the framed text (using \begin{shaded})
+\definecolor{trapColor}{RGB}{250,137,137} % #FA8989
+\definecolor{tipColor}{RGB}{164,235,205} % #A4EBCD
+\definecolor{codeColor}{RGB}{251,255,168}
+\definecolor{codeBackground}{RGB}{46,46,46}
+\usepackage{courier} % to use Courier font (using \texttt{})
+\usepackage{textcomp}
+\usepackage{listings}
+\lstset{ %
+  language=R,                     % the language of the code
+  upquote=true,                   % to get good code quotes
+  basicstyle=\tiny,       % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+  stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+                                  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{codeBackground},  % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  rulecolor=\color{codeBackground}, % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  basicstyle=\tiny\ttfamily\color{white},   % sets the font to Courier 
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  caption=,                       % show the filename of files included with \lstinputlisting;
+  %title=\lstname,                % show the filename of files included with \lstinputlisting;
+                                  % also try caption instead of title
+  keywordstyle=\color{tipColor},     % keyword style
+  commentstyle=\color{gray}, % comment style
+  stringstyle=\color{codeColor},      % string literal style
+  escapeinside={\%*}{*)},         % if you want to add a comment within your code
+  morekeywords={*,...},           % if you want to add more keywords to the set
+  literate=%                      % To color the non-string numbers
+   *{0}{{{\color{trapColor}0}}}1
+    {1}{{{\color{trapColor}1}}}1
+    {2}{{{\color{trapColor}2}}}1
+    {3}{{{\color{trapColor}3}}}1
+    {4}{{{\color{trapColor}4}}}1
+    {5}{{{\color{trapColor}5}}}1
+    {6}{{{\color{trapColor}6}}}1
+    {7}{{{\color{trapColor}7}}}1
+    {8}{{{\color{trapColor}8}}}1
+    {9}{{{\color{trapColor}9}}}1
+}
+
+% Pour les sections.
+\renewcommand\thesection{\Roman{section}.}
+\renewcommand{\thesubsection}{\Alph{subsection}.}
+
+% For the Directory Tree
+\usepackage{dirtree}
+\renewcommand*\DTstylecomment{\rmfamily\color{trapColor}\textsc} 
+\renewcommand*\DTstyle{\ttfamily\textcolor{codeBackground}}
+
+% These two things below define the environment "trap", "tips", and "code"
+\newenvironment{tips}{%
+\def\FrameCommand{\fboxrule=\FrameRule\fboxsep=\FrameSep \fcolorbox{tipColor}{tipColor}}{\begin{center}\includegraphics[width=0.08\textwidth]{tipsIcon}\vspace{-0.5cm}\end{center}}%
+\MakeFramed {\FrameRestore}}%
+{\endMakeFramed}
+
+\newenvironment{trap}{%
+\def\FrameCommand{\fboxrule=\FrameRule\fboxsep=\FrameSep \fcolorbox{trapColor}{trapColor}}{\begin{center}\includegraphics[width=0.08\textwidth]{trapIcon}\vspace{-0.5cm}\end{center}}%
+\MakeFramed {\FrameRestore}}%
+{\endMakeFramed}
+
+% To make the command "code": \begin{code}...\end{code} (Set the frame as [fragile=singleslide])
+\lstnewenvironment{code}{\begin{center}\includegraphics[width=0.21\textwidth]{codeIcon2}\vspace{0cm}\end{center} \vspace{-\baselineskip}}{\vspace{-\baselineskip}}
+% For addign R code files
+\newcommand{\codeFile}[1]{\begin{center}\includegraphics[width=0.21\textwidth]{codeIcon2}\vspace{-0.5cm}\end{center} \lstinputlisting{../../../Slides/_CodeFiles/#1}}
+
+\newenvironment{mathFormula}{%
+\def\FrameCommand{\fboxrule=\FrameRule\fboxsep=\FrameSep \fcolorbox{black}{white}}{\begin{center}\includegraphics[width=0.12\textwidth]{squaredRootIcon}\vspace{-0.5cm}\end{center}}%
+\MakeFramed {\FrameRestore}}%
+{\endMakeFramed}
+
+% To be able to center both figures vertically
+\newcommand*{\vcenteredhbox}[1]{\begingroup
+\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
+
+% To format \LaTeX in nice font
+\let\LaTeXtemp\LaTeX
+\renewcommand{\LaTeX}{{\rm \LaTeXtemp{} }}
+
+% To format \R
+\newcommand{\R}{{$\mathbb{R}$ }}
