@@ -1,0 +1,67 @@
+---
+title: "Atelier de familiarisation aux sciences sociales numériques"
+subtitle: "Local DKN-1270"
+author: "Alexandre Fortier-Chouinard"
+date: "10 juin 2019"
+output: pdf_document
+---
+|Heure|Activité|
+|---------------|-----------------------------------------------------------------|
+|9 h 30-10 h|Accueil des participants, pâtisseries et café|
+|10 h-12 h|Bloc 1: philosophie du code source ouvert et outils modernes de recherche|
+|12 h-13 h|Pause diner|
+|13 h-15 h|Bloc 2: apprentissage de R et LaTeX et travail supervisé|
+|15 h-15 h 30|Pause café|
+|15 h 30-17 h 30|Bloc 3: autres méthodes et ouverture vers l'avenir|
+
+Bloc 1:
+
+1. Présentation générale
+
+> *Catherine Ouellet* (15 min)
+
+2. Installation de RStudio, R et LaTeX
+
+> *Alexis Bibeau, Alexandre Fortier-Chouinard et Nadjim Fréchet* (1 h 10)
+
+3. Philosophie du code source ouvert, présentation de GitHub, Git et VIM
+
+> *Adrien Cloutier* (20 min)
+
+4. Période de questions (15 min)
+
+Bloc 2:
+
+1. Explication de R, des extensions et de LaTeX
+
+> *Alexis Bibeau, Alexandre Fortier-Chouinard et Nadjim Fréchet*
+
+2. Exercice pratique de code supervisé: la consommation de bière par pays
+
+Bloc 3:
+
+1. Site web, introduction à WordPress et HTML
+
+> *William Poirier* (20 min)
+
+2. Langages de balisage et R Markdown
+
+> *Maxime Blanchard* (15 min)
+
+3. Analyse textuelle
+
+> *Nadjim Fréchet* (15 min)
+
+4. Shiny, MTurk et scoping
+
+> *Adrien Cloutier et Camille Tremblay-Antoine* (30 min)
+
+5. Stack Overflow, Slack et DataCamp
+
+> *Marc-Antoine Rancourt* (10 min)
+
+6. ICPSR et conclusion
+
+> *Catherine Ouellet* (10 min)
+
+7. Période de questions (15 min)
