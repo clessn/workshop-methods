@@ -112,19 +112,19 @@
     \end{frame}
     
     \begin{frame}
-        \frametitle{Why \LaTeX? Reasons to Hate} \vspace{1cm}
+        \frametitle{Pourquoi \LaTeX? Raisons d'aimer} \vspace{1cm}
         \begin{itemize}
-           \item{Tough to learn... I mean very tough. But the basics are easy}
-           \item{Incompatible with MS Word}
-           \item{\sout{No spell checker}}
-           \item{No ``Change trackers'' and stuff like that}
-           \item{Final document available only after code compilation}
-           \item{Some journals do not accept \LaTeX{} submission... others strongly encourage it}
+           \item{Difficile à apprendre... Très difficile. Mais les bases sont simples.}
+           \item{Incompatible avec Word}
+           \item{\sout{Pas d'autocorrecteur}}
+           \item{Pas de ``Suivi des corrections'' et de trucs comme ça}
+           \item{Le document final est uniquement disponible après la compilation du code}
+           \item{Certains journaux n'acceptent pas les soumissions en \LaTeX{}... d'autres les encouragent}
         \end{itemize} 
     \end{frame}
 
     \begin{frame}
-        \frametitle{\LaTeX: A Nice Table} \vspace{1cm}   
+        \frametitle{\LaTeX: Un beau tableau} \vspace{1cm}   
             \begin{table}
               \centering
               \normalsize
@@ -140,21 +140,21 @@
     \end{frame}
     
     \begin{frame}
-        \frametitle{\LaTeX: The Nice Table Code} \vspace{1cm}   
+        \frametitle{\LaTeX: Le code du beau tableau} \vspace{1cm}   
         \begin{center}
            \includegraphics[width=0.95\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/LaTeX-TableauCodeENG}
         \end{center}  
     \end{frame}
     
     \begin{frame}
-        \frametitle{\LaTeX: It's a joke, right?!} \vspace{1cm}   
+        \frametitle{\LaTeX: C'est une blague?!} \vspace{1cm}   
         \begin{center}
            \includegraphics[width=0.4\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/EmoticonConfused.png}
         \end{center}  
     \end{frame}
     
     \begin{frame}
-        \frametitle{\LaTeX: Nope} \vspace{1cm}   
+        \frametitle{\LaTeX: Non.} \vspace{1cm}   
         \begin{center}
            \includegraphics[width=0.85\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/DesperateImage.png}
         \end{center}  
@@ -168,7 +168,7 @@
     \end{frame}
     
     \begin{frame}[fragile=singleslide]
-        \frametitle{\LaTeX: Code (Part 1)} \vspace{0.5cm} 
+        \frametitle{\LaTeX: Code (Partie 1)} \vspace{0.5cm} 
         \begin{code}
 % Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
 % Date and time: Wed, Jan 07, 2015 - 22:20:00
@@ -197,7 +197,7 @@
     \end{frame}   
     
     \begin{frame}[fragile=singleslide]
-        \frametitle{\LaTeX: Code (Part 2)} \vspace{0.5cm} 
+        \frametitle{\LaTeX: Code (Partie 2)} \vspace{0.5cm} 
         \begin{code}
   Moins de 34 ans &  & $-$0.03 &  & $-$0.17 &  & $-$0.13 & $-$0.26 \\ 
   &  & (0.15) &  & (0.34) &  & (0.16) & (0.36) \\ 
@@ -267,20 +267,20 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
 
 
 
-\section{\R {} Programming Bases}
+\section{\R {} Les bases de la programmation}
 
     \begin{frame}
-        \frametitle{\R $=$ Programming Language}
+        \frametitle{\R $=$ Language de programmation}
         \begin{itemize}
-            \item Calculation operators
-            \item Assignment operators
-            \item Logical operators
-            \item Control instructions
+            \item Opérateurs de calcul
+            \item Opérations d'assignement
+            \item Opérateurs logique
+            \item Instructions de contrôle
         \end{itemize}
     \end{frame}
 
     \begin{frame}
-        \frametitle{Calculation Operators}
+        \frametitle{Opérateurs de calcul}
         \begin{itemize}
             \item $+$
             \item $-$
@@ -290,7 +290,7 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
     \end{frame}
     
     \begin{frame}
-        \frametitle{Logical Operators}
+        \frametitle{Opérateurs logique}
         \begin{itemize}
             \item $==$
             \item $!=$
@@ -305,7 +305,7 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
     \end{frame}
     
     \begin{frame}
-        \frametitle{Control Instructions}
+        \frametitle{Instructions de contrôle}
         \begin{itemize}
             \item if... else
             \item for loop
@@ -320,19 +320,19 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
 
 
 
-\section{\R {} Data Structure}
+\section{\R {} Structure de données}
 
     \begin{frame}
-        \frametitle{Data Structure}
+        \frametitle{Structure de données}
         \begin{itemize}
-            \item<1-> Constants
-            \item<2-> Vectors
+            \item<1-> Constantes
+            \item<2-> Vecteurs
             \item<3-> Data frames
         \end{itemize}
     \end{frame}
     
     \begin{frame}[fragile=singleslide]
-        \frametitle{Constants}
+        \frametitle{Constantes}
         \begin{code}
 variableString <- "Banana"
 variableNumerical <- 1492
@@ -415,10 +415,10 @@ Data <- data.frame(vectorString, vectorNumerical, vectorBoolean, c(23,17,32,56))
 
 
 
-\section{Functions}
+\section{Fonctions}
 
     \begin{frame}
-        \frametitle{\R Base Functions}
+        \frametitle{Fonctions de base \R}
         \begin{itemize}
             \item length()
             \item min()
@@ -430,7 +430,7 @@ Data <- data.frame(vectorString, vectorNumerical, vectorBoolean, c(23,17,32,56))
     \end{frame}
         
     \begin{frame}[fragile=singleslide]
-        \frametitle{\R Function: mean()}
+        \frametitle{Fonction \R : mean()}
         \begin{code}
 mean(yourVector)
         \end{code}
@@ -449,18 +449,18 @@ mean(yourVector)
     % \end{frame}
 
     \begin{frame}[fragile=singleslide]
-        \frametitle{Creating a Function in \R}
+        \frametitle{Créer une fonction en \R}
     \end{frame}
     
     \begin{frame}
-        \frametitle{\R Function: meanGirls()} \vspace{1cm}
+        \frametitle{Fonction \R : meanGirls()} \vspace{1cm}
         \begin{center}
             \includegraphics[width=0.56\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/meanGirls.pdf}
         \end{center}
     \end{frame}
     
     \begin{frame}[fragile=singleslide]
-        \frametitle{\R Function: meanGirls()}
+        \frametitle{Fonction \R: meanGirls()}
         \begin{code}
 meanGirls <- function(Data){
     result <- sum(Data$age[Data$woman==1])/length(Data$age[Data$woman==1])
@@ -472,7 +472,7 @@ meanGirls <- function(Data){
 
     \begin{frame}[fragile=singleslide]
     % Add [fragile=singleslide] to your begin{frame} if you are to add code to your slide. 
-        \frametitle{\R Function: meanGirlsPlus()}
+        \frametitle{Fonction \R : meanGirlsPlus()}
         \begin{code}
 meanGirlsPlus <- function(Data, star=FALSE){
     if(star == FALSE){
@@ -487,42 +487,42 @@ meanGirlsPlus <- function(Data, star=FALSE){
     \end{frame}
     
     \begin{frame}
-        \frametitle{Then?} \vspace{1cm}
+        \frametitle{Maintenant?} \vspace{1cm}
         \begin{center}
             \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/packageEvolution0.pdf}
         \end{center}
     \end{frame} 
     
     \begin{frame}
-        \frametitle{Then? More \R Functions...} \vspace{1cm}
+        \frametitle{Maintenant? Plus de fonctions \R ...} \vspace{1cm}
         \begin{center}
             \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/packageEvolution1.pdf}
         \end{center}
     \end{frame} 
     
     \begin{frame}
-        \frametitle{Then? A \R Package} \vspace{1cm}
+        \frametitle{Maintenant? Un package \R} \vspace{1cm}
         \begin{center}
             \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/packageEvolution2.pdf}
         \end{center}
     \end{frame} 
     
     \begin{frame}
-        \frametitle{Then? Package Publication} \vspace{1cm}
+        \frametitle{Maintenant? La publication d'un package} \vspace{1cm}
         \begin{center}
             \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/packageEvolution3.pdf}
         \end{center}
     \end{frame} 
     
     \begin{frame}
-        \frametitle{Then? Diffusion to the Community} \vspace{1cm}
+        \frametitle{Maintenant? Diffusion à la communauté} \vspace{1cm}
         \begin{center}
             \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/packageEvolution4.pdf}
         \end{center}
     \end{frame} 
     
     \begin{frame}
-        \frametitle{\R Community} \vspace{1cm}
+        \frametitle{Communauté \R} \vspace{1cm}
         \begin{center}
             \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/MrX0.pdf}
         \end{center}
@@ -543,7 +543,7 @@ install.packages("MeanSexPak")
     \end{frame}
     
     \begin{frame}[fragile=singleslide]
-        \frametitle{Ensuite? Mr. X Uses the Package}
+        \frametitle{Ensuite? Mr. X utilise le package}
         \begin{code}
 library(MeanSexPak)
 
@@ -553,13 +553,13 @@ girlsMeanAge <- meanGirls(MrXOwnData)
     \end{frame}
     
     \begin{frame}
-        \frametitle{Number of \R Packages}  \vspace{1.2cm}
+        \frametitle{Nombre de packages \R}  \vspace{1.2cm}
         \begin{center}
             \includegraphics[width=0.65\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/OpenSource-TS-RPackages2}
         \end{center} 
     \end{frame}
    
-\section{Enough blabla... Let's Code!} 
+\section{Assez de blabla... c'est le temps de coder!} 
   
 %     \begin{frame}[fragile=singleslide]
 %         \frametitle{Let's code! \\\vspace{0.2cm} Install and load some \emph{packages}...}
