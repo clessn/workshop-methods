@@ -2,6 +2,7 @@
 \documentclass{beamer}
 \input{BeamerMacros.tex} % Loading the macros 
 \usetheme{Cement_WorkshopR}
+\usepackage{hyperref}
 
 \title{\R + \LaTeX}
 \subtitle{Une très brève introduction}
@@ -43,7 +44,7 @@
               \includegraphics[width=0.4\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/RStudio-Logo-Blue-Gradient}
             \end{center} 
             \begin{enumerate}
-                \item<2-> \R: www.cran.rstudio.com
+                \item<2-> \R: https://cran.rstudio.com
                 \item<3-> \LaTeX: www.latex-project.org/get/
                 \item<4-> RStudio: www.rstudio.com/products/rstudio/download/
             \end{enumerate}
@@ -57,6 +58,15 @@
             \end{center} 
     \end{frame}
 
+    \begin{frame}
+            \frametitle{Installation \\ \vspace{0.2cm} 2 Languages, 1 Software}
+            \vspace{2.3cm}
+            \begin{center}
+            Stack Overflow Traffic to Programming Languages
+              \includegraphics[width=0.97\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/ProgressionR}
+            \end{center} 
+    \end{frame}
+
 
 
 
@@ -65,11 +75,11 @@
 \section{Le monde \vspace{0.3cm} de l'Open Source}
 
     \begin{frame}
-        \frametitle{Pourquoi \R?}  \vspace{1.2cm}
+        \frametitle{Why \R?}  \vspace{1.2cm}
     \end{frame}
 
     \begin{frame}
-        \frametitle{Pourquoi \R?}  \vspace{1.2cm}
+        \frametitle{Why \R?}  \vspace{1.2cm}
         \begin{center}
             \includegraphics[width=0.85\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/statPackage-evolution3}
         \end{center} 
@@ -103,7 +113,7 @@
     \begin{frame}
         \frametitle{Pourquoi \LaTeX? Raisons d'aimer} \vspace{1cm}
         \begin{itemize}
-           \item{Bibliographie: \BibTeX}
+           \item{\href{https://scholar.google.ca}{Bibliographie: \BibTeX}}
            \item{Table des matières, tableaux, etc.}
            \item{S'occupe automatique des trucs comme les tableaux, les graphiques, etc.}
            \item{De beaux gabarits}
@@ -580,6 +590,9 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 %   library(ggthemes)  # Cool premade ggplot themes
 %         \end{code}
 %     \end{frame}
+%     
+%   
+% 
 %     
 %   
 % 
