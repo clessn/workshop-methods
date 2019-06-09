@@ -24,12 +24,12 @@
 %%% BEGINNING OF THE PRESENTATION
 
     \begin{frame}
-        \frametitle{Objectifs \& Philosophie}
+        \frametitle{Objectifs et philosophie}
         \begin{itemize}
             \item<2-> Installation:  RStudio + \R + \LaTeX
             \item<3-> Résumé de la journée: \R et \LaTeX
                       \begin{enumerate}
-                        \item Le monde de l'open source
+                        \item Le monde de l'\emph{Open Source}
                         \item Quelques bases de programmation \R
                         \item Faire des graphiques en \R avec \LaTeX
                       \end{enumerate}
@@ -38,7 +38,7 @@
     \end{frame}
 
    \begin{frame}
-            \frametitle{Installation \\ \vspace{0.2cm} 2 Languages, 1 Software}
+            \frametitle{Installation \\ \vspace{0.2cm} 2 langages, 1 logiciel}
             \vspace{0.5cm}
             \begin{center}
               \includegraphics[width=0.4\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/RStudio-Logo-Blue-Gradient}
@@ -51,56 +51,55 @@
     \end{frame}
     
     \begin{frame}
-            \frametitle{Installation \\ \vspace{0.2cm} 2 Languages, 1 Software}
+            \frametitle{Installation \\ \vspace{0.2cm} 2 langages, 1 logiciel}
             \vspace{2.3cm}
             \begin{center}
               \includegraphics[width=0.97\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/RStudio-Screenshot}
             \end{center} 
     \end{frame}
 
-    \begin{frame}
-            \frametitle{Installation \\ \vspace{0.2cm} 2 Languages, 1 Software}
-            \vspace{2.3cm}
-            \begin{center}
-            Stack Overflow Traffic to Programming Languages
-              \includegraphics[width=0.97\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/ProgressionR}
-            \end{center} 
-    \end{frame}
 
 
 
 
 
-
-\section{Le monde \vspace{0.3cm} de l'Open Source}
+\section{Le monde \vspace{0.3cm} de l'\emph{Open Source}}
 
     \begin{frame}
-        \frametitle{Why \R?}  \vspace{1.2cm}
+        \frametitle{Pourquoi \R?}  \vspace{1.2cm}
     \end{frame}
 
     \begin{frame}
-        \frametitle{Why \R?}  \vspace{1.2cm}
+        \frametitle{Pourquoi \R?}  \vspace{1.2cm}
         \begin{center}
             \includegraphics[width=0.85\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/statPackage-evolution3}
         \end{center} 
     \end{frame}
     
-    \begin{frame}
+     \begin{frame}
+        \frametitle{Pourquoi \R?}  \vspace{1.2cm}
+        \begin{center}
+            Stack Overflow Traffic to Programming Languages
+            \includegraphics[width=0.9\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/ProgressionR}
+        \end{center} 
+    \end{frame}
+
+   \begin{frame}
         \frametitle{Pourquoi \R? Les raisons de l'aimer}
         \begin{enumerate}
             \item{Gratisssss}
             \item{Disponible pour tous les systèmes d'exploitation}
             \item{Graphiques + \LaTeX}
-            \item{Popularité + Packages}
-            \item{\emph{Open source}: Développer par et pour les chercheurs}
+            \item{Popularité + \emph{packages} (extensions)}
+            \item{\emph{Open Source} (code source ouvert): développé par et pour les chercheurs}
         \end{enumerate}
     \end{frame}
     
     \begin{frame}
         \frametitle{Pourquoi \R? Les raisons de détester}
         \begin{enumerate}
-            \item{Programmer du code = Courbe d'apprentissage raide}
-            \item{Développement éclectique. Par moment... chaotique}
+            \item{Programmer du code = courbe d'apprentissage raide}
+            \item{Développement éclectique, parfois chaotique}
         \end{enumerate}
     \end{frame}
     
@@ -115,21 +114,21 @@
         \begin{itemize}
            \item{\href{https://scholar.google.ca}{Bibliographie: \BibTeX}}
            \item{Table des matières, tableaux, etc.}
-           \item{S'occupe automatique des trucs comme les tableaux, les graphiques, etc.}
+           \item{S'occupe automatiquement des tableaux, graphiques, etc.}
            \item{De beaux gabarits}
-           \item{Code + \emph{Open source} = Une large communauté d'experts en ligne}
+           \item{Code + \emph{Open Source} = une large communauté d'experts en ligne}
         \end{itemize} 
     \end{frame}
     
     \begin{frame}
         \frametitle{Pourquoi \LaTeX? Raisons d'aimer} \vspace{1cm}
         \begin{itemize}
-           \item{Difficile à apprendre... Très difficile. Mais les bases sont simples.}
+           \item{Difficile à apprendre... Très difficile. Mais les bases sont simples}
            \item{Incompatible avec Word}
            \item{\sout{Pas d'autocorrecteur}}
-           \item{Pas de ``Suivi des corrections'' et de trucs comme ça}
+           \item{Pas de <<~suivi des corrections~>> et de trucs comme ça}
            \item{Le document final est uniquement disponible après la compilation du code}
-           \item{Certains journaux n'acceptent pas les soumissions en \LaTeX{}... d'autres les encouragent}
+           \item{Certaines revues scientifiques n'acceptent pas les soumissions en \LaTeX{}... d'autres les encouragent}
         \end{itemize} 
     \end{frame}
 
@@ -153,20 +152,6 @@
         \frametitle{\LaTeX: Le code du beau tableau} \vspace{1cm}   
         \begin{center}
            \includegraphics[width=0.95\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/LaTeX-TableauCodeENG}
-        \end{center}  
-    \end{frame}
-    
-    \begin{frame}
-        \frametitle{\LaTeX: C'est une blague?!} \vspace{1cm}   
-        \begin{center}
-           \includegraphics[width=0.4\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/EmoticonConfused.png}
-        \end{center}  
-    \end{frame}
-    
-    \begin{frame}
-        \frametitle{\LaTeX: Non.} \vspace{1cm}   
-        \begin{center}
-           \includegraphics[width=0.85\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/DesperateImage.png}
         \end{center}  
     \end{frame}
     
@@ -224,7 +209,7 @@
   \_constante & $-$1.05$^{***}$ & $-$0.86$^{***}$ & 0.34 & 0.96$^{**}$ & $-$3.17$^{***}$ & $-$2.95$^{***}$ & $-$1.21$^{*}$ \\ 
   & (0.05) & (0.11) & (0.20) & (0.35) & (0.15) & (0.19) & (0.51) \\ 
  N & 2,745 & 2,464 & 655 & 610 & 2,636 & 2,381 & 602 \\ 
-Log Likelihood & $-$1,650.11 & $-$1,487.30 & $-$383.02 & $-$346.16 & $-$1,412.88 & $-$1,276.31 & $-$317.77 \\ 
+Log-vraisemblance & $-$1,650.11 & $-$1,487.30 & $-$383.02 & $-$346.16 & $-$1,412.88 & $-$1,276.31 & $-$317.77 \\ 
 AIC & 3,304.22 & 2,996.60 & 770.04 & 716.31 & 2,829.77 & 2,576.62 & 661.54 \\ 
 \hline \\[-1.8ex] 
 \multicolumn{8}{l}{\emph{Source}: Étude électorale canadienne, 2011.} \\ 
@@ -263,6 +248,29 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
         \end{center}  
     \end{frame}
 
+%  \begin{frame}
+%        \frametitle{Dropbox} \vspace{1cm}   
+%        \begin{center}
+%           \includegraphics[width=0.8\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/Arborescence_Dropbox}
+%        \end{center}  
+%    \end{frame}
+%
+  \begin{frame}
+        \frametitle{\LaTeX: c'est tout?} \vspace{1cm}  
+        \begin{itemize}
+            \item<2-> PowerPoint: le Saint-Graal des présentations orales?
+            \item<3-> NON! Beamer
+            \item<4-> Google Docs: l'Excalibur du travail en ligne instantané?
+            \item<5-> NON!!! Overleaf
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Overleaf}
+        \begin{center}
+           \includegraphics[width=0.85\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/Overleaf.png}
+        \end{center}  
+    \end{frame}
 
 
 
@@ -280,11 +288,11 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
 \section{\R {} Les bases de la programmation}
 
     \begin{frame}
-        \frametitle{\R $=$ Language de programmation}
+        \frametitle{\R $=$ langage de programmation}
         \begin{itemize}
             \item Opérateurs de calcul
-            \item Opérations d'assignement
-            \item Opérateurs logique
+            \item Opérateurs d'assignement
+            \item Opérateurs logiques
             \item Instructions de contrôle
         \end{itemize}
     \end{frame}
@@ -294,13 +302,14 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
         \begin{itemize}
             \item $+$
             \item $-$
+            \item $*$
             \item $/$
             \item $\%\%$ 
         \end{itemize}
     \end{frame}
     
     \begin{frame}
-        \frametitle{Opérateurs logique}
+        \frametitle{Opérateurs logiques}
         \begin{itemize}
             \item $==$
             \item $!=$
@@ -330,14 +339,14 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
 
 
 
-\section{\R {} Structure de données}
+\section{\R {} Structure des données}
 
     \begin{frame}
-        \frametitle{Structure de données}
+        \frametitle{Structure des données}
         \begin{itemize}
             \item<1-> Constantes
             \item<2-> Vecteurs
-            \item<3-> Data frames
+            \item<3-> \emph{Data frames} (tableaux de données)
         \end{itemize}
     \end{frame}
     
@@ -360,7 +369,7 @@ vecteurBoolean <- c(variableBoolean, FALSE, TRUE, TRUE)
     \end{frame}
     
     \begin{frame}[fragile=singleslide]
-        \frametitle{Data Frames}
+        \frametitle{\emph{Data frames}}
         \begin{code}
 Data <- data.frame(vectorString, vectorNumerical, vectorBoolean, c(23,17,32,56))
         \end{code}
@@ -465,7 +474,7 @@ mean(yourVector)
     \begin{frame}
         \frametitle{Fonction \R : meanGirls()} \vspace{1cm}
         \begin{center}
-            \includegraphics[width=0.56\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/meanGirls.pdf}
+            \includegraphics[width=0.4\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/meanGirls2.png}
         \end{center}
     \end{frame}
     
@@ -511,14 +520,14 @@ meanGirlsPlus <- function(Data, star=FALSE){
     \end{frame} 
     
     \begin{frame}
-        \frametitle{Maintenant? Un package \R} \vspace{1cm}
+        \frametitle{Maintenant? Un \emph{package} \R} \vspace{1cm}
         \begin{center}
             \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/packageEvolution2.pdf}
         \end{center}
     \end{frame} 
     
     \begin{frame}
-        \frametitle{Maintenant? La publication d'un package} \vspace{1cm}
+        \frametitle{Maintenant? La publication d'un \emph{package}} \vspace{1cm}
         \begin{center}
             \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/packageEvolution3.pdf}
         \end{center}
@@ -539,21 +548,21 @@ meanGirlsPlus <- function(Data, star=FALSE){
     \end{frame}
     
     \begin{frame}
-        \frametitle{Mr. X} \vspace{1cm}
+        \frametitle{M. X} \vspace{1cm}
         \begin{center}
             \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/MrX1.pdf}
         \end{center}
     \end{frame}
 
     \begin{frame}[fragile=singleslide]
-        \frametitle{Then? Mr. X Installs the Package}
+        \frametitle{Ensuite? M. X installe le \emph{package}}
         \begin{code}
 install.packages("MeanSexPak")
         \end{code}
     \end{frame}
     
     \begin{frame}[fragile=singleslide]
-        \frametitle{Ensuite? Mr. X utilise le package}
+        \frametitle{Ensuite? M. X utilise le \emph{package}}
         \begin{code}
 library(MeanSexPak)
 
@@ -563,13 +572,13 @@ girlsMeanAge <- meanGirls(MrXOwnData)
     \end{frame}
     
     \begin{frame}
-        \frametitle{Nombre de packages \R}  \vspace{1.2cm}
+        \frametitle{Nombre de \emph{packages} \R}  \vspace{1.2cm}
         \begin{center}
             \includegraphics[width=0.65\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/OpenSource-TS-RPackages2}
         \end{center} 
     \end{frame}
    
-\section{Assez de blabla... c'est le temps de coder!} 
+\section{Assez de blabla... C'est le temps de coder!} 
   
 %     \begin{frame}[fragile=singleslide]
 %         \frametitle{Let's code! \\\vspace{0.2cm} Install and load some \emph{packages}...}
@@ -847,7 +856,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Et maintenant, comment on apprend ?}
+\section{Possibilités de recherche en R}
 
 %%
 
@@ -1094,16 +1103,16 @@ girlsMeanAge <- meanGirls(MrXOwnData)
     
  %%
 
-    \begin{frame}
-    
-      \frametitle{Shiny: Des exemples plus raffinés} \vspace{1cm}
-      
-        \begin{center}
-      	  \includegraphics[width=0.9\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/Shiny_Dashboard2.png}
-        \end{center} 
-      
-          
-    \end{frame}  
+ %  \begin{frame}
+ %  
+ %    \frametitle{Shiny: Des exemples plus raffinés} \vspace{1cm}
+ %    
+ %      \begin{center}
+ %    	  \includegraphics[width=0.9\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/Shiny_Dashboard2.png}
+ %      \end{center} 
+ %    
+ %        
+ %  \end{frame}  
     
     
  %%
@@ -1143,7 +1152,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
     \end{frame}
     
 %%
-
+\section{Et maintenant, comment on apprend ?}
 
     \begin{frame}
     
@@ -1262,21 +1271,171 @@ girlsMeanAge <- meanGirls(MrXOwnData)
          
         \end{center} 
 
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
 \begin{table}[]
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|l|l|l|}
+\begin{tabular}{llll}
 \hline
-\multicolumn{1}{|c|}{\begin{tabular}[c]{@{}c@{}}Catégories/\\ Difficulté\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Importation et \\ manipulation des données\end{tabular} & Visualisation de données & \begin{tabular}[c]{@{}l@{}}Probabilités et\\ analyses statistiques\end{tabular} \\ \hline
-Débutant & \begin{tabular}[c]{@{}l@{}}Introduction to R;\\ Importing Data in R (part 1);\\ Cleaning Data in R;\\ Introduction to the Tidyverse;\end{tabular} & \begin{tabular}[c]{@{}l@{}}Data visualization in R;\\ Data visualization\\ with ggplot2 (part 1);\end{tabular} & \begin{tabular}[c]{@{}l@{}}Introduction to Data;\\ Exploratory Data Analysis;\\ Foundation of Probability in R;\\ Foundation of Inference;\end{tabular} \\ \hline
-Intermédiaire & \begin{tabular}[c]{@{}l@{}}Intermediate R;\\ Intermediate R practice;\\ Introduction to Text\\  Analysis in R;\\ Importing Data in R (part 2);\end{tabular} & \begin{tabular}[c]{@{}l@{}}Data visualization\\ with ggplot2 (part 2);\\ Visualization Best Practices in R;\end{tabular} & \begin{tabular}[c]{@{}l@{}}Correlation and regression;\\ Multiple and Logistic \\ Regression;\\ Exploratory Data Analysis;\end{tabular} \\ \hline
+\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Catégories/\\ Difficulté\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Importation et \\ manipulation des données\end{tabular} & Visualisation de données & \begin{tabular}[c]{@{}l@{}}Probabilités et\\ analyses statistiques\end{tabular} \\ \hline
+\multicolumn{1}{|l|}{Débutant} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Introduction to R;\\ Importing Data in R (part 1);\\ Cleaning Data in R;\\ Introduction to the Tidyverse;\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Data visualization in R;\\ Data visualization\\ with ggplot2 (part 1);\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Introduction to Data;\\ Exploratory Data Analysis;\\ Foundation of Probability in R;\\ Foundation of Inference;\end{tabular}} \\ \hline
+\multicolumn{1}{|l|}{Intermédiaire} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Intermediate R;\\ Intermediate R practice;\\ Introduction to Text\\  Analysis in R;\\ Importing Data in R (part 2);\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Data visualization\\ with ggplot2 (part 2);\\ Visualization Best Practices in R;\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Correlation and regression;\\ Multiple and Logistic \\ Regression;\\ Exploratory Data Analysis;\end{tabular}} \\ \hline
 Avancé & \begin{tabular}[c]{@{}l@{}}Writing efficient R code;\\ Importing \& Cleaning Data\\ in R: Case studies;\\ Working with Web Data in R;\end{tabular} & \begin{tabular}[c]{@{}l@{}}Data Visualization \\ with ggplot2 (Part 3);\\ Communicating with Data\\  in the Tidyverse;\end{tabular} & \begin{tabular}[c]{@{}l@{}}Forecasting Using R;\\ Statistical Modeling in R (part1);\\ Exploratory Data Analysis\\  in R: Case Study;\end{tabular} \\ \hline
 \end{tabular}%
 }
 \caption{Échelles pour l'apprentissage de R}
-\label{chelles pour lapprentissage de R}
-\end{table}  
+
+\end{table}
+
+\end{frame}
+
+%%
+
+  \begin{frame}
+    
+      \frametitle{Choix de cours : \uline{serpents} et échelles} \vspace{1cm}
       
-  \end{frame}
+        \begin{center}
+        
+          \includegraphics[width=0.15\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/snake.png}
+         
+        \end{center} 
+        
+  Des serpents existent aux différents niveaux d'expertise
+      
+    \begin{itemize}
+        
+      \item{Débutant}
+        
+          \begin{itemize}
+            \item Croire qu'il sera trop difficile d'apprendre, que c'est un objectif inatteignable
+            \item Croire qu'il est possible d'apprendre sans pratiquer
+            \item La peur de demander de l'aide
+            \item Ne pas construire des bases solides avant d'aller plus loin
+            \item La boucle infinie de tutoriels
 
+          \end{itemize}
+        
+        \end{itemize}
+        
+     \end{frame}
+  
+%%
 
+    \begin{frame}
+    
+      \frametitle{Choix de cours : \uline{serpents} et échelles} \vspace{1cm}
+      
+        \begin{center}
+        
+          \includegraphics[width=0.15\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/snake.png}
+         
+        \end{center} 
+        
+  Des serpents existent aux différents niveaux d'expertise
+      
+    \begin{itemize}
+        
+      \item{Intermédiaire}
+        
+          \begin{itemize}
+            \item Croire qu'on a suffisamment de connaissances et ne pas sortir de sa zone de confort
+            \item Vouloir apprendre plusieurs langages et n'en maîtriser aucun (R vs. Python, Ruby, PHP ...)
+            \item Écrire du code mais ne pas le commenter
+            \item Coder en n'utilisant un style et une planification cohérente et constante 
+
+          \end{itemize}
+        
+        \end{itemize}
+        
+     \end{frame}
+  
+%%
+
+    \begin{frame}
+    
+      \frametitle{Choix de cours : \uline{serpents} et échelles} \vspace{1cm}
+      
+        \begin{center}
+        
+          \includegraphics[width=0.15\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/snake.png}
+         
+        \end{center} 
+        
+  Des serpents existent aux différents niveaux d'expertise
+      
+    \begin{itemize}
+        
+      \item{Avancé}
+        
+          \begin{itemize}
+            \item La peur de partager son code 
+            \item Laisser le parfait être l’ennemi du bien
+            \item Manquer d'empathie et de compréhension envers les nouveaux utilisateurs
+            \item Douchebagisme
+
+          \end{itemize}
+        
+        \end{itemize}
+        
+     \end{frame}
+     
+  
+%%
+
+    \begin{frame}
+    
+      \frametitle{DataCamp vs. les autres sites} \vspace{1cm}
+      
+        
+        \begin{itemize}
+          \item Plus grande quantité de cours, toujours grandissante 
+          \item Instructeurs, souvent du milieu académique, reconnus et certifiés
+          \item Prix concurrentiels et forfaits académiques disponibles
+          \item Apprendre à son propre rythme, vs. Coursera et cie. 
+
+        \end{itemize}
+      
+     \end{frame}
+     
+
+%%
+
+    \begin{frame}
+    
+      \frametitle{Autres ressources pertinentes} \vspace{1cm}
+      
+       \begin{itemize}
+        \item Livres
+        
+          \begin{itemize}
+            \item Statistiques en sciences humaines avec R (Guay, 2014)
+            \item Learning R. A Step-by-Step Function Guide to Data Analysis (Cotton, 2013)
+            \item Hands-On Programming with R (Grolemund, 2014)
+            \item Advanced R, 2 ed. (Wickham, 2019)
+
+        \end{itemize}
+      \end{itemize}
+      
+     \end{frame}
+
+%%
+
+    \begin{frame}
+    
+      \frametitle{Autres ressources pertinentes} \vspace{1cm}
+      
+       \begin{itemize}
+       \item Ressources en ligne
+       
+        \begin{itemize}
+          \item R Bootcamp
+          \item Quick-R
+          \item R-bloggers
+            
+        \end{itemize}
+      \end{itemize}
+      
+     \end{frame}
+     
 \end{document}
