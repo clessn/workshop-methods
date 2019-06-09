@@ -2,7 +2,6 @@
 \documentclass{beamer}
 \input{BeamerMacros.tex} % Loading the macros 
 \usetheme{Cement_WorkshopR}
-\usepackage{hyperref}
 
 \title{\R + \LaTeX}
 \subtitle{Une très brève introduction}
@@ -24,12 +23,12 @@
 %%% BEGINNING OF THE PRESENTATION
 
     \begin{frame}
-        \frametitle{Objectifs et philosophie}
+        \frametitle{Objectifs \& Philosophie}
         \begin{itemize}
             \item<2-> Installation:  RStudio + \R + \LaTeX
             \item<3-> Résumé de la journée: \R et \LaTeX
                       \begin{enumerate}
-                        \item Le monde de l'\emph{Open Source}
+                        \item Le monde de l'open source
                         \item Quelques bases de programmation \R
                         \item Faire des graphiques en \R avec \LaTeX
                       \end{enumerate}
@@ -38,20 +37,20 @@
     \end{frame}
 
    \begin{frame}
-            \frametitle{Installation \\ \vspace{0.2cm} 2 langages, 1 logiciel}
+            \frametitle{Installation \\ \vspace{0.2cm} 2 Languages, 1 Software}
             \vspace{0.5cm}
             \begin{center}
               \includegraphics[width=0.4\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/RStudio-Logo-Blue-Gradient}
             \end{center} 
             \begin{enumerate}
-                \item<2-> \R: https://cran.rstudio.com
+                \item<2-> \R: www.cran.rstudio.com
                 \item<3-> \LaTeX: www.latex-project.org/get/
                 \item<4-> RStudio: www.rstudio.com/products/rstudio/download/
             \end{enumerate}
     \end{frame}
     
     \begin{frame}
-            \frametitle{Installation \\ \vspace{0.2cm} 2 langages, 1 logiciel}
+            \frametitle{Installation \\ \vspace{0.2cm} 2 Languages, 1 Software}
             \vspace{2.3cm}
             \begin{center}
               \includegraphics[width=0.97\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/RStudio-Screenshot}
@@ -63,7 +62,7 @@
 
 
 
-\section{Le monde \vspace{0.3cm} de l'\emph{Open Source}}
+\section{Le monde \vspace{0.3cm} de l'Open Source}
 
     \begin{frame}
         \frametitle{Pourquoi \R?}  \vspace{1.2cm}
@@ -76,30 +75,22 @@
         \end{center} 
     \end{frame}
     
-     \begin{frame}
-        \frametitle{Pourquoi \R?}  \vspace{1.2cm}
-        \begin{center}
-            Stack Overflow Traffic to Programming Languages
-            \includegraphics[width=0.9\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/ProgressionR}
-        \end{center} 
-    \end{frame}
-
-   \begin{frame}
+    \begin{frame}
         \frametitle{Pourquoi \R? Les raisons de l'aimer}
         \begin{enumerate}
             \item{Gratisssss}
             \item{Disponible pour tous les systèmes d'exploitation}
             \item{Graphiques + \LaTeX}
-            \item{Popularité + \emph{packages} (extensions)}
-            \item{\emph{Open Source} (code source ouvert): développé par et pour les chercheurs}
+            \item{Popularité + Packages}
+            \item{\emph{Open source}: Développer par et pour les chercheurs}
         \end{enumerate}
     \end{frame}
     
     \begin{frame}
         \frametitle{Pourquoi \R? Les raisons de détester}
         \begin{enumerate}
-            \item{Programmer du code = courbe d'apprentissage raide}
-            \item{Développement éclectique, parfois chaotique}
+            \item{Programmer du code = Courbe d'apprentissage raide}
+            \item{Développement éclectique. Par moment... chaotique}
         \end{enumerate}
     \end{frame}
     
@@ -112,23 +103,23 @@
     \begin{frame}
         \frametitle{Pourquoi \LaTeX? Raisons d'aimer} \vspace{1cm}
         \begin{itemize}
-           \item{\href{https://scholar.google.ca}{Bibliographie: \BibTeX}}
+           \item{Bibliographie: \BibTeX}
            \item{Table des matières, tableaux, etc.}
-           \item{S'occupe automatiquement des tableaux, graphiques, etc.}
+           \item{S'occupe automatique des trucs comme les tableaux, les graphiques, etc.}
            \item{De beaux gabarits}
-           \item{Code + \emph{Open Source} = une large communauté d'experts en ligne}
+           \item{Code + \emph{Open source} = Une large communauté d'experts en ligne}
         \end{itemize} 
     \end{frame}
     
     \begin{frame}
         \frametitle{Pourquoi \LaTeX? Raisons d'aimer} \vspace{1cm}
         \begin{itemize}
-           \item{Difficile à apprendre... Très difficile. Mais les bases sont simples}
+           \item{Difficile à apprendre... Très difficile. Mais les bases sont simples.}
            \item{Incompatible avec Word}
            \item{\sout{Pas d'autocorrecteur}}
-           \item{Pas de <<~suivi des corrections~>> et de trucs comme ça}
+           \item{Pas de ``Suivi des corrections'' et de trucs comme ça}
            \item{Le document final est uniquement disponible après la compilation du code}
-           \item{Certaines revues scientifiques n'acceptent pas les soumissions en \LaTeX{}... d'autres les encouragent}
+           \item{Certains journaux n'acceptent pas les soumissions en \LaTeX{}... d'autres les encouragent}
         \end{itemize} 
     \end{frame}
 
@@ -152,6 +143,20 @@
         \frametitle{\LaTeX: Le code du beau tableau} \vspace{1cm}   
         \begin{center}
            \includegraphics[width=0.95\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/LaTeX-TableauCodeENG}
+        \end{center}  
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{\LaTeX: C'est une blague?!} \vspace{1cm}   
+        \begin{center}
+           \includegraphics[width=0.4\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/EmoticonConfused.png}
+        \end{center}  
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{\LaTeX: Non.} \vspace{1cm}   
+        \begin{center}
+           \includegraphics[width=0.85\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/DesperateImage.png}
         \end{center}  
     \end{frame}
     
@@ -209,7 +214,7 @@
   \_constante & $-$1.05$^{***}$ & $-$0.86$^{***}$ & 0.34 & 0.96$^{**}$ & $-$3.17$^{***}$ & $-$2.95$^{***}$ & $-$1.21$^{*}$ \\ 
   & (0.05) & (0.11) & (0.20) & (0.35) & (0.15) & (0.19) & (0.51) \\ 
  N & 2,745 & 2,464 & 655 & 610 & 2,636 & 2,381 & 602 \\ 
-Log-vraisemblance & $-$1,650.11 & $-$1,487.30 & $-$383.02 & $-$346.16 & $-$1,412.88 & $-$1,276.31 & $-$317.77 \\ 
+Log Likelihood & $-$1,650.11 & $-$1,487.30 & $-$383.02 & $-$346.16 & $-$1,412.88 & $-$1,276.31 & $-$317.77 \\ 
 AIC & 3,304.22 & 2,996.60 & 770.04 & 716.31 & 2,829.77 & 2,576.62 & 661.54 \\ 
 \hline \\[-1.8ex] 
 \multicolumn{8}{l}{\emph{Source}: Étude électorale canadienne, 2011.} \\ 
@@ -248,6 +253,7 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
         \end{center}  
     \end{frame}
 
+<<<<<<< HEAD
   \begin{frame}
         \frametitle{\LaTeX: c'est tout?} \vspace{1cm}  
         \begin{itemize}
@@ -264,15 +270,121 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
            \includegraphics[width=0.85\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/Overleaf.png}
         \end{center}  
     \end{frame}
+=======
+
+%%%%%%%%%%% Adrien's part ! :) 
+	
+	  \begin{frame}
+	        \frametitle{La logique de Dropbox} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.9\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/Arborescence_Dropbox}
+	        \end{center}  
+	    \end{frame}
+	    
+%%
+	
+	  \begin{frame}
+	        \frametitle{PLUS JAMAIS} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/memoire_meme}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+	  \begin{frame}
+	  
+	        \frametitle{Version control} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/git_logic}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	          \begin{frame}
+	        \frametitle{Git = un logiciel libre} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/Git_terminal}
+	        \end{center}  
+	    \end{frame}
+	    
+%%
+
+	      \begin{frame}
+	        \frametitle{Github = un site web} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.9\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/gitHub}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	      \begin{frame}
+	        \frametitle{Quelques bases} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/common_gitcommand}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	          \begin{frame}
+	        \frametitle{La vraie base} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/labase_git}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	      \begin{frame}
+	        \frametitle{N'empêche, il faut réfléchir..!} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/meme_git}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	      \begin{frame}
+	        \frametitle{Vim et Lady GaGa} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/ladyGag}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	      \begin{frame}
+	        \frametitle{Vim = un éditeur de texte} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.7\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/quitter_VIM}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	          \begin{frame}
+	        \frametitle{Vim-adventure = un jeu pour apprendre Vim !} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/VIM_adventure}
+	        \end{center}  
+	    \end{frame}
+
+%%%%%%%%%%% End of Adrien's part ! :(
+
+
+
+>>>>>>> 04838c6e7356302d5e70acdf0904bdae1e226711
 
 \section{\R {} Les bases de la programmation}
 
     \begin{frame}
-        \frametitle{\R $=$ langage de programmation}
+        \frametitle{\R $=$ Language de programmation}
         \begin{itemize}
             \item Opérateurs de calcul
-            \item Opérateurs d'assignement
-            \item Opérateurs logiques
+            \item Opérations d'assignement
+            \item Opérateurs logique
             \item Instructions de contrôle
         \end{itemize}
     \end{frame}
@@ -282,14 +394,13 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
         \begin{itemize}
             \item $+$
             \item $-$
-            \item $*$
             \item $/$
             \item $\%\%$ 
         \end{itemize}
     \end{frame}
     
     \begin{frame}
-        \frametitle{Opérateurs logiques}
+        \frametitle{Opérateurs logique}
         \begin{itemize}
             \item $==$
             \item $!=$
@@ -311,14 +422,26 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
         \end{itemize}
     \end{frame}
 
+<<<<<<< HEAD
 \section{\R {} Structure des données}
+=======
+
+
+
+
+
+
+
+
+\section{\R {} Structure de données}
+>>>>>>> 04838c6e7356302d5e70acdf0904bdae1e226711
 
     \begin{frame}
-        \frametitle{Structure des données}
+        \frametitle{Structure de données}
         \begin{itemize}
             \item<1-> Constantes
             \item<2-> Vecteurs
-            \item<3-> \emph{Data frames} (tableaux de données)
+            \item<3-> Data frames
         \end{itemize}
     \end{frame}
     
@@ -341,7 +464,7 @@ vecteurBoolean <- c(variableBoolean, FALSE, TRUE, TRUE)
     \end{frame}
     
     \begin{frame}[fragile=singleslide]
-        \frametitle{\emph{Data frames}}
+        \frametitle{Data Frames}
         \begin{code}
 Data <- data.frame(vectorString, vectorNumerical, vectorBoolean, c(23,17,32,56))
         \end{code}
@@ -446,7 +569,7 @@ mean(yourVector)
     \begin{frame}
         \frametitle{Fonction \R : meanGirls()} \vspace{1cm}
         \begin{center}
-            \includegraphics[width=0.4\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/meanGirls2.png}
+            \includegraphics[width=0.56\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/meanGirls.pdf}
         \end{center}
     \end{frame}
     
@@ -492,14 +615,14 @@ meanGirlsPlus <- function(Data, star=FALSE){
     \end{frame} 
     
     \begin{frame}
-        \frametitle{Maintenant? Un \emph{package} \R} \vspace{1cm}
+        \frametitle{Maintenant? Un package \R} \vspace{1cm}
         \begin{center}
             \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/packageEvolution2.pdf}
         \end{center}
     \end{frame} 
     
     \begin{frame}
-        \frametitle{Maintenant? La publication d'un \emph{package}} \vspace{1cm}
+        \frametitle{Maintenant? La publication d'un package} \vspace{1cm}
         \begin{center}
             \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/packageEvolution3.pdf}
         \end{center}
@@ -520,21 +643,21 @@ meanGirlsPlus <- function(Data, star=FALSE){
     \end{frame}
     
     \begin{frame}
-        \frametitle{M. X} \vspace{1cm}
+        \frametitle{Mr. X} \vspace{1cm}
         \begin{center}
             \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/MrX1.pdf}
         \end{center}
     \end{frame}
 
     \begin{frame}[fragile=singleslide]
-        \frametitle{Ensuite? M. X installe le \emph{package}}
+        \frametitle{Then? Mr. X Installs the Package}
         \begin{code}
 install.packages("MeanSexPak")
         \end{code}
     \end{frame}
     
     \begin{frame}[fragile=singleslide]
-        \frametitle{Ensuite? M. X utilise le \emph{package}}
+        \frametitle{Ensuite? Mr. X utilise le package}
         \begin{code}
 library(MeanSexPak)
 
@@ -544,13 +667,13 @@ girlsMeanAge <- meanGirls(MrXOwnData)
     \end{frame}
     
     \begin{frame}
-        \frametitle{Nombre de \emph{packages} \R}  \vspace{1.2cm}
+        \frametitle{Nombre de packages \R}  \vspace{1.2cm}
         \begin{center}
             \includegraphics[width=0.65\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/OpenSource-TS-RPackages2}
         \end{center} 
     \end{frame}
    
-\section{Assez de blabla... C'est le temps de coder!} 
+\section{Assez de blabla... c'est le temps de coder!} 
   
 %     \begin{frame}[fragile=singleslide]
 %         \frametitle{Let's code! \\\vspace{0.2cm} Install and load some \emph{packages}...}
@@ -571,9 +694,6 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 %   library(ggthemes)  # Cool premade ggplot themes
 %         \end{code}
 %     \end{frame}
-%     
-%   
-% 
 %     
 %   
 % 
@@ -991,7 +1111,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
       \frametitle{Shiny: dans un processus commun et synergique} \vspace{1cm}
       
         \begin{center}
-      	  \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/Shiny_synergie.png}
+      	  \includegraphics[width=0.9\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/Shiny_synergie.png}
         \end{center} 
       
           
@@ -1004,7 +1124,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
       \frametitle{Shiny: un exemple très simple avec ggplot2} \vspace{1cm}
       
         \begin{center}
-      	  \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/Shiny_ggplot1.png}
+      	  \includegraphics[width=0.9\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/Shiny_ggplot1.png}
         \end{center} 
       
           
@@ -1030,7 +1150,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
       \frametitle{Shiny: Un exemple très simple avec ggplot2} \vspace{1cm}
       
         \begin{center}
-      	  \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/Shiny_ggplot3.png}
+      	  \includegraphics[width=0.8\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/Shiny_ggplot3.png}
         \end{center} 
       
           
@@ -1159,7 +1279,11 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 
     \begin{frame}
     
+<<<<<<< HEAD
       \frametitle{Qu’est-ce que le \emph{crowdsourcing}?} \vspace{1cm}
+=======
+      \frametitle{La plateforme MTurk} \vspace{1cm}
+>>>>>>> 04838c6e7356302d5e70acdf0904bdae1e226711
       
        \begin{center}
          \includegraphics[width=1\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/MTurk_turks.png}
@@ -1225,8 +1349,12 @@ girlsMeanAge <- meanGirls(MrXOwnData)
        \begin{itemize}
           \item{Moyenne de 0,01 à 0,05~\$}
           \item{Recommandé \~ salaire minimum}
+<<<<<<< HEAD
           \item{Frais de traitement de 20~\%}
           \item{Requester}
+=======
+          \item{Frais de traitement de 20\%}
+>>>>>>> 04838c6e7356302d5e70acdf0904bdae1e226711
         \end{itemize}
   
    \begin{flushright}
@@ -1275,6 +1403,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
     \end{flushright} 
          
     \end{frame}  
+   
         
 %%
 
@@ -1327,6 +1456,22 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/exMTurk_4}
 	        \end{center}  
 	    \end{frame}
+	    
+	   
+%%
+
+    \begin{frame}
+    
+      \frametitle{Mturk et \R} \vspace{1cm}
+      
+       \begin{itemize}
+          \item{Automatiser l'approbation des tâches}
+          \item{Insérer des tâches dont on sait le résultat}
+          \item{Insérer une radomnisation des catégories}
+        \end{itemize}
+         
+    \end{frame}  
+    
     
 %%
 
@@ -1337,7 +1482,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
     Approche systématique et transparente pour appréhender la littérature
     
         \begin{itemize}
-          \item{Élaboration et déploiement d'une stratége de recherche documentaire}
+          \item{Élaboration et déploiement d'une stratégie de recherche documentaire}
           \item{Collecte d'un large corpus de références académiques}
           \item{Tri et codage des références}
           \item{Analyses des caractéristiques de la littérature dans le champ de recherche}
@@ -1431,7 +1576,11 @@ girlsMeanAge <- meanGirls(MrXOwnData)
     
         \begin{itemize}
           \item{Coder dans l'optique de pouvoir utiliser le code pour plusieurs projets}
+<<<<<<< HEAD
           \item{Mise à jour automatique des visualisations graphiques lorsque les données changent}
+=======
+          \item{Mise à jour automatique des visalisations graphiques lorsque les données changent}
+>>>>>>> 04838c6e7356302d5e70acdf0904bdae1e226711
           \item{Possibilités de visualisations graphiques}
         \end{itemize}
 	
