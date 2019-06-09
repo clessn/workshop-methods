@@ -332,23 +332,6 @@ class: left, top
 - ... et la logique est similaire.
 
 ---
-class: left, top
-
-# Et les désavantages?
-
---
-
-- La communauté est beaucoup plus petite
-
---
-
-- Moins de _packages_ disponibles afin de polir l'esthétique des documents...
-
---
-
-- ... donc il faut se salir les mains un peu!
-
----
 class: center, middle, inverse
 
 # Vous n'êtes pas encore convaincu-e-s?
