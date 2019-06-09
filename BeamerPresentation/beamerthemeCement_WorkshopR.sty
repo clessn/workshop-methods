@@ -185,3 +185,18 @@
         %%%%\fill[color=CementHighlight] (11.8cm, 4cm) rectangle(-1cm,0.285cm); % For the progression bar background
 	\end{tikzpicture}
 }
+
+% add subsection titles
+\AtBeginSubsection{\frame{\subsectionpage}}
+\setbeamertemplate{subsection page}
+{
+    %\setcounter{framenumber}{1}
+    \begin{tikzpicture}
+		% set up the entire slide as the canvas
+		\useasboundingbox (0,0) rectangle(10.8cm, 9.3cm); %rectangle(\the\paperwidth,\the\paperheight);
+		\fill[color=CementMainColor] (-1cm, -0.3cm) rectangle(12.8cm, 9.9cm); % Background
+		%%%%\fill[color=CementWhite] (-1cm, 4.9cm) rectangle(11.8cm, 6.9cm); % The rectangle over the text
+		\node[text width=9cm,align=center] at (5.4cm, 5.9cm) {\color{CementHighlight}\Huge\textbf{\insertsubsection}};
+        %%%%\fill[color=CementHighlight] (11.8cm, 4cm) rectangle(-1cm,0.285cm); % For the progression bar background
+	\end{tikzpicture}
+}
