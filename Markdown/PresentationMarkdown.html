@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>R Markdown</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Maxime Blanchard" />
+    <meta name="date" content="2019-06-10" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""&gt;
+  &lt;head&gt;
+    &lt;title&gt;R Markdown&lt;/title&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta name="author" content="Maxime Blanchard" /&gt;
+    &lt;meta name="date" content="2019-06-10" /&gt;
+    &lt;link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" /&gt;
+    &lt;link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" /&gt;
+    &lt;script src="libs/htmlwidgets-1.3/htmlwidgets.js"&gt;&lt;/script&gt;
+    &lt;script src="libs/viz-0.3/viz.js"&gt;&lt;/script&gt;
+    &lt;link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" /&gt;
+    &lt;script src="libs/grViz-binding-1.0.1/grViz.js"&gt;&lt;/script&gt;
+    &lt;script src="libs/jquery-1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" /&gt;
+    &lt;script src="libs/leaflet-1.3.1/leaflet.js"&gt;&lt;/script&gt;
+    &lt;link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" /&gt;
+    &lt;script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"&gt;&lt;/script&gt;
+    &lt;script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"&gt;&lt;/script&gt;
+    &lt;link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" /&gt;
+    &lt;script src="libs/leaflet-binding-2.0.2/leaflet.js"&gt;&lt;/script&gt;
+    &lt;link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" /&gt;
+    &lt;script src="libs/datatables-binding-0.6/datatables.js"&gt;&lt;/script&gt;
+    &lt;link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" /&gt;
+    &lt;link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" /&gt;
+    &lt;script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"&gt;&lt;/script&gt;
+    &lt;link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" /&gt;
+    &lt;script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;textarea id="source"&gt;
+
+class: inverse, center, middle
+
+&amp;lt;style type="text/css"&amp;gt;
+body, td {
+   font-size: 14px;
+}
+code.r{
+  font-size: 11px;
+}
+pre {
+  font-size: 20px
+}
+&amp;lt;/style&amp;gt;
+
+
+
+&amp;lt;img src="figures/rmarkdown-200x232@2x.png" width="150px"/&amp;gt;
+
+# R Markdown
+
+.large[Maxime Blanchard | Workshop CLESSN | 10 juin 2019]
+
+---
+class: left, top
+
+.center[
+# C'est quoi?
+]
+
+---
+class: left, top
+
+.center[
+# C'est quoi?
+]
+
+.pull-left[
+&lt;div id="htmlwidget-239ab792dc43f5ee687d" style="width:504px;height:504px;" class="grViz html-widget"&gt;&lt;/div&gt;
+&lt;script type="application/json" data-for="htmlwidget-239ab792dc43f5ee687d"&gt;{"x":{"diagram":"\ndigraph boxes_and_circles {\n\n  # a \"graph\" statement\n  graph [overlap = true, fontsize = 4]\n\n  # several \"node\" statements\n  node [shape = box,\n        fontname = Helvetica]\n  R; LaTeX; CSS; HTML; Texte; HTML_; PDF; Word\n\n  node [shape = circle,\n        fixedsize = true,\n        width = 0.9] // sets as circles\n  Rmd\n\n  # several \"edge\" statements\n  R-&gt;Rmd LaTeX-&gt;Rmd CSS-&gt;Rmd HTML-&gt;Rmd Texte-&gt;Rmd\n  Rmd-&gt;PDF Rmd-&gt;HTML_  Rmd-&gt;Word\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}&lt;/script&gt;
+]
+
+--
+
+.pull-right[
+### Concrètement, ça donne quoi?
+]
+
+---
+class: left, top
+
+.center[
+# C'est quoi?
+]
+
+.pull-left[
+&lt;div id="htmlwidget-3838c7346cc24ad38be0" style="width:504px;height:504px;" class="grViz html-widget"&gt;&lt;/div&gt;
+&lt;script type="application/json" data-for="htmlwidget-3838c7346cc24ad38be0"&gt;{"x":{"diagram":"\ndigraph boxes_and_circles {\n\n  # a \"graph\" statement\n  graph [overlap = true, fontsize = 4]\n\n  # several \"node\" statements\n  node [shape = box,\n        fontname = Helvetica]\n  R; LaTeX; CSS; HTML; Texte; HTML_; PDF; Word\n\n  node [shape = circle,\n        fixedsize = true,\n        width = 0.9] // sets as circles\n  Rmd\n\n  # several \"edge\" statements\n  R-&gt;Rmd LaTeX-&gt;Rmd CSS-&gt;Rmd HTML-&gt;Rmd Texte-&gt;Rmd\n  Rmd-&gt;PDF Rmd-&gt;HTML_  Rmd-&gt;Word\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}&lt;/script&gt;
+]
+
+.pull-right[
+### Concrètement, ça donne quoi?
+
+- Permet de centraliser la recherche
+]
+
+---
+class: left, top
+
+.center[
+# C'est quoi?
+]
+
+.pull-left[
+&lt;div id="htmlwidget-2685d98f4f9e47b54df6" style="width:504px;height:504px;" class="grViz html-widget"&gt;&lt;/div&gt;
+&lt;script type="application/json" data-for="htmlwidget-2685d98f4f9e47b54df6"&gt;{"x":{"diagram":"\ndigraph boxes_and_circles {\n\n  # a \"graph\" statement\n  graph [overlap = true, fontsize = 4]\n\n  # several \"node\" statements\n  node [shape = box,\n        fontname = Helvetica]\n  R; LaTeX; CSS; HTML; Texte; HTML_; PDF; Word\n\n  node [shape = circle,\n        fixedsize = true,\n        width = 0.9] // sets as circles\n  Rmd\n\n  # several \"edge\" statements\n  R-&gt;Rmd LaTeX-&gt;Rmd CSS-&gt;Rmd HTML-&gt;Rmd Texte-&gt;Rmd\n  Rmd-&gt;PDF Rmd-&gt;HTML_  Rmd-&gt;Word\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}&lt;/script&gt;
+]
+
+.pull-right[
+### Concrètement, ça donne quoi?
+
+- Permet de centraliser la recherche
+
+- Offre une flexibilité incomparable
+]
+
+---
+class: left, top
+
+.center[
+# C'est quoi?
+]
+
+.pull-left[
+&lt;div id="htmlwidget-f7577c7235b3422864f4" style="width:504px;height:504px;" class="grViz html-widget"&gt;&lt;/div&gt;
+&lt;script type="application/json" data-for="htmlwidget-f7577c7235b3422864f4"&gt;{"x":{"diagram":"\ndigraph boxes_and_circles {\n\n  # a \"graph\" statement\n  graph [overlap = true, fontsize = 4]\n\n  # several \"node\" statements\n  node [shape = box,\n        fontname = Helvetica]\n  R; LaTeX; CSS; HTML; Texte; HTML_; PDF; Word\n\n  node [shape = circle,\n        fixedsize = true,\n        width = 0.9] // sets as circles\n  Rmd\n\n  # several \"edge\" statements\n  R-&gt;Rmd LaTeX-&gt;Rmd CSS-&gt;Rmd HTML-&gt;Rmd Texte-&gt;Rmd\n  Rmd-&gt;PDF Rmd-&gt;HTML_  Rmd-&gt;Word\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}&lt;/script&gt;
+]
+
+.pull-right[
+### Concrètement, ça donne quoi?
+
+- Permet de centraliser la recherche
+
+- Offre une flexibilité incomparable
+
+- La lecture des manuscripts est simplifiée/rendue plus rapide
+]
+
+---
+class: left, top
+
+.center[
+# C'est quoi?
+]
+
+.pull-left[
+&lt;div id="htmlwidget-e99fc3fa6f3eb2054011" style="width:504px;height:504px;" class="grViz html-widget"&gt;&lt;/div&gt;
+&lt;script type="application/json" data-for="htmlwidget-e99fc3fa6f3eb2054011"&gt;{"x":{"diagram":"\ndigraph boxes_and_circles {\n\n  # a \"graph\" statement\n  graph [overlap = true, fontsize = 4]\n\n  # several \"node\" statements\n  node [shape = box,\n        fontname = Helvetica]\n  R; LaTeX; CSS; HTML; Texte; HTML_; PDF; Word\n\n  node [shape = circle,\n        fixedsize = true,\n        width = 0.9] // sets as circles\n  Rmd\n\n  # several \"edge\" statements\n  R-&gt;Rmd LaTeX-&gt;Rmd CSS-&gt;Rmd HTML-&gt;Rmd Texte-&gt;Rmd\n  Rmd-&gt;PDF Rmd-&gt;HTML_  Rmd-&gt;Word\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}&lt;/script&gt;
+]
+
+.pull-right[
+### Concrètement, ça donne quoi?
+
+- Permet de centraliser la recherche
+
+- Offre une flexibilité incomparable
+
+- La lecture des manuscripts est simplifiée/rendue plus rapide
+
+### Le principal avantage
+
+- _"Submissions are only accepted in Microsoft Word format"_... ne soyez plus **jamais** pris au dépourvu!
+]
+
+---
+class: center, top
+
+# Plus compliqué que LaTeX?
+
+--
+
+&amp;lt;img src="PresentationMarkdown_files/figure-html/unnamed-chunk-6-1.png" width="576" /&amp;gt;
+
+---
+class: inverse, center, middle
+
+# Un (très) bref exemple
+
+---
+class: left, top
+
+# Et la courbe d'apprentissage?
+
+--
+
+### Pour les débutants
+
+- Plus simple que d'apprendre LaTeX
+
+--
+
+### Pour ceux qui connaissent LaTeX
+
+- Simplement l'apprentissage d'un nouveau language, mais...
+
+--
+
+- ... les connaissances de LaTeX s'exportent dans Markdown...
+
+--
+
+- ... et la logique est similaire.
+
+---
+class: center, middle, inverse
+
+# Vous n'êtes pas encore convaincu-e-s?
+
+---
+class: center, middle, inverse
+
+# Bonus
+
+---
+class: center, top
+
+## Pourquoi pas présenter une carte?
+
+--
+
+.left-column[
+.large[Université Laval]
+]
+
+.right-column[
+&lt;div id="htmlwidget-d98c810ef90659069b87" style="width:504px;height:504px;" class="leaflet html-widget"&gt;&lt;/div&gt;
+&lt;script type="application/json" data-for="htmlwidget-d98c810ef90659069b87"&gt;{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&amp;copy; &lt;a href=\"http://openstreetmap.org\"&gt;OpenStreetMap&lt;\/a&gt; contributors, &lt;a href=\"http://creativecommons.org/licenses/by-sa/2.0/\"&gt;CC-BY-SA&lt;\/a&gt;"}]}],"setView":[[46.781849,-71.274217],17,[]]},"evals":[],"jsHooks":[]}&lt;/script&gt;
+]
+
+---
+class: left, top
+
+## Code + output, pour enseigner?
+
+.pull-left[
+```r
+fun.1 &amp;lt;- function(x) x
+fun.2 &amp;lt;- function(x) x^2
+
+ggplot(data=data.frame(x=0), mapping=aes(x=x)) +
+  stat_function(fun=fun.1, color="grey60") +
+  stat_function(fun=fun.2) +
+  scale_y_continuous(limits=c(0,2)) +
+  scale_x_continuous(limits=c(0,2)) +
+  labs(x="Real Distance", y="Perceived\nDistance") +
+  annotate("text", x=1.8, y=1.5, label="True\nrelationship", size=2.7) +
+  annotate("text", x=1.1, y=1.95, label="Expected\nrelationship", size=2.7) +
+  theme_classic() +
+  theme(axis.ticks=element_blank(),
+        axis.text=element_blank(),
+        axis.title=element_text(size=10),
+        axis.title.y=element_text(angle=0, vjust=1),
+        axis.title.x=element_text(angle=0, hjust=1))
+```
+]
+
+---
+class: left, top
+
+## Code + output, pour enseigner?
+
+.pull-left[
+```r
+fun.1 &amp;lt;- function(x) x
+fun.2 &amp;lt;- function(x) x^2
+
+ggplot(data=data.frame(x=0), mapping=aes(x=x)) +
+  stat_function(fun=fun.1, color="grey60") +
+  stat_function(fun=fun.2) +
+  scale_y_continuous(limits=c(0,2)) +
+  scale_x_continuous(limits=c(0,2)) +
+  labs(x="Real Distance", y="Perceived\nDistance") +
+  annotate("text", x=1.8, y=1.5, label="True\nrelationship", size=2.7) +
+  annotate("text", x=1....
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
