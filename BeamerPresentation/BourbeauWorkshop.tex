@@ -4,8 +4,7 @@
 \usetheme{Cement_WorkshopR}
 \usepackage{hyperref}
 
-\title{\R + \LaTeX}
-\subtitle{Une très brève introduction}
+\title{Atelier de familiarisation aux sciences sociales numériques}
 %\author{Yannick Dufresne, Ph.D.}
 \date{10 juin 2019}
 
@@ -22,6 +21,9 @@
 % 	\setcounter{showSlideNumbers}{0}
 
 %%% BEGINNING OF THE PRESENTATION
+\section{Bloc 1: philosophie du code source ouvert et introduction à la programmation}
+\subsection{Présentation générale}
+\emph{Catherine Ouellet}
 
     \begin{frame}
         \frametitle{Objectifs et philosophie}
@@ -36,6 +38,9 @@
             \item<4-> Philosophie: Les outils \emph{avant} la méthode
         \end{itemize}
     \end{frame}
+
+\subsection{Installation et présentation de RStudio, \R et \LaTeX}
+\emph{Alexandre Fortier-Chouinard}
 
    \begin{frame}
             \frametitle{Installation \\ \vspace{0.2cm} 2 langages, 1 logiciel}
@@ -263,7 +268,7 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
         \end{center}  
     \end{frame}
 
-\section{\R {} Les bases de la programmation}
+\subsubsection{\R {} Les bases de la programmation}
 
     \begin{frame}
         \frametitle{\R $=$ langage de programmation}
@@ -309,7 +314,7 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
         \end{itemize}
     \end{frame}
 
-\section{\R {} Structure des données}
+\subsubsection{\R {} Structure des données}
 
     \begin{frame}
         \frametitle{Structure des données}
@@ -404,7 +409,7 @@ Data <- data.frame(vectorString, vectorNumerical, vectorBoolean, c(23,17,32,56))
 
 
 
-\section{Fonctions}
+\subsubsection{Fonctions}
 
     \begin{frame}
         \frametitle{Fonctions de base \R}
@@ -548,7 +553,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
         \end{center} 
     \end{frame}
    
-\section{Assez de blabla... C'est le temps de coder!} 
+\subsubsection{Assez de blabla... C'est le temps de coder!} 
   
 %     \begin{frame}[fragile=singleslide]
 %         \frametitle{Let's code! \\\vspace{0.2cm} Install and load some \emph{packages}...}
@@ -590,7 +595,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 %     
 %     
 % 
-% \section{Create and Clean Variables}
+% \subsubsection{Create and Clean Variables}
 % 
 % 
 %     \begin{frame}[fragile=singleslide]
@@ -655,7 +660,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 % 
 % 
 % 
-% \section{\R Graphics and a Pinch of \LaTeX}
+% \subsubsection{\R Graphics and a Pinch of \LaTeX}
 % 
 %     \begin{frame}[fragile=singleslide]
 %         \frametitle{Let's code! Creating a Histogram}
@@ -678,9 +683,12 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 % 
 % 
 % 
-% \section{End.}
+% \subsubsection{End.}
 
 %%%%%%%%%%% Adrien's part ! :) 
+\subsection{Présentation de Dropbox, GitHub, Git et Vim}
+\emph{Adrien Cloutier}
+
 	
 	  \begin{frame}
 	        \frametitle{La logique de Dropbox} \vspace{1cm}   
@@ -781,10 +789,19 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 
 %%%%%%%%%%% End of Adrien's part ! :(
 
+\section{Bloc 2: exemples d’utilisation de \R et \LaTeX et travail supervisé}
+\subsection{Exemples pratiques d’utilisation de \LaTeX et \R}
+\emph{Alexis Bibeau}
 
-\section{Wordpress et HTML}
+\subsection{Exercice individuel supervisé de codage avec \R}
+\emph{Alexis Bibeau}
+
+\section{Bloc 3: autres méthodes et ouverture vers l’avenir}
+\subsection{Site web, introduction à Wordpress et HTML}
+\emph{William Poirier}
+
+
 \begin{frame}
-        \frametitle{Plan de la présentation}
         \begin{itemize}
             \item<2-> Wordpress
                       \begin{enumerate}
@@ -913,7 +930,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
           \begin{itemize}
             \item<2-> La structure du langage HTML
               \begin{itemize}
-                \item À la façon de \LaTex
+                \item À la façon de \LaTeX
                 \item "<body> </body>" = ouvre et ferme le document
                 \item "<p> </p>" = ouvre et ferme un paragraphe
                 \item "<h1-6> </h1-6>" = un entête
@@ -923,12 +940,18 @@ girlsMeanAge <- meanGirls(MrXOwnData)
               \end{itemize}
             \end{itemize}
       \end{frame}
-     \section{Démonstration}
+     \subsubsection{Démonstration}
      
+\subsection{Langages de balisage et R Markdown}
+\emph{Maxime Blanchard}
+
      
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \section{Analyse textuelle: \\
+\subsection{Analyse textuelle}
+\emph{Nadjim Fréchet}
+
+ \subsubsection{Analyse textuelle: \\
        Parce que lire c'est long et plate!}
      
 %% 
@@ -1164,14 +1187,13 @@ girlsMeanAge <- meanGirls(MrXOwnData)
  \end{frame}
  
  %%
- \section{Une petite démo?}
+ \subsubsection{Une petite démo?}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Shiny, MTurk et scoping}
+\emph{Adrien Cloutier et Camille Tremblay-Antoine}
 
-\section{Possibilités pour pousser plus loin nos recherches}
-
-%%
 
     \begin{frame}
     
@@ -1184,8 +1206,6 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 
     \begin{frame}
     
-        \frametitle{Plan de la présentation} \vspace{1cm}
-        
         \begin{itemize}
         
         \item{Des outils qui s'offrent à nous}
@@ -1696,7 +1716,10 @@ girlsMeanAge <- meanGirls(MrXOwnData)
     \end{frame}  
     
 
-\section{Et maintenant, comment on apprend?}
+\subsection{Stack Overflow, Slack et DataCamp}
+\emph{Marc-Antoine Rancourt}
+
+\subsubsection{Et maintenant, comment on apprend?}
 
     \begin{frame}
     
@@ -1708,8 +1731,6 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 
     \begin{frame}
     
-        \frametitle{Plan de la présentation} \vspace{1cm}
-        
         \begin{itemize}
         
         \item{Apprentissage}
@@ -2083,7 +2104,8 @@ girlsMeanAge <- meanGirls(MrXOwnData)
   \end{frame}  
   
   
-  \section{Inter-university Consortium for Political and Social Research (ICPSR)}
+\subsection{ICPSR et conclusion}
+\emph{Catherine Ouellet}
 
 
 \begin{frame}{C'est quoi?}
@@ -2114,7 +2136,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 \end{frame}
 
 
-\section{Démystifier les idées préconçues}
+\subsubsection{Démystifier les idées préconçues}
 
 \begin{frame}{Démystifier les idées préconçues}
 \begin{itemize}
@@ -2206,7 +2228,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 
 
 
-\section{Une fois là-bas}
+\subsubsection{Une fois là-bas}
 
 \begin{frame}{Workshops}
   \begin{itemize}
@@ -2243,7 +2265,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 \end{frame}
 
 
-\section{\$\$\$\$}
+\subsubsection{\$\$\$\$}
 
 \begin{frame}{Opportunités de financement}
 
