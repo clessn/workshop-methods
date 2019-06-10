@@ -20,12 +20,52 @@
 % 	\setcounter{showProgressBar}{1}
 % 	\setcounter{showSlideNumbers}{0}
 
+\begin{frame}
+      \frametitle{Plan de la présentation}
+      \begin{itemize}
+        \item \textbf{Bloc 1: philosophie du code source ouvert et introduction à la programmation}
+          \begin{enumerate}
+            \item Présentation générale \textit{(Catherine Ouellet)}
+            \item Installation et présentation de RStudio, \R et \LaTeX{} \textit{(Alexandre Fortier-Chouinard)}
+            \item Présentation de Dropbox, GitHub, Git et Vim \textit{(Adrien Cloutier)}
+          \end{enumerate}
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Plan de la présentation}
+        \begin{itemize}
+        \item \textbf{Bloc 2: exemples d'utilisation de \R et \LaTeX{} et travail supervisé}
+          \begin{enumerate}
+            \item Exemples pratiques d'utilisation de \LaTeX{} et \R \textit{(Alexis Bibeau)}
+            \item Exercice individuel supervisé de codage avec \R \textit{(Alexis Bibeau)}
+          \end{enumerate}
+      \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+    \frametitle{Plan de la présentation}
+     \begin{itemize}
+      \item \textbf{Bloc 3: autres méthodes et ouverture vers l'avenir}
+          \begin{enumerate}
+            \item Site web, introduction à WordPress et HTML \textit{(William Poirier)}
+            \item Langages de balisage et R Markdown \textit{(Maxime Blanchard)}
+            \item Analyse textuelle \textit{(Nadjim Fréchet)}
+            \item Shiny, MTurk et scoping \textit{(Adrien Cloutier et Camille Tremblay-Antoine)}
+            \item Stack Overflow, Slack et DataCamp \textit{(Marc-Antoine Rancourt)}
+            \item ICPSR et conclusion \textit{(Catherine Ouellet)}
+          \end{enumerate}
+      \end{itemize}
+    \end{frame}
+    
+    
+  
+
+
 %%% BEGINNING OF THE PRESENTATION
 \section{Bloc 1: philosophie du code source ouvert et introduction à la programmation}
-\subsection{Présentation générale}
-\emph{Catherine Ouellet}
-
-<<<<<<< HEAD
+\subsection{Présentation générale \\ \small\emph{Catherine Ouellet}}
+%\emph{Catherine Ouellet}
 
 \begin{frame}{}
     \vspace{-0.5cm}
@@ -78,63 +118,9 @@
     %         \item<4-> Philosophie: Les outils \emph{avant} la méthode
     %     \end{itemize}
     % \end{frame}
-=======
-    \begin{frame}
-      \frametitle{Plan de la présentation}
-      \begin{itemize}
-        \item \textbf{Bloc 1: philosophie du code source ouvert et introduction à la programmation}
-          \begin{enumerate}
-            \item Présentation générale \textit{(Catherine Ouellet)}
-            \item Installation et présentation de RStudio, R et LaTeX \textit{(Alexandre Fortier-Chouinard)}
-            \item Présentation de Dropbox, GitHub, Git et Vim \textit{(Adrien Cloutier)}
-          \end{enumerate}
-        \end{itemize}
-    \end{frame}
-    
-    \begin{frame}
-      \frametitle{Plan de la présentation}
-        \begin{itemize}
-        \item \textbf{Bloc 2: exemples d'utilisation de \R et \LaTeX et travail supervisé}
-          \begin{enumerate}
-            \item Exemples pratiques d'utilisation de LaTeX et R \textit{(Alexis Bibeau)}
-            \item Exercice individuel supervisé de codage avec R \textit{(Alexis Bibeau)}
-          \end{enumerate}
-      \end{itemize}
-    \end{frame}
-    
-    \begin{frame}
-    \frametitle{Plan de la présentation}
-     \begin{itemize}
-      \item \textbf{Bloc 3: autres méthodes et ouverture vers l'avenir}
-          \begin{enumerate}
-            \item Site web, introduction à WordPress et HTML \textit{(William Poirier)}
-            \item Langages de balisage et R Markdown \textit{(Maxime Blanchard)}
-            \item Analyse textuelle \textit{(Nadjim Fréchet)}
-            \item Shiny, MTurk et scoping \textit{(Adrien Cloutier et Camille Tremblay-Antoine)}
-            \item Stack Overflow, Slack et DataCamp \textit{(Marc-Antoine Rancourt)}
-            \item ICPSR et conclusion \textit{(Catherine Ouellet)}
-          \end{enumerate}
-      \end{itemize}
-    \end{frame}
-    
-    
-    \begin{frame}
-        \frametitle{Objectifs et philosophie}
-        \begin{itemize}
-            \item<2-> Installation:  RStudio + \R + \LaTeX
-            \item<3-> Résumé de la journée: \R et \LaTeX
-                      \begin{enumerate}
-                        \item Le monde de l'\emph{Open Source}
-                        \item Quelques bases de programmation \R
-                        \item Faire des graphiques en \R avec \LaTeX
-                      \end{enumerate}
-            \item<4-> Philosophie: Les outils \emph{avant} la méthode
-        \end{itemize}
-    \end{frame}
->>>>>>> 775322c8ed5c37193d7a41137ac9df80a76d0388
 
-\subsection{Installation et présentation de RStudio, \R et \LaTeX}
-\emph{Alexandre Fortier-Chouinard}
+    
+\subsection{Installation et présentation de RStudio, \R et \LaTeX \\ \small\emph{Alexandre Fortier-Chouinard}}
 
    \begin{frame}
             \frametitle{Installation \\ \vspace{0.2cm} 2 langages, 1 logiciel}
@@ -362,7 +348,12 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
         \end{center}  
     \end{frame}
 
-\subsubsection{\R {} Les bases de la programmation}
+    \begin{frame}
+     \begin{center}
+          \Huge \R {} Les bases de la programmation
+      \end{center}
+    \end{frame}
+
 
     \begin{frame}
         \frametitle{\R $=$ langage de programmation}
@@ -408,7 +399,11 @@ stargazer(model1, model2, model3, model4, model5, model6, model7)
         \end{itemize}
     \end{frame}
 
-\subsubsection{\R {} Structure des données}
+\begin{frame}
+     \begin{center}
+          \Huge \R {} Structure des données
+      \end{center}
+    \end{frame}
 
     \begin{frame}
         \frametitle{Structure des données}
@@ -501,9 +496,12 @@ Data <- data.frame(vectorString, vectorNumerical, vectorBoolean, c(23,17,32,56))
     \end{frame}
 
 
+\begin{frame}
+     \begin{center}
+          \Huge Fonctions
+      \end{center}
+    \end{frame}
 
-
-\subsubsection{Fonctions}
 
     \begin{frame}
         \frametitle{Fonctions de base \R}
@@ -647,7 +645,14 @@ girlsMeanAge <- meanGirls(MrXOwnData)
         \end{center} 
     \end{frame}
    
-\subsubsection{Assez de blabla... C'est le temps de coder!} 
+   
+   
+\begin{frame}
+     \begin{center}
+          \Huge Assez de blabla... C'est le temps de coder! 
+      \end{center}
+\end{frame}
+
   
 %     \begin{frame}[fragile=singleslide]
 %         \frametitle{Let's code! \\\vspace{0.2cm} Install and load some \emph{packages}...}
@@ -780,8 +785,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 % \subsubsection{End.}
 
 %%%%%%%%%%% Adrien's part ! :) 
-\subsection{Présentation de Dropbox, GitHub, Git et Vim}
-\emph{Adrien Cloutier}
+\subsection{Présentation de Dropbox, GitHub, Git et Vim \\ \small\emph{Adrien Cloutier}}
 
 	
 	  \begin{frame}
@@ -881,33 +885,51 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 	        \end{center}  
 	    \end{frame}
 
-%%%%%%%%%%% End of Adrien's part ! :(
+\begin{frame}
+\begin{recipe}
+\begin{center}
+\Huge Pause repas
+\end{center}
+\end{recipe}
+\end{frame}
 
-\section{Bloc 2: exemples d’utilisation de \R et \LaTeX et travail supervisé}
-\subsection{Exemples pratiques d’utilisation de \LaTeX et \R}
-\emph{Alexis Bibeau}
+
+
+
+
+\section{Bloc 2: exemples d’utilisation de \R et \LaTeX{} et travail supervisé}
+\subsection{Exemples pratiques d’utilisation de \LaTeX{} et \R \\ \small\emph{Alexis Bibeau}}
 
 \subsection{Exercice individuel supervisé de codage avec \R}
-\emph{Alexis Bibeau}
+
+
+
+\begin{frame}
+\begin{recipe}
+\begin{center}
+\Huge Pause café
+\end{center}
+\end{recipe}
+\end{frame}
+
 
 \section{Bloc 3: autres méthodes et ouverture vers l’avenir}
-\subsection{Site web, introduction à Wordpress et HTML}
-\emph{William Poirier}
+\subsection{Site web, introduction à Wordpress et HTML \\ \small\emph{William Poirier}}
 
 
 \begin{frame}
         \begin{itemize}
-            \item<2-> Wordpress
+            \item Wordpress
                       \begin{enumerate}
                         \item Astra
                         \item Elementor
                       \end{enumerate}
-            \item<3-> HTML
+            \item<2-> HTML
                       \begin{enumerate} 
                         \item La création d'Internet
                         \item Notions de base en programmation HTML
                       \end{enumerate}
-            \item<4-> Démonstration
+            \item<3-> Démonstration
         \end{itemize}
     \end{frame}
     
@@ -951,7 +973,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
           \item<2-> Elementor c'est quoi? 
             \begin{itemize}
               \item Constructeur de pages ou \textit{page builder}
-              \item Existance propre, mais intégré à Astra
+              \item Existence propre, mais intégré à Astra
               \item Offre une interface facile d'utilisation
             \end{itemize}
         \end{itemize}
@@ -1034,19 +1056,31 @@ girlsMeanAge <- meanGirls(MrXOwnData)
               \end{itemize}
             \end{itemize}
       \end{frame}
-     \subsubsection{Démonstration}
+      
+      \begin{frame}
+     \begin{center}
+          \Huge Démonstration
+      \end{center}
+\end{frame}
+
      
-\subsection{Langages de balisage et R Markdown}
-\emph{Maxime Blanchard}
+     
+\subsection{Langages de balisage et R Markdown \\ \small\emph{Maxime Blanchard}}
 
      
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Analyse textuelle}
-\emph{Nadjim Fréchet}
+\subsection{Analyse textuelle \\ \small\emph{Nadjim Fréchet}}
 
- \subsubsection{Analyse textuelle: \\
-       Parce que lire c'est long et plate!}
+
+\begin{frame}
+     \begin{center}
+          \Huge Analyse textuelle: \\
+       Parce que lire c'est long et plate!
+      \end{center}
+\end{frame}
+
+
      
 %% 
 
@@ -1165,12 +1199,20 @@ girlsMeanAge <- meanGirls(MrXOwnData)
  \end{frame}
  
  %%
- \subsubsection{Une petite démo?}
+ 
+ \begin{frame}
+     \begin{center}
+          \Huge Une petite démo?
+
+      \end{center}
+\end{frame}
+
+
+ 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Shiny, MTurk et scoping}
-\emph{Adrien Cloutier et Camille Tremblay-Antoine}
+\subsection{Shiny, MTurk et scoping \\ \small\emph{Adrien Cloutier et Camille Tremblay-Antoine}}
 
 
     \begin{frame}
@@ -1497,7 +1539,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
     
       \frametitle{À savoir pour plonger dans MTurk} \vspace{1cm}
       
-      Design HTML proposé, mais possiblité d'utiliser des plateformes externes
+      Design HTML proposé, mais possibilité d'utiliser des plateformes externes
        \begin{itemize}
           \item{Qualtrics}
           \item{Survey Monkey}
@@ -1694,10 +1736,16 @@ girlsMeanAge <- meanGirls(MrXOwnData)
     \end{frame}  
     
 
-\subsection{Stack Overflow, Slack et DataCamp}
-\emph{Marc-Antoine Rancourt}
+\subsection{Stack Overflow, Slack et DataCamp \\ \small\emph{Marc-Antoine Rancourt}}
 
-\subsubsection{Et maintenant, comment on apprend?}
+
+\begin{frame}
+     \begin{center}
+          \Huge Et maintenant, comment on apprend?
+      \end{center}
+\end{frame}
+
+
 
     \begin{frame}
     
@@ -2082,8 +2130,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
   \end{frame}  
   
   
-\subsection{ICPSR et conclusion}
-\emph{Catherine Ouellet}
+\subsection{ICPSR et conclusion \\ \small\emph{Catherine Ouellet}}
 
 
 \begin{frame}{C'est quoi?}
@@ -2114,7 +2161,12 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 \end{frame}
 
 
-\subsubsection{Démystifier les idées préconçues}
+\begin{frame}
+     \begin{center}
+          \Huge Démystifier les idées préconçues 
+      \end{center}
+\end{frame}
+
 
 \begin{frame}{Démystifier les idées préconçues}
 \begin{itemize}
@@ -2127,8 +2179,12 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 \end{frame}
 
 
+\begin{frame}
+     \begin{center}
+          \Huge Une fois là-bas 
+      \end{center}
+\end{frame}
 
-\subsubsection{Une fois là-bas}
 
 \begin{frame}{Workshops}
   \begin{itemize}
@@ -2154,34 +2210,36 @@ girlsMeanAge <- meanGirls(MrXOwnData)
 \end{frame}
 
 
-% \begin{frame}{Blalock Lecture Series}
-% 
-% % \begin{figure}
-% % \vspace
-% %     \centering
-% %     \includegraphics[width=0.7\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/SciComm-Arthur-Lupia-XL.jpg}
-% %     %\caption{Caption}
-% %     \label{fig:my_label3}
-% % \end{figure}
-% % \end{frame}
+\begin{frame}{Blalock Lecture Series}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/SciComm-Arthur-Lupia-XL.jpg}
+    %\caption{Caption}
+    \label{fig:my_label3}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+     \begin{center}
+          \Huge \$\$\$\$
+      \end{center}
+\end{frame}
 
 
-\subsubsection{\$\$\$\$}
-% 
-% \begin{frame}{Opportunités de financement}
-% 
-% \begin{itemize}
-% \vspace
-%     \item Bourse de formation en méthodes qualitatives ou quantitatives (Département -- 2~000~\$ -- 15 janvier 2019)
-%     \item William G. Jacoby Scholarship (ICPSR -- doctorat en sc. po -- février 2020)
-%     \item Warren E. Miller (ICPSR -- comportement électoral -- février 2020) 
-%     \item Saundra K. Schneider (ICPSR -- affaires publiques -- février 2020)
-%     \item Soutien de différents groupes de recherche \newline
-%     - GRCP (800~\$ annuel) \newline
-%     - CECD (jusqu'à 3~000~\$, 15 déc. et 15 avril) 
-% \end{itemize}
-% 
-% \end{frame}
+\begin{frame}{Opportunités de financement}
+
+\begin{itemize}
+    \item Bourse de formation en méthodes qualitatives ou quantitatives (Département -- 2~000~\$ -- 15 janvier 2019)
+    \item William G. Jacoby Scholarship (ICPSR -- doctorat en sc. po -- février 2020)
+    \item Warren E. Miller (ICPSR -- comportement électoral -- février 2020)
+    \item Saundra K. Schneider (ICPSR -- affaires publiques -- février 2020)
+    \item Soutien de différents groupes de recherche \newline
+    - GRCP (800~\$ annuel) \newline
+    - CECD (jusqu'à 3~000~\$, 15 déc. et 15 avril)
+\end{itemize}
+
+\end{frame}
 
     \begin{frame}
       \frametitle{Retour sur la journée}
@@ -2189,7 +2247,7 @@ girlsMeanAge <- meanGirls(MrXOwnData)
         \item \textbf{Bloc 1: philosophie du code source ouvert et introduction à la programmation}
           \begin{enumerate}
             \item Présentation générale
-            \item Installation et présentation de RStudio, R et LaTeX
+            \item Installation et présentation de RStudio, \R et \LaTeX
             \item Présentation de Dropbox, GitHub, Git et Vim
           \end{enumerate}
         \end{itemize}
@@ -2198,10 +2256,10 @@ girlsMeanAge <- meanGirls(MrXOwnData)
     \begin{frame}
       \frametitle{Retour sur la journée}
         \begin{itemize}
-        \item \textbf{Bloc 2: exemples d'utilisation de \R et \LaTeX et travail supervisé}
+        \item \textbf{Bloc 2: exemples d'utilisation de \R et \LaTeX{} et travail supervisé}
           \begin{enumerate}
-            \item Exemples pratiques d'utilisation de LaTeX et R
-            \item Exercice individuel supervisé de codage avec R
+            \item Exemples pratiques d'utilisation de \LaTeX{} et \R
+            \item Exercice individuel supervisé de codage avec \R
           \end{enumerate}
       \end{itemize}
     \end{frame}
@@ -2219,6 +2277,14 @@ girlsMeanAge <- meanGirls(MrXOwnData)
             \item ICPSR et conclusion
           \end{enumerate}
       \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+     \begin{center}
+          \Huge Merci. \\
+          \vspace{0.5cm}
+          \includegraphics[width=0.5\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/CLESSN.png}
+      \end{center}
     \end{frame}
     
 

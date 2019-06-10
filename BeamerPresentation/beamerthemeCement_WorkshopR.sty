@@ -18,7 +18,7 @@
 %\definecolor{CementHighlight}{RGB}{204,240,212} % Green
 %\definecolor{CementHighlight}{RGB}{242,234,203} % Beige
 %\definecolor{CementHighlight}{RGB}{242,234,203} % light blue
-\definecolor{CementFrontpageColour}{RGB}{0,0,0} % The color to display on the first and last slide
+\definecolor{CementFrontpageColour}{RGB}{255,255,255} % The color to display on the first and last slide
 
 % use Adobe's Source Pro fonts:
 % Source Serif Pro: http://store1.adobe.com/cfusion/store/html/index.cfm?store=OLS-US&event=displayFontPackage&code=1966
@@ -109,17 +109,17 @@
             \fill[color=CementFrontpageColour] (0, 0) rectangle(12.8cm, 9.9cm); % the Title full background
 
 			% draw the actual text
-            \node[text width=11.8cm,align=center] at (10.65cm, 8.5cm) {\includegraphics[width=0.3\textwidth]{../Horaire/CLESSN-Logo-BlancTransparent.png}};
+            \node[text width=11.8cm,align=center] at (8cm, 3cm) {\includegraphics[width=0.3\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/CLESSN-Logo-NoirTransparent.png}};
             %\node[text width=11.8cm,align=center] at (6.85cm, 2.6cm) {\includegraphics[width=1\textwidth]{../_Graphs/PlanDeCours1.pdf}};
-			\node[anchor=south,text width=11.8cm,inner xsep=0.5cm] at (6.5cm,6cm) {\color{CementWhite}\Huge\textbf{\inserttitle}}; % The title
-			\node[anchor=north east,text width=11.8cm,align=left] at (12.6cm,5.95cm) {\color{CementWhite}\large\insertsubtitle}; % subtitle
+			\node[anchor=south,text width=11.8cm,inner xsep=0.5cm] at (6.5cm,6cm) {\color{CementText}\Huge\textbf{\inserttitle}}; % The title
+			\node[anchor=north east,text width=11.8cm,align=left] at (12.6cm,5.95cm) {\color{CementText}\large\insertsubtitle}; % subtitle
 			%\node[above] at(6.5cm,2.1cm) {\color{CementText}\tiny };
-			\node[above] at (6.5cm,2.1cm) {\color{CementWhite}\Large\insertauthor};
+			\node[above] at (6.5cm,2.1cm) {\color{CementText}\Large\insertauthor};
       %\node[above] at (6.5cm,1.52cm) {\color{CementWhite}\large Département de Science Politique};
       %\node at(6.5cm,1.32cm) {\includegraphics[width=0.45\textwidth]{../_SharedFolder_BourbeauWorkshop/_Graphs/TwitterWhite_id}};
 
 			% add the date in the corner
-			\node[anchor=south east] at(12.8cm,0cm) {\color{CementWhite}\tiny\insertdate};
+			\node[anchor=south east] at(12.8cm,0cm) {\color{CementText}\tiny\insertdate};
 		\else %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			% NOT the title page
 			% title bar
@@ -194,9 +194,9 @@
     \begin{tikzpicture}
 		% set up the entire slide as the canvas
 		\useasboundingbox (0,0) rectangle(10.8cm, 9.3cm); %rectangle(\the\paperwidth,\the\paperheight);
-		\fill[color=CementMainColor] (-1cm, -0.3cm) rectangle(12.8cm, 9.9cm); % Background
+		\fill[color=CementHighlight] (-1cm, -0.3cm) rectangle(12.8cm, 9.9cm); % Background
 		%%%%\fill[color=CementWhite] (-1cm, 4.9cm) rectangle(11.8cm, 6.9cm); % The rectangle over the text
-		\node[text width=9cm,align=center] at (5.4cm, 5.9cm) {\color{CementHighlight}\Huge\textbf{\insertsubsection}};
+		\node[text width=9cm,align=center] at (5.4cm, 5.9cm) {\color{CementMainColor}\Large\textbf{\insertsubsection}};
         %%%%\fill[color=CementHighlight] (11.8cm, 4cm) rectangle(-1cm,0.285cm); % For the progression bar background
 	\end{tikzpicture}
 }
