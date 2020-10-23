@@ -1,0 +1,2287 @@
+%!TEX program = xelatex
+\documentclass{beamer}
+\input{BeamerMacros.tex} % Loading the macros 
+\usetheme{Cement_WorkshopR}
+\usepackage{hyperref}
+
+\title{Atelier de familiarisation aux sciences sociales numériques}
+%\author{Yannick Dufresne, Ph.D.}
+\date{10 juin 2019}
+
+%\setcounter{showSlideNumbers}{1}
+
+\begin{document}
+%     \setcounter{showProgressBar}{0}
+% 	\setcounter{showSlideNumbers}{0}
+
+	\frame{\titlepage}
+
+%     \setcounter{framenumber}{0}
+% 	\setcounter{showProgressBar}{1}
+% 	\setcounter{showSlideNumbers}{0}
+
+\begin{frame}
+      \frametitle{Plan de la présentation}
+      \begin{itemize}
+        \item \textbf{Bloc 1: philosophie du code source ouvert et introduction à la programmation}
+          \begin{enumerate}
+            \item Présentation générale \textit{(Catherine Ouellet)}
+            \item Installation et présentation de RStudio, \R et \LaTeX{} \textit{(Alexandre Fortier-Chouinard)}
+            \item Présentation de Dropbox, GitHub, Git et Vim \textit{(Adrien Cloutier)}
+          \end{enumerate}
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Plan de la présentation}
+        \begin{itemize}
+        \item \textbf{Bloc 2: exemples d'utilisation de \R et \LaTeX{} et travail supervisé}
+          \begin{enumerate}
+            \item Exemples pratiques d'utilisation de \LaTeX{} et \R \textit{(Alexis Bibeau)}
+            \item Exercice individuel supervisé de codage avec \R \textit{(Alexis Bibeau)}
+          \end{enumerate}
+      \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+    \frametitle{Plan de la présentation}
+     \begin{itemize}
+      \item \textbf{Bloc 3: autres méthodes et ouverture vers l'avenir}
+          \begin{enumerate}
+            \item Site web, introduction à WordPress et HTML \textit{(William Poirier)}
+            \item Langages de balisage et R Markdown \textit{(Maxime Blanchard)}
+            \item Analyse textuelle \textit{(Nadjim Fréchet)}
+            \item Shiny, MTurk et scoping \textit{(Adrien Cloutier et Camille Tremblay-Antoine)}
+            \item Stack Overflow, Slack et DataCamp \textit{(Marc-Antoine Rancourt)}
+            \item ICPSR et conclusion \textit{(Catherine Ouellet)}
+          \end{enumerate}
+      \end{itemize}
+    \end{frame}
+    
+    
+  
+
+
+%%% BEGINNING OF THE PRESENTATION
+\section{Bloc 1: philosophie du code source ouvert et introduction à la programmation}
+\subsection{Présentation générale \\ \small\emph{Catherine Ouellet}}
+%\emph{Catherine Ouellet}
+
+\begin{frame}{}
+    \vspace{-0.5cm}
+    \centering \huge \textbf{Pourquoi?}
+\end{frame}
+
+\begin{frame}{Ère numérique? Trois défis pour les sciences sociales}
+\vspace{1cm}
+    \begin{center}
+        \includegraphics[width=0.75\textwidth]{../_SharedFolder_workshop-methods/_Graphs/DigitalAgeEffects3}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Ère numérique? Trois défis pour les sciences sociales}
+\vspace{1cm}
+    \begin{center}
+        \includegraphics[width=0.75\textwidth]{../_SharedFolder_workshop-methods/_Graphs/DigitalAgeEffects2}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Ère numérique? Trois défis pour les sciences sociales}
+\vspace{1cm}
+    \begin{center}
+        \includegraphics[width=0.75\textwidth]{../_SharedFolder_workshop-methods/_Graphs/DigitalAgeEffects1}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Ère numérique? Trois défis pour les sciences sociales}
+\vspace{1cm}
+    \begin{center}
+        \includegraphics[width=0.75\textwidth]{../_SharedFolder_workshop-methods/_Graphs/DigitalAgeEffects0}
+    \end{center}
+\end{frame}
+
+
+%%%%%% 
+
+
+    % \begin{frame}
+    %     \frametitle{Objectifs et philosophie}
+    %     \begin{itemize}
+    %         \item<2-> Installation:  RStudio + \R + \LaTeX
+    %         \item<3-> Résumé de la journée: \R et \LaTeX
+    %                   \begin{enumerate}
+    %                     \item Le monde de l'\emph{Open Source}
+    %                     \item Quelques bases de programmation \R
+    %                     \item Faire des graphiques en \R avec \LaTeX
+    %                   \end{enumerate}
+    %         \item<4-> Philosophie: Les outils \emph{avant} la méthode
+    %     \end{itemize}
+    % \end{frame}
+
+    
+\subsection{Installation et présentation de RStudio, \R et \LaTeX \\ \small\emph{Alexandre Fortier-Chouinard}}
+
+   \begin{frame}
+            \frametitle{Installation \\ \vspace{0.2cm} 2 langages, 1 logiciel}
+            \vspace{0.5cm}
+            \begin{center}
+              \includegraphics[width=0.4\textwidth]{../_SharedFolder_workshop-methods/_Graphs/RStudio-Logo-Blue-Gradient}
+            \end{center} 
+            \begin{enumerate}
+                \item<2-> \R: https://cran.rstudio.com
+                \item<3-> \LaTeX: www.latex-project.org/get/
+                \item<4-> RStudio: www.rstudio.com/products/rstudio/download/
+            \end{enumerate}
+    \end{frame}
+    
+    \begin{frame}
+            \frametitle{Installation \\ \vspace{0.2cm} 2 langages, 1 logiciel}
+            \vspace{2.3cm}
+            \begin{center}
+              \includegraphics[width=0.97\textwidth]{../_SharedFolder_workshop-methods/_Graphs/RStudio-Screenshot}
+            \end{center} 
+    \end{frame}
+
+
+
+
+
+
+    \begin{frame}
+        \frametitle{Pourquoi \R?}  \vspace{1.2cm}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Pourquoi \R?}  \vspace{1.2cm}
+        \begin{center}
+            \includegraphics[width=0.85\textwidth]{../_SharedFolder_workshop-methods/_Graphs/statPackage-evolution3}
+        \end{center} 
+    \end{frame}
+    
+     \begin{frame}
+        \frametitle{Pourquoi \R?}  \vspace{1.2cm}
+        \begin{center}
+            Stack Overflow Traffic to Programming Languages
+            \includegraphics[width=0.9\textwidth]{../_SharedFolder_workshop-methods/_Graphs/ProgressionR}
+        \end{center} 
+    \end{frame}
+
+   \begin{frame}
+        \frametitle{Pourquoi \R? Les raisons d'aimer}
+        \begin{enumerate}
+            \item{Gratisssss}
+            \item{Disponible pour tous les systèmes d'exploitation}
+            \item{Graphiques + tableaux + \LaTeX}
+            \item{Popularité + \emph{packages} (extensions)}
+            \item{\emph{Open Source} (code source ouvert): développé par et pour les chercheurs}
+        \end{enumerate}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Pourquoi \R? Les raisons de détester}
+        \begin{enumerate}
+            \item{Programmer du code = courbe d'apprentissage raide}
+            \item{Développement éclectique, parfois chaotique}
+        \end{enumerate}
+    \end{frame}
+    
+
+
+    \begin{frame}
+        \frametitle{Pourquoi \LaTeX?} \vspace{1cm}   
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Pourquoi \LaTeX? Les raisons d'aimer} \vspace{1cm}
+        \begin{itemize}
+           \item{\href{https://scholar.google.ca}{Bibliographie: \BibTeX}}
+           \item{Table des matières, tableaux, etc.}
+           \item{S'occupe automatiquement des tableaux, graphiques, etc.}
+           \item{De beaux gabarits}
+           \item{Code + \emph{Open Source} = une large communauté d'experts en ligne}
+        \end{itemize} 
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Pourquoi \LaTeX? Les raisons de détester} \vspace{1cm}
+        \begin{itemize}
+           \item{Difficile à apprendre... Très difficile. Mais les bases sont simples}
+           \item{Incompatible avec Word}
+           \item{\sout{Pas d'autocorrecteur}}
+           \item{Pas de <<~suivi des corrections~>> et de trucs comme ça}
+           \item{Le document final est uniquement disponible après la compilation du code}
+           \item{Certaines revues scientifiques n'acceptent pas les soumissions en \LaTeX{}... d'autres les encouragent}
+        \end{itemize} 
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{\LaTeX: Un beau tableau} \vspace{1cm}   
+            \begin{table}
+              \centering
+              \normalsize
+              \caption{\large{Table 1. Length of Bananas and Apples}}
+              \begin{tabular}{lrr}
+                  Quantile & Bananas & Apples\\\hline 
+                  0\% & 59 & 44\\
+                  50\% &69&64\\
+                  100\% & 77 & 71\\
+              \end{tabular}
+              \label{tab:bananespommes}
+            \end{table}  
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{\LaTeX: Le code du beau tableau} \vspace{1cm}   
+        \begin{center}
+           \includegraphics[width=0.95\textwidth]{../_SharedFolder_workshop-methods/_Graphs/LaTeX-TableauCodeENG}
+        \end{center}  
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{\LaTeX} \vspace{1cm}   
+        \begin{center}
+           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/ComplexTableLaTeX}
+        \end{center}  
+    \end{frame}
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{\LaTeX: Code (Partie 1)} \vspace{0.5cm} 
+        \begin{code}
+% Table created by stargazer v.5.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, Jan 07, 2015 - 22:20:00
+\begin{table}[!htbp] \centering 
+  \caption{Tests des hypothèses} 
+  \label{} 
+\scriptsize 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline \\[-1.8ex] 
+\\[-1.8ex] & \multicolumn{7}{c}{Vote pour le NPD} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7)\\ 
+\hline \\[-1.8ex] 
+  Évaluation du chef NPD &  &  &  &  & 3.87$^{***}$ & 3.81$^{***}$ & 3.17$^{***}$ \\ 
+  &  &  &  &  & (0.22) & (0.24) & (0.52) \\ 
+  Droite idéologique &  &  & $-$2.86$^{***}$ & $-$3.24$^{***}$ &  &  & $-$2.66$^{***}$ \\ 
+  &  &  & (0.46) & (0.53) &  &  & (0.57) \\ 
+  Québec & 0.69$^{***}$ & 0.61$^{***}$ &  & 0.92$^{**}$ &  & 0.56$^{**}$ & 0.93$^{**}$ \\ 
+  & (0.09) & (0.16) &  & (0.34) &  & (0.17) & (0.35) \\ 
+  Femme &  & 0.05 &  & $-$0.08 &  & $-$0.03 & $-$0.08 \\ 
+  &  & (0.09) &  & (0.19) &  & (0.10) & (0.20) \\ 
+  Francophone &  & $-$0.02 &  & $-$0.37 &  & $-$0.29 & $-$0.63 \\ 
+  &  & (0.17) &  & (0.35) &  & (0.18) & (0.37) \\ 
+  Allophone &  & $-$0.17 &  & $-$0.38 &  & $-$0.18 & $-$0.22 \\ 
+  &  & (0.15) &  & (0.34) &  & (0.17) & (0.36) \\ 
+        \end{code}
+    \end{frame}   
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{\LaTeX: Code (Partie 2)} \vspace{0.5cm} 
+        \begin{code}
+  Moins de 34 ans &  & $-$0.03 &  & $-$0.17 &  & $-$0.13 & $-$0.26 \\ 
+  &  & (0.15) &  & (0.34) &  & (0.16) & (0.36) \\ 
+  Plus de 55 ans &  & $-$0.23$^{*}$ &  & $-$0.33 &  & $-$0.24$^{*}$ & $-$0.23 \\ 
+  &  & (0.10) &  & (0.21) &  & (0.11) & (0.22) \\ 
+  Haut revenu &  & $-$0.33$^{**}$ &  & $-$0.36 &  & $-$0.30$^{*}$ & $-$0.32 \\ 
+  &  & (0.12) &  & (0.24) &  & (0.13) & (0.25) \\ 
+  Faible revenu &  & 0.30$^{*}$ &  & 0.33 &  & 0.40$^{*}$ & 0.49 \\ 
+  &  & (0.15) &  & (0.31) &  & (0.17) & (0.33) \\ 
+  Pas de diplôme secondaire &  & $-$0.23 &  & 0.04 &  & $-$0.12 & 0.03 \\ 
+  &  & (0.15) &  & (0.36) &  & (0.17) & (0.38) \\ 
+  Diplôme universitaire &  & 0.13 &  & $-$0.61$^{**}$ &  & $-$0.12 & $-$0.79$^{***}$ \\ 
+  &  & (0.10) &  & (0.21) &  & (0.11) & (0.22) \\ 
+  \_constante & $-$1.05$^{***}$ & $-$0.86$^{***}$ & 0.34 & 0.96$^{**}$ & $-$3.17$^{***}$ & $-$2.95$^{***}$ & $-$1.21$^{*}$ \\ 
+  & (0.05) & (0.11) & (0.20) & (0.35) & (0.15) & (0.19) & (0.51) \\ 
+ N & 2,745 & 2,464 & 655 & 610 & 2,636 & 2,381 & 602 \\ 
+Log-vraisemblance & $-$1,650.11 & $-$1,487.30 & $-$383.02 & $-$346.16 & $-$1,412.88 & $-$1,276.31 & $-$317.77 \\ 
+AIC & 3,304.22 & 2,996.60 & 770.04 & 716.31 & 2,829.77 & 2,576.62 & 661.54 \\ 
+\hline \\[-1.8ex] 
+\multicolumn{8}{l}{\emph{Source}: Étude électorale canadienne, 2011.} \\ 
+\multicolumn{8}{l}{\emph{Note}: Régression logistique binomiale.} \\ 
+\multicolumn{8}{l}{$^{*}$p$<$0.05; $^{**}$p$<$0.01; $^{***}$p$<$0.001} \\ 
+\end{tabular} 
+\end{table} 
+        \end{code}
+    \end{frame} 
+    
+    \begin{frame}
+        \frametitle{\LaTeX} \vspace{1cm}   
+        \begin{center}
+           \includegraphics[width=0.85\textwidth]{../_SharedFolder_workshop-methods/_Graphs/LaTeX-MsWordHug.pdf}
+        \end{center}  
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{\LaTeX} \vspace{1cm}
+        \begin{center}
+           \includegraphics[width=0.75\textwidth]{../_SharedFolder_workshop-methods/_Graphs/LaTeX-wordvslatexENG}
+        \end{center} 
+    \end{frame}
+ 
+    \begin{frame}[fragile=singleslide]
+        \frametitle{\R + \LaTeX} \vspace{0.5cm} 
+        \begin{code}
+stargazer(model1, model2, model3, model4, model5, model6, model7)
+        \end{code}
+    \end{frame}   
+
+    \begin{frame}
+        \frametitle{\R + \LaTeX} \vspace{1cm}   
+        \begin{center}
+           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/ComplexTableLaTeX}
+        \end{center}  
+    \end{frame}
+
+  \begin{frame}
+        \frametitle{\LaTeX: c'est tout?} \vspace{1cm}  
+        \begin{itemize}
+            \item<2-> PowerPoint: le Saint-Graal des présentations orales?
+            \item<3-> NON! Beamer
+            \item<4-> Google Docs: l'Excalibur du travail en ligne instantané?
+            \item<5-> NON!!! Overleaf
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Overleaf}
+        \begin{center}
+           \includegraphics[width=0.85\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Overleaf.png}
+        \end{center}  
+    \end{frame}
+
+    \begin{frame}
+     \begin{center}
+          \Huge \R {} Les bases de la programmation
+      \end{center}
+    \end{frame}
+
+
+    \begin{frame}
+        \frametitle{\R $=$ langage de programmation}
+        \begin{itemize}
+            \item Opérateurs de calcul
+            \item Opérateurs d'assignement
+            \item Opérateurs logiques
+            \item Instructions de contrôle
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Opérateurs de calcul}
+        \begin{itemize}
+            \item $+$
+            \item $-$
+            \item $*$
+            \item $/$
+            \item $\%\%$ 
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Opérateurs logiques}
+        \begin{itemize}
+            \item $==$
+            \item $!=$
+            \item $>=$
+            \item $<=$
+            \item $<$
+            \item $>$
+            \item $\&$
+            \item $|$
+            \item \%in\%
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Instructions de contrôle}
+        \begin{itemize}
+            \item if... else
+            \item for loop
+        \end{itemize}
+    \end{frame}
+
+\begin{frame}
+     \begin{center}
+          \Huge \R {} Structure des données
+      \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Structure des données}
+        \begin{itemize}
+            \item<1-> Constantes
+            \item<2-> Vecteurs
+            \item<3-> \emph{Data frames} (tableaux de données)
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{Constantes}
+        \begin{code}
+variableString <- "Banana"
+variableNumerical <- 1492
+variableBoolean <- TRUE
+        \end{code}
+    \end{frame}
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{Vecteurs}
+        \begin{code}
+vecteurString <- c(variableString, "Apple", "Orange", "Sand Paper")
+vecteurNumerical <- c(variableNumerical, 1604, 2011, 0328424)
+vecteurBoolean <- c(variableBoolean, FALSE, TRUE, TRUE)
+        \end{code}
+    \end{frame}
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{\emph{Data frames}}
+        \begin{code}
+Data <- data.frame(vectorString, vectorNumerical, vectorBoolean, c(23,17,32,56))
+        \end{code}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{} \vspace{0.7cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/DataStructures0.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{} \vspace{0.7cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/DataStructures1.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{} \vspace{0.7cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/DataStructures2.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{} \vspace{0.7cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/DataStructures3.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{\texttt{aFruit <- ``banana"}} \vspace{0.6cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/DataStructures4.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{\texttt{fruits\lbrack 1\rbrack <- ``banana"}} \vspace{0.6cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/DataStructures5.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{\texttt{Data\lbrack 1,1\rbrack  <- ``banana"}} \vspace{0.6cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/DataStructures6.pdf}
+        \end{center}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{\texttt{Data\$fruits\lbrack 1\rbrack <- ``banana"}} \vspace{0.6cm}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/DataStructures6.pdf}
+        \end{center}
+    \end{frame}
+
+
+\begin{frame}
+     \begin{center}
+          \Huge Fonctions
+      \end{center}
+    \end{frame}
+
+
+    \begin{frame}
+        \frametitle{Fonctions de base \R}
+        \begin{itemize}
+            \item length()
+            \item min()
+            \item max()
+            \item sum()
+            \item median()
+            \item mean()
+        \end{itemize}
+    \end{frame}
+        
+    \begin{frame}[fragile=singleslide]
+        \frametitle{Fonction \R : mean()}
+        \begin{code}
+mean(yourVector)
+        \end{code}
+    \end{frame}
+    
+    % \begin{frame}
+    %     \frametitle{\R Function: mean ()} \vspace{0.2cm}
+    %     \begin{tips}
+    %         To get more information on a function and its \emph{arguments},
+    %         we can write a ? in front of the function name in the RStudio console \\ 
+    %         \texttt{> ?mean} \\ \vspace{0.2cm}
+    %         When a \emph{package} is not installed on the computer,
+    %         it is necessary to write two ? \\ \vspace{0.2cm}
+    %         \texttt{> ??copy\_to} \\
+    %     \end{tips}
+    % \end{frame}
+
+    \begin{frame}[fragile=singleslide]
+        \frametitle{Créer une fonction en \R}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Fonction \R : meanGirls()} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=0.4\textwidth]{../_SharedFolder_workshop-methods/_Graphs/meanGirls2.png}
+        \end{center}
+    \end{frame}
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{Fonction \R: meanGirls()}
+        \begin{code}
+meanGirls <- function(Data){
+    result <- sum(Data$age[Data$woman==1])/length(Data$age[Data$woman==1])
+    return(result)
+}
+        \end{code}
+    \end{frame}
+
+
+    \begin{frame}[fragile=singleslide]
+    % Add [fragile=singleslide] to your begin{frame} if you are to add code to your slide. 
+        \frametitle{Fonction \R : meanGirlsPlus()}
+        \begin{code}
+meanGirlsPlus <- function(Data, star=FALSE){
+    if(star == FALSE){
+        result <- sum(Data$age[Data$woman==1])/length(Data$age[Data$woman==1])
+    } else {
+        result <- sum(Data$age[Data$woman==1])/length(Data$age[Data$woman==1])
+        result <- paste("*****", result, "*****")
+    }    
+    return(result)
+}
+        \end{code}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Maintenant?} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/packageEvolution0.pdf}
+        \end{center}
+    \end{frame} 
+    
+    \begin{frame}
+        \frametitle{Maintenant? Plus de fonctions \R ...} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/packageEvolution1.pdf}
+        \end{center}
+    \end{frame} 
+    
+    \begin{frame}
+        \frametitle{Maintenant? Un \emph{package} \R} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/packageEvolution2.pdf}
+        \end{center}
+    \end{frame} 
+    
+    \begin{frame}
+        \frametitle{Maintenant? La publication d'un \emph{package}} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/packageEvolution3.pdf}
+        \end{center}
+    \end{frame} 
+    
+    \begin{frame}
+        \frametitle{Maintenant? Diffusion à la communauté} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/packageEvolution4.pdf}
+        \end{center}
+    \end{frame} 
+    
+    \begin{frame}
+        \frametitle{Communauté \R} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/MrX0.pdf}
+        \end{center}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{M. X} \vspace{1cm}
+        \begin{center}
+            \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/MrX1.pdf}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}[fragile=singleslide]
+        \frametitle{Ensuite? M. X installe le \emph{package}}
+        \begin{code}
+install.packages("MeanSexPak")
+        \end{code}
+    \end{frame}
+    
+    \begin{frame}[fragile=singleslide]
+        \frametitle{Ensuite? M. X utilise le \emph{package}}
+        \begin{code}
+library(MeanSexPak)
+
+# Calculate the mean age of the girls
+girlsMeanAge <- meanGirls(MrXOwnData)
+        \end{code}
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Nombre de \emph{packages} \R}  \vspace{1.2cm}
+        \begin{center}
+            \includegraphics[width=0.65\textwidth]{../_SharedFolder_workshop-methods/_Graphs/OpenSource-TS-RPackages2}
+        \end{center} 
+    \end{frame}
+   
+   
+   
+
+%     \begin{frame}[fragile=singleslide]
+%         \frametitle{Let's code! \\\vspace{0.2cm} Install and load some \emph{packages}...}
+%         \begin{code}
+% # 0. Install the packages (To do ONLY the first time we use the package)
+%   # install.packages("ggplot2")   # To create beautiful graphs
+%   # install.packages("stargazer") # To output LaTeX regression tables from R
+%   # install.packages("maptools")  # To combine spatial data
+%   # install.packages("rworldmap") # To map global data
+%   # install.packages("ggthemes")  # Cool premade ggplot themes
+% 
+% 
+% # 1. Load the packages 
+%   library(ggplot2)   # To create beautiful graphs ("gg" means "Grammar of Graphics")
+%   library(stargazer) # To output LaTeX regression tables from R
+%   library(maptools)  # To combine spatial data
+%   library(rworldmap) # To map global data
+%   library(ggthemes)  # Cool premade ggplot themes
+%         \end{code}
+%     \end{frame}
+%     
+%   
+% 
+%     
+%   
+% 
+%     \begin{frame}[fragile=singleslide]
+%         \frametitle{Let's code! \\\vspace{0.2cm} Load a dataset...}
+%         \begin{code}
+% # 2. Load some data
+%   Data <- read.csv(".../RWorkshop/Data/AlcoholDataWHO.csv")
+%   
+% # 3. Explore the dataframe
+%   names(Data) # To see the variables in the dataframe
+%   head(Data)  # To see the first couple of rows in the dataframe
+%         \end{code}
+%     \end{frame}
+%     
+%     
+%     
+% 
+% \subsubsection{Create and Clean Variables}
+% 
+% 
+%     \begin{frame}[fragile=singleslide]
+%         \frametitle{Let's code! \\\vspace{0.2cm} Coding a Variable (Dummy)}
+%         \begin{code}
+% # 4. Create new variables
+%   # An area variable
+%   Data$geoArea <- 0
+%   Data$geoArea[Data$country == "Canada"] <- 1
+%         \end{code}
+%     \end{frame}
+%     
+%     \begin{frame}[fragile=singleslide]
+%         \frametitle{Let's code! \\\vspace{0.2cm} Coding a Variable (Three Categories)}
+%         \begin{code}
+% # 4. Create new variables
+%   # An area variable
+%   Data$geoArea <- 0
+%   Data$geoArea[Data$country == "Canada"] <- 1
+%   Data$geoArea[Data$country == "France" | 
+%                Data$country == "UK" |
+%                Data$country == "Spain" | 
+%                Data$country == "Italy" |
+%                Data$country == "Germany" |
+%                Data$country == "Belgium"] <- 2
+%         \end{code}
+%     \end{frame}
+% 
+%     \begin{frame}
+%         \frametitle{Coding a Variable}
+%         \begin{tips}
+%             Conditions between \texttt{[ ]} can be interpreted a bit like a \texttt{if...else}.
+%         \end{tips}
+%     \end{frame}
+%     
+% 
+%     \begin{frame}[fragile=singleslide]
+%         \frametitle{Let's code! \\\vspace{0.2cm} Coding a Variable (Additive Scale)}
+%         \begin{code}
+% # Build an additive scale
+%   Data$alcoholTotal <- Data$beer_servings + Data$spirit_servings + Data$wine_servings
+% # Look at the new variable
+%   table(Data$alcoholTotal)
+%   summary(Data$alcoholTotal)
+%         \end{code}
+%     \end{frame}
+%     
+%     \begin{frame}
+%         \frametitle{Coding Nicely}
+%             \begin{tips}
+%                 Choosing clear and neat names for \R objects is very important. \\
+%                 Some conventions exist that helps the open source development of \R
+%                 to be less chaotic.
+%                 \begin{enumerate} 
+%                     \item<1-> CamelCase
+%                     \item<1-> Dataframes names: Uppercase
+%                     \item<1-> Vector names (Variables): Lowercase
+%                 \end{enumerate}
+%             \end{tips}
+%     \end{frame}
+% 
+% 
+% 
+% 
+% \subsubsection{\R Graphics and a Pinch of \LaTeX}
+% 
+%     \begin{frame}[fragile=singleslide]
+%         \frametitle{Let's code! Creating a Histogram}
+%         \begin{code}
+% # 5. Make a histogram
+% ggplot(DataWHO, aes(y=alcoholTotal, x=reorder(country, alcoholTotal), 
+%                     fill=as.factor(geoArea))) +
+%       geom_bar(stat = "identity", width=0.5) +
+%       scale_fill_manual(values=c("0"="grey", "1"="red", "2"="blue"), 
+%                         labels=c("0"="Others", "1"="Canada", "2"="Europe")) +
+%       theme_wsj() +
+%       theme(legend.title=element_blank(),
+%             axis.text.x=element_text(angle=45, vjust=1, hjust=1, size=4),
+%             axis.title=element_blank()) 
+%         \end{code}
+%     \end{frame}
+% 
+% 
+% 
+% 
+% 
+% 
+% \subsubsection{End.}
+
+%%%%%%%%%%% Adrien's part ! :) 
+\subsection{Présentation de Dropbox, GitHub, Git et Vim \\ \small\emph{Adrien Cloutier}}
+
+	
+	  \begin{frame}
+	        \frametitle{La logique de Dropbox} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.9\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Arborescence_Dropbox}
+	        \end{center}  
+	    \end{frame}
+	    
+%%
+	
+	  \begin{frame}
+	        \frametitle{PLUS JAMAIS} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/memoire_meme}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+	  \begin{frame}
+	  
+	        \frametitle{Version control} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/git_logic}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	          \begin{frame}
+	        \frametitle{Git = un logiciel libre} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Git_terminal}
+	        \end{center}  
+	    \end{frame}
+	    
+%%
+
+	      \begin{frame}
+	        \frametitle{GitHub = un site web} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.9\textwidth]{../_SharedFolder_workshop-methods/_Graphs/gitHub}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	      \begin{frame}
+	        \frametitle{Quelques bases} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/common_gitcommand}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	          \begin{frame}
+	        \frametitle{La vraie base} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/labase_git}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	      \begin{frame}
+	        \frametitle{N'empêche, il faut réfléchir..!} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/meme_git}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	      \begin{frame}
+	        \frametitle{Vim et Lady Gaga} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/ladyGag}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	      \begin{frame}
+	        \frametitle{Vim = un éditeur de texte} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.7\textwidth]{../_SharedFolder_workshop-methods/_Graphs/quitter_VIM}
+	        \end{center}  
+	    \end{frame}
+	    
+%%	
+
+	          \begin{frame}
+	        \frametitle{VIM Adventures = un jeu pour apprendre Vim!} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/VIM_adventure}
+	        \end{center}  
+	    \end{frame}
+
+\begin{frame}
+\begin{recipe}
+\begin{center}
+\Huge Pause repas
+\end{center}
+\end{recipe}
+\end{frame}
+
+
+
+
+
+\section{Bloc 2: exemples d’utilisation de \R et \LaTeX{} et travail supervisé}
+\subsection{Exemples pratiques d’utilisation de \LaTeX{} et \R \\ \small\emph{Alexis Bibeau}}
+
+\subsection{Exercice individuel supervisé de codage avec \R}
+
+
+
+\begin{frame}
+\begin{recipe}
+\begin{center}
+\Huge Pause café
+\end{center}
+\end{recipe}
+\end{frame}
+
+
+\section{Bloc 3: autres méthodes et ouverture vers l’avenir}
+\subsection{Site web, introduction à Wordpress et HTML \\ \small\emph{William Poirier}}
+
+
+\begin{frame}
+        \begin{itemize}
+            \item Wordpress
+                      \begin{enumerate}
+                        \item Astra
+                        \item Elementor
+                      \end{enumerate}
+            \item<2-> HTML
+                      \begin{enumerate} 
+                        \item La création d'Internet
+                        \item Notions de base en programmation HTML
+                      \end{enumerate}
+            \item<3-> Démonstration
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Wordpress : Astra \& Elementor}
+      \begin{itemize}
+        \item<2-> Wordpress c'est quoi? 
+          \begin{itemize}
+            \item Système de gestion de contenus (SGC ou CMS)
+            \item Images, vidéos, PDF
+            \item Pages, boutons, hyperliens
+          \end{itemize}
+        \item<3-> Pas idéal à lui seul
+          \begin{itemize}
+            \item D'où l'utilisation de thèmes
+          \end{itemize}
+      \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Wordpress: Astra}
+      \begin{itemize}
+        \item<2-> Astra c'est quoi? 
+          \begin{itemize}
+            \item Un thème construit pour Wordpress
+            \item Une collection de \textit{templates} et de \textit{stylesheets}
+            \item Offre également des sites web à personnaliser 
+          \end{itemize}
+        \item<3-> Pourquoi Astra?
+          \begin{enumerate}
+            \item[1] Facilité d'utilisation: inclut Elementor
+            \item[2] Produit des sites web très rapides
+            \item[3] Présence de tutoriels complets en ligne
+          \end{enumerate}
+        \end{itemize}
+      \end{frame}
+      
+      \begin{frame}
+        \frametitle{Wordpress: Elementor}
+        \begin{itemize}
+          \item<2-> Elementor c'est quoi? 
+            \begin{itemize}
+              \item Constructeur de pages ou \textit{page builder}
+              \item Existence propre, mais intégré à Astra
+              \item Offre une interface facile d'utilisation
+            \end{itemize}
+        \end{itemize}
+      \end{frame}
+        
+      \begin{frame}
+        \frametitle{La création d'Internet}
+        \begin{itemize}
+          \item<2-> Internet
+            \begin{itemize}
+              \item Entre 1975 et 1980
+              \item Réseau de réseaux
+            \end{itemize}
+          \item<3-> World Wide Web : 1989
+            \begin{itemize}
+              \item Pas la même chose qu'Internet!
+              \item Système utilisé pour accéder à Internet
+              \item On accède au WWW par des navigateurs web:
+                \begin{itemize}
+                  \item Chrome, Safari, Firefox, Opera, Internet Explorer, etc.
+                \end{itemize}
+              \item Existence d'autres systèmes comme:
+                \begin{itemize}
+                  \item E-mail, messagerie instantanée 
+                \end{itemize}
+            \end{itemize}
+        \end{itemize}
+      \end{frame}
+      
+      \begin{frame}
+        \frametitle{WWW: URL, HTML et HTTP?}
+        \begin{itemize}
+          \item<2-> URL = Uniform Resource Locator
+            \begin{itemize}
+              \item Adresse du site web
+            \end{itemize}
+          \item<3-> HTTP = Hypertext Transfer Protocol
+            \begin{itemize}
+              \item Transmettre et formater les commandes
+              \item Indiquer aux serveurs et aux navigateurs comment agir
+              \item HTTPS = sa version sécurisée
+            \end{itemize}
+          \item<4-> HTML = Hypertext Markup Language
+            \begin{itemize}
+              \item Le \textit{markup language} standard
+              \item Indique comment formater et afficher la \textbf{page} web
+            \end{itemize}
+        \end{itemize}
+      \end{frame}
+      
+      \begin{frame}
+        \frametitle{Explorons une URL} \vspace{1cm}
+          \begin{center}
+            \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/URLimage.png}
+          \end{center}
+      \end{frame}
+      
+      \begin{frame}
+        \frametitle{HTML, quelques notions de base} \vspace{0.3cm}
+        \begin{itemize}
+          \item<2-> La structure d'une page HTML 
+            \begin{center}
+            \includegraphics[width=0.4\textwidth]{../_SharedFolder_workshop-methods/_Graphs/StrucPWeb.png}
+            \end{center}
+        \end{itemize}
+      \end{frame}
+      
+      \begin{frame}
+        \frametitle{HTML, quelques notions de base}
+          \begin{itemize}
+            \item<2-> La structure du langage HTML
+              \begin{itemize}
+                \item À la façon de \LaTeX
+                \item "<body> </body>" = ouvre et ferme le document
+                \item "<p> </p>" = ouvre et ferme un paragraphe
+                \item "<h1-6> </h1-6>" = un entête
+                \item "<ul> </ul>" =  une liste non ordonnée 
+                \item "<em> </em>" = une section en \textit{italique}
+                \item "<strong </strong>" = une section en \textbf{gras}
+              \end{itemize}
+            \end{itemize}
+      \end{frame}
+      
+      \begin{frame}
+     \begin{center}
+          \Huge Démonstration
+      \end{center}
+\end{frame}
+
+     
+     
+\subsection{Langages de balisage et R Markdown \\ \small\emph{Maxime Blanchard}}
+
+     
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Analyse textuelle \\ \small\emph{Nadjim Fréchet}}
+
+
+\begin{frame}
+     \begin{center}
+          \Huge Analyse textuelle: \\
+       Parce que lire c'est long et plate!
+      \end{center}
+\end{frame}
+
+
+     
+%% 
+
+ \begin{frame}
+      
+      \begin{itemize}
+       
+         \frametitle{Une analyse quantitative des textes? Bro, on est en sciences sociales...} \vspace{1cm}
+       
+            \item<2-> Depuis la nuit des temps (sans blague, ou presque)...
+            \item<3-> L'humain s'exprime avec des mots (beaucoup)...
+            \item<4-> Larges corpus de textes et pas assez d'une vie pour les lire
+            \item<5-> 21e siècle, nouveaux moyens de communication, plus de textes...
+       
+      \end{itemize}
+       
+  \end{frame}
+     
+%%
+          
+\begin{frame}
+      
+   \frametitle{Du contenu textuel partout!} \vspace{1cm}
+        \begin{center}
+        \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/docteur-B-raptors.png} 
+    \end{center}
+      
+ \end{frame}
+     
+%%
+          
+ \begin{frame}
+      
+    \frametitle{Vraiment partout!} \vspace{1cm}
+      
+        \begin{center}
+         \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/chiffres-arabes.png}
+      \end{center}
+      
+  \end{frame}
+     
+     
+%% 
+          
+          
+ \begin{frame}
+      
+       \frametitle{Plus sérieusement!} \vspace{1cm}
+      
+            \begin{center}
+            \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Grimmer-stewart-2013.png}
+       \end{center}
+     
+\end{frame}
+     
+%%
+
+\begin{frame}
+      
+      \frametitle{Plusieurs méthodes} \vspace{1cm}
+      
+           \begin{itemize}
+           
+           \item Dictionnaires (analyse de sentiments)
+           \item<2-> Classification supervisée et non supervisée
+           \item<3-> Mesure de l'idéologie des acteurs politiques (supervisée ou non)
+           
+      \end{itemize}
+           
+ \end{frame}
+     
+%%
+
+ \begin{frame}
+      
+      \frametitle{Plusieurs méthodes, facile de se perdre, ou de faire n'importe quoi...} \vspace{1cm}
+ 
+           \begin{itemize}
+ 
+                \item Ton texte fait deux pages... En as-tu vraiment besoin?
+                 \item<2-> Parfois le bon vieux quali c'est mieux...
+                  \item<3-> Comment se retrouver dans tout ça? 
+ 
+        \end{itemize}
+ 
+ \end{frame}
+
+
+%%
+
+\begin{frame}
+
+       \frametitle{Dans une université près de chez vous!} \vspace{1cm}
+
+          \begin{center}
+
+            \includegraphics[width=0.7\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Fig-frechet-savoie-dufresne.png}
+            
+       \end{center}
+
+\end{frame}
+
+%% 
+
+ \begin{frame}
+ 
+   % \frametitle{Réseaux des grands auteurs en analyse textuelle!} % \vspace{1cm}
+ 
+       \begin{center}
+ 
+            \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/frechet-savoie-dufresne-network.pdf}
+    
+       \end{center}
+ 
+ 
+ \end{frame}
+ 
+ %%
+ 
+ \begin{frame}
+     \begin{center}
+          \Huge Une petite démo?
+
+      \end{center}
+\end{frame}
+
+
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Shiny, MTurk et scoping \\ \small\emph{Adrien Cloutier et Camille Tremblay-Antoine}}
+
+
+    \begin{frame}
+    
+        \frametitle{Avec \R, penser autrement les possibilités de recherche} \vspace{1cm}
+    
+    \end{frame}
+
+
+%%
+
+    \begin{frame}
+    
+        \begin{itemize}
+        
+        \item{Des outils qui s'offrent à nous}
+         
+          \begin{itemize}
+            \item{Shiny}
+	    \item{MTurk}
+          \end{itemize}
+	  
+	  
+         \item{Utiliser \R dans la systématisation des revues de littérature}
+        
+          \begin{itemize}
+            \item{\emph{Scoping review}}
+          \end{itemize}         
+        \end{itemize}
+        
+    \end{frame}
+
+%%
+
+    \begin{frame}
+    
+      \frametitle{Shiny: Qu'est-ce qu'une \emph{Shiny app}?} \vspace{1cm}
+      
+    
+    
+        \begin{itemize}
+          \item{Environnement d'application web pour \R}
+          \item{Permet de transformer des analyses en applications web réactives}
+          \item{Ne nécessite aucune connaissance de HTML, CSS, ou JavaScript}
+          \item{Partageable avec des gens qui n’ont pas \R}
+        \end{itemize}
+          
+    \end{frame}  
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{Shiny: dans un processus commun et synergique} \vspace{1cm}
+      
+        \begin{center}
+      	  \includegraphics[width=0.9\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Shiny_synergie.png}
+        \end{center} 
+      
+          
+    \end{frame}  
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{Shiny: un exemple très simple avec ggplot2} \vspace{1cm}
+      
+        \begin{center}
+      	  \includegraphics[width=0.9\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Shiny_ggplot1.png}
+        \end{center} 
+      
+          
+    \end{frame} 
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{Shiny: un exemple très simple avec ggplot2} \vspace{1cm}
+      
+        \begin{center}
+      	  \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Shiny_ggplot2.png}
+        \end{center} 
+      
+          
+    \end{frame} 
+    
+ %%
+
+    \begin{frame}
+    
+      \frametitle{Shiny: un exemple très simple avec ggplot2} \vspace{1cm}
+      
+        \begin{center}
+      	  \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Shiny_ggplot3.png}
+        \end{center} 
+      
+          
+    \end{frame} 
+    
+ %%
+
+    \begin{frame}
+    
+      \frametitle{Shiny: un exemple très simple avec ggplot2} \vspace{1cm}
+      
+        \begin{center}
+      	  \includegraphics[width=0.5\textwidth]{../_SharedFolder_workshop-methods/_Graphs/emoji_exploding-head.png}
+        \end{center} 
+      
+          
+    \end{frame}     
+    
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{Shiny: des exemples plus raffinés} \vspace{1cm}
+      
+        \begin{center}
+      	  \includegraphics[width=0.9\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Shiny_Dashboard1.png}
+        \end{center} 
+      
+          
+    \end{frame}  
+    
+ %%
+
+ %  \begin{frame}
+ %  
+ %    \frametitle{Shiny: Des exemples plus raffinés} \vspace{1cm}
+ %    
+ %      \begin{center}
+ %    	  \includegraphics[width=0.9\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Shiny_Dashboard2.png}
+ %      \end{center} 
+ %    
+ %        
+ %  \end{frame}  
+    
+    
+ %%
+
+    \begin{frame}
+    
+      \frametitle{Shiny: des exemples plus raffinés} \vspace{1cm}
+      
+        \begin{center}
+      	  \includegraphics[width=0.9\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Shiny_Dashboard3.png}
+        \end{center} 
+      
+          
+    \end{frame}  
+    
+    
+ %%
+
+    \begin{frame}
+    
+      \frametitle{Shiny: des exemples plus raffinés} \vspace{1cm}
+      
+        \begin{center}
+      	  \includegraphics[width=0.9\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Shiny_Dashboard4.png}
+        \end{center} 
+      
+          
+    \end{frame}  
+    
+ %%
+
+
+    \begin{frame}
+    
+        \frametitle{Une infinité de possibilités: un \emph{package} continuellement en développement} \vspace{1cm}
+    
+    \end{frame}
+    
+    
+%%
+    
+     \begin{frame}
+	        \frametitle{Cent têtes valent mieux qu’une: le \emph{crowdsourcing} en sciences sociales} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/crowdsourcing}
+	        \end{center}  
+	    \end{frame}
+    
+   
+%%
+
+
+    \begin{frame}
+    
+      \frametitle{Qu’est-ce que le \emph{crowdsourcing}?} \vspace{1cm}
+      
+    Branche de l’innovation ouverte et de la co-création
+    
+    \begin{center}
+		C'est un acte consistant, pour une entreprise ou une institution, à assumer une fonction autrefois exercée par des employés et à l'externaliser vers un réseau indéfini (et généralement étendu) de personnes, sous la forme d'un appel ouvert. Cela peut prendre la forme d'une production par des pairs (lorsque le travail est effectué en collaboration), mais le travail est également souvent entrepris par des individus isolés (novices ou experts). \\~\\
+		(Howe, 2016)  \\~\\
+		5051 citations \\~\\
+    \end{center}
+         
+    \end{frame}  
+    
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{Qu’est-ce que le \emph{crowdsourcing}?} \vspace{1cm}
+      
+       \begin{center}
+         \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/MTurk_taches.png}
+        \end{center} 
+   
+         
+    \end{frame}  
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{La plateforme MTurk} \vspace{1cm}
+
+       \begin{center}
+         \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/MTurk_turks.png}
+        \end{center} 
+   
+         
+    \end{frame}  
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{Utilisation dans la littérature} \vspace{1cm}
+      
+       \begin{center}
+         \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Mturk_litt.png}
+        \end{center} 
+   
+         
+    \end{frame}  
+  
+  
+  %%
+
+    \begin{frame}
+    
+      \frametitle{Utilisation dans la littérature} \vspace{1cm}
+      
+       \begin{center}
+         \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Mturk_experts.png}
+        \end{center} 
+   
+         
+    \end{frame}  
+    
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{Un peu de vocabulaire} \vspace{1cm}
+      
+       \begin{itemize}
+          \item{HIT: Human Intelligence Tasks}
+          \item{Assignment}
+          \item{Turker}
+          \item{Requester}
+        \end{itemize}
+   
+   \begin{flushright}
+     	    \includegraphics[width=0.3\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Mturk_hit.png}
+    \end{flushright} 
+         
+    \end{frame}  
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{À savoir pour plonger dans MTurk} \vspace{1cm}
+      
+      Paiement par assignment:
+       \begin{itemize}
+          \item{Moyenne de 0,01 à 0,05~\$}
+          \item{Recommandé \~{} salaire minimum}
+          \item{Frais de traitement de 20~\%}
+        \end{itemize}
+  
+   \begin{flushright}
+     	    \includegraphics[width=0.2\textwidth]{../_SharedFolder_workshop-methods/_Graphs/MTurk_emoji_plonger.png}
+    \end{flushright} 
+         
+    \end{frame}  
+    
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{À savoir pour plonger dans MTurk} \vspace{1cm}
+      
+      Qualifications des Turkers:
+       \begin{itemize}
+          \item{Qualifications entraînent des frais supplémentaires}
+          \item{Possibilité de sélectionner parmi plus de 60 spécificités}
+          \item{Trop, c'est comme pas assez}
+          \item{Tester, tester, tester}
+        \end{itemize}
+   
+   \begin{flushright}
+     	    \includegraphics[width=0.2\textwidth]{../_SharedFolder_workshop-methods/_Graphs/MTurk_emoji_plonger.png}
+    \end{flushright} 
+         
+    \end{frame}  
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{À savoir pour plonger dans MTurk} \vspace{1cm}
+      
+      Design HTML proposé, mais possibilité d'utiliser des plateformes externes
+       \begin{itemize}
+          \item{Qualtrics}
+          \item{Survey Monkey}
+          \item{Google Forms}
+          \item{Sites institutionnels}
+        \end{itemize}
+   
+   \begin{flushright}
+     	    \includegraphics[width=0.2\textwidth]{../_SharedFolder_workshop-methods/_Graphs/MTurk_emoji_plonger.png}
+    \end{flushright} 
+         
+    \end{frame}  
+   
+        
+%%
+
+     \begin{frame}
+	        \frametitle{Un exemple de la maison} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/exMTurk_5}
+	        \end{center}  
+	    \end{frame}
+    
+%%
+     \begin{frame}
+	        \frametitle{Un exemple de la maison} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/exMTurk_2}
+	        \end{center}  
+	    \end{frame}
+    
+%%
+     \begin{frame}
+	        \frametitle{Un exemple de la maison} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/exMTurk_3}
+	        \end{center}  
+	    \end{frame}
+    
+%%
+
+  \begin{frame}
+	        \frametitle{Un exemple de la maison} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/exMTurk_6}
+	        \end{center}  
+	    \end{frame}
+    
+%%
+
+  \begin{frame}
+	        \frametitle{Un exemple de la maison} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.65\textwidth]{../_SharedFolder_workshop-methods/_Graphs/exMTurk_7}
+	        \end{center}  
+	    \end{frame}
+    
+%%
+
+     \begin{frame}
+	        \frametitle{Un exemple de la maison} \vspace{1cm}   
+	        \begin{center}
+	           \includegraphics[width=0.8\textwidth]{../_SharedFolder_workshop-methods/_Graphs/exMTurk_4}
+	        \end{center}  
+	    \end{frame}
+	    
+	   
+%%
+
+    \begin{frame}
+    
+      \frametitle{MTurk et \R} \vspace{1cm}
+      
+       \begin{itemize}
+          \item{Automatiser l'approbation des tâches}
+          \item{Insérer des tâches dont on sait le résultat}
+          \item{Insérer une randomisation des catégories}
+        \end{itemize}
+         
+    \end{frame}  
+    
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{\emph{Scoping review}: cartographier la littérature scientifique} \vspace{1cm}
+      
+    Approche systématique et transparente pour appréhender la littérature
+    
+        \begin{itemize}
+          \item{Élaboration et déploiement d'une stratégie de recherche documentaire}
+          \item{Collecte d'un large corpus de références académiques}
+          \item{Tri et codage des références}
+          \item{Analyses des caractéristiques de la littérature dans le champ de recherche}
+        \end{itemize}
+          
+    \end{frame}  
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{\emph{Scoping review}: et \R alors?} \vspace{1cm}
+      
+      Cartographie de la littérature
+      
+        \begin{center}
+         \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Scoping-Map.png}
+        \end{center} 
+      
+          
+    \end{frame}  
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{\emph{Scoping review}: et \R alors?} \vspace{1cm}
+      
+      Visualiser la distribution de certaines caractéristiques
+      
+        \begin{center}
+         \includegraphics[width=0.9\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Scoping-Devis.png}
+        \end{center} 
+      
+          
+    \end{frame}  
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{\emph{Scoping review}: et \R alors?} \vspace{1cm}
+      
+      Visualiser la distribution de certaines caractéristiques
+      
+        \begin{center}
+         \includegraphics[width=0.9\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Scoping-Annee_Thématique.png}
+        \end{center} 
+      
+          
+    \end{frame}  
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{\emph{Scoping review}: et \R alors?} \vspace{1cm}
+      
+      Visualiser la distribution de certaines caractéristiques
+      
+     \begin{center}
+         \includegraphics[width=0.9\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Scoping-Annee_Distribution.png}
+        \end{center} 
+      
+          
+    \end{frame}  
+    
+    
+    %%
+
+    \begin{frame}
+    
+      \frametitle{\emph{Scoping review}: et \R alors?} \vspace{1cm}
+      
+      Visualiser la distribution de certaines caractéristiques
+      
+     \begin{center}
+         \includegraphics[width=1\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Scoping-Grid_Thematique.png}
+        \end{center} 
+      
+          
+    \end{frame} 
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{\emph{Scoping review}: <<~D'accord, mais on pourrait faire ça avec Excel...~>>} \vspace{1.5cm}
+      
+    Oui! Mais pourquoi c'est mieux avec \R: \\~\\
+    
+        \begin{itemize}
+          \item{Coder dans l'optique de pouvoir utiliser le code pour plusieurs projets}
+          \item{Mise à jour automatique des visualisations graphiques lorsque les données changent}
+          \item{Possibilités de visualisations graphiques}
+        \end{itemize}
+	
+	  \begin{flushright}
+     	    \includegraphics[width=0.15\textwidth]{../_SharedFolder_workshop-methods/_Graphs/emoji-tipping-hand.png}
+    \end{flushright} 
+          
+    \end{frame}  
+    
+
+\subsection{Stack Overflow, Slack et DataCamp \\ \small\emph{Marc-Antoine Rancourt}}
+
+
+\begin{frame}
+     \begin{center}
+          \Huge Et maintenant, comment on apprend?
+      \end{center}
+\end{frame}
+
+
+
+    \begin{frame}
+    
+        \frametitle{Contre vents et marées: apprendre \R et savoir naviguer malgré les intempéries} \vspace{1cm}
+    
+    \end{frame}
+    
+%%
+
+    \begin{frame}
+    
+        \begin{itemize}
+        
+        \item{Apprentissage}
+        
+          \begin{itemize}
+            \item Présentation de DataCamp 
+            \item Choix de cours: serpents et échelles
+            \item DataCamp vs les autres sites
+            \item Livres, manuels et autres 
+            \item Opportunités d'apprentissage
+          \end{itemize}
+        
+         \item{Navigation}
+         
+          \begin{itemize}
+            \item{Stack Overflow}
+            \item{Slack}
+            \item{Conseils pour régler ses problèmes de programmation}
+          \end{itemize}
+          
+        \end{itemize}
+        
+    \end{frame}
+
+%%
+
+    \begin{frame}
+    
+      \frametitle{Présentation de DataCamp} \vspace{1cm}
+      
+        \begin{center}
+         \includegraphics[width=0.15\textwidth]{../_SharedFolder_workshop-methods/_Graphs/datacamplogo.png}
+        \end{center} 
+      
+    DataCamp, c'est un site Internet où apprendre \R, Python, Git, SQL, etc. Mais c'est beaucoup plus que cela!
+    
+        \begin{itemize}
+          \item{+200 instructeurs provenant de plusieurs disciplines}
+          \item{+250 cours offerts, allant de débutant à avancé}
+          \item{Exercices théoriques et pratiques, accompagnés de vidéos}
+          \item{Une équipe dynamique qui développe constamment du nouveau contenu}
+        \end{itemize}
+          
+    \end{frame}
+    
+%%
+
+    \begin{frame}
+    
+      \frametitle{Apprentissage} \vspace{1cm}
+      
+          \begin{center}
+
+        \includegraphics[width=0.15\textwidth]{../_SharedFolder_workshop-methods/_Graphs/rlogo}
+          \end{center}
+
+    \end{frame}
+
+%%    
+
+    \begin{frame}
+    
+      \frametitle{Présentation de DataCamp} \vspace{1cm}
+      
+        \begin{center}
+        
+         \includegraphics[width=0.20\textwidth]{../_SharedFolder_workshop-methods/_Graphs/hadleywickham.jpg}
+         
+        \end{center} 
+      
+      Plusieurs instructeurs connus, notamment Hadley Wickham, scientifique en chef à RStudio
+      
+          \begin{itemize}
+            \item{PhD en statistiques, Iowa State University}
+            \item{ggplot2, plyr, dplyr, stringr, tidyverse}
+            \item{L'approche tidy}
+          \end{itemize}
+    
+    \end{frame}
+    
+%%
+
+   \begin{frame}
+    
+      \frametitle{Choix de cours: serpents et échelles} \vspace{1cm}
+      
+      
+        \begin{center}
+        
+          \includegraphics[width=0.30\textwidth]{../_SharedFolder_workshop-methods/_Graphs/shas.jpg}
+         
+        \end{center} 
+      
+    Qu'est-ce que le \textit{serpents et échelles}?
+
+        \begin{itemize}
+          \item{Une liste précise et personnalisable de matériel académique pour apprendre \R}
+          \item{Une liste des pièges à éviter pour atteindre ses objectifs}
+          \item{Une façon dynamique de voir son progrès}
+        \end{itemize}
+
+    \end{frame}
+
+%%
+
+
+  \begin{frame}
+    
+      \frametitle{Choix de cours: serpents et échelles} \vspace{1cm}
+    
+        \begin{center}
+        
+          \includegraphics[width=0.08\textwidth]{../_SharedFolder_workshop-methods/_Graphs/ladder.jpg}
+         
+        \end{center} 
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\begin{tabular}[c]{@{}c@{}}Catégories/\\ Difficulté\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Importation et \\ manipulation des données\end{tabular} & Visualisation de données & \begin{tabular}[c]{@{}l@{}}Probabilités et\\ analyses statistiques\end{tabular} \\ \hline
+\multicolumn{1}{|l|}{Débutant} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Introduction to \R;\\ Importing Data in \R (part 1);\\ Cleaning Data in \R;\\ Introduction to the Tidyverse;\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Data visualization in \R;\\ Data visualization\\ with ggplot2 (part 1);\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Introduction to Data;\\ Exploratory Data Analysis;\\ Foundation of Probability in \R;\\ Foundation of Inference;\end{tabular}} \\ \hline
+\multicolumn{1}{|l|}{Intermédiaire} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Intermediate \R;\\ Intermediate \R practice;\\ Introduction to Text\\  Analysis in \R;\\ Importing Data in \R (part 2);\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Data visualization\\ with ggplot2 (part 2);\\ Visualization Best Practices in \R;\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Correlation and regression;\\ Multiple and Logistic \\ Regression;\\ Exploratory Data Analysis;\end{tabular}} \\ \hline
+\multicolumn{1}{|l|}{Avancé} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Writing efficient \R code;\\ Importing \& Cleaning Data\\ in \R: Case studies;\\ Working with Web Data in \R;\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Data Visualization \\ with ggplot2 (part 3);\\ Communicating with Data\\  in the Tidyverse;\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Forecasting Using \R;\\ Statistical Modeling in \R (part 1);\\ Exploratory Data Analysis\\  in \R: Case Study;\end{tabular}} \\ \hline
+\end{tabular}%
+}
+\caption{Échelles pour l'apprentissage de \R}
+\end{table}
+
+
+\end{frame}
+
+%%
+
+  \begin{frame}
+    
+      \frametitle{Choix de cours: \uline{serpents} et échelles} \vspace{1cm}
+      
+        \begin{center}
+        
+          \includegraphics[width=0.15\textwidth]{../_SharedFolder_workshop-methods/_Graphs/snake.png}
+         
+        \end{center} 
+        
+  Des serpents existent aux différents niveaux d'expertise
+      
+    \begin{itemize}
+       
+      \item{Débutant}
+        
+          \begin{itemize}
+            \item Croire qu'il sera trop difficile d'apprendre, que c'est un objectif inatteignable
+            \item Croire qu'il est possible d'apprendre sans pratiquer
+            \item La peur de demander de l'aide
+            \item Ne pas construire des bases solides avant d'aller plus loin
+            \item La boucle infinie de tutoriels
+
+          \end{itemize}
+        
+        \end{itemize}
+        
+     \end{frame}
+  
+%%
+
+    \begin{frame}
+    
+      \frametitle{Choix de cours: \uline{serpents} et échelles} \vspace{1cm}
+      
+        \begin{center}
+        
+          \includegraphics[width=0.15\textwidth]{../_SharedFolder_workshop-methods/_Graphs/snake.png}
+         
+        \end{center} 
+        
+  Des serpents existent aux différents niveaux d'expertise
+      
+    \begin{itemize}
+        
+      \item{Intermédiaire}
+        
+          \begin{itemize}
+            \item Croire qu'on a suffisamment de connaissances et ne pas sortir de sa zone de confort
+            \item Vouloir apprendre plusieurs langages et n'en maîtriser aucun (\R vs Python, Ruby, PHP...)
+            \item Écrire du code mais ne pas le commenter
+            \item Coder en n'utilisant pas un style et une planification cohérente et constante 
+
+          \end{itemize}
+        
+        \end{itemize}
+        
+     \end{frame}
+  
+%%
+
+    \begin{frame}
+    
+      \frametitle{Choix de cours: \uline{serpents} et échelles} \vspace{1cm}
+      
+        \begin{center}
+        
+          \includegraphics[width=0.15\textwidth]{../_SharedFolder_workshop-methods/_Graphs/snake.png}
+         
+        \end{center} 
+        
+  Des serpents existent aux différents niveaux d'expertise
+      
+    \begin{itemize}
+        
+      \item{Avancé}
+        
+          \begin{itemize}
+            \item La peur de partager son code 
+            \item Laisser le parfait être l’ennemi du bien
+            \item Manquer d'empathie et de compréhension envers les nouveaux utilisateurs
+            \item Douchebagisme
+
+          \end{itemize}
+        
+        \end{itemize}
+        
+     \end{frame}
+     
+  
+%%
+
+    \begin{frame}
+    
+      \frametitle{DataCamp vs les autres sites} \vspace{1cm}
+      
+        
+        \begin{itemize}
+          \item Plus grande quantité de cours, toujours grandissante 
+          \item Instructeurs, souvent du milieu académique, reconnus et certifiés
+          \item Prix concurrentiels et forfaits académiques disponibles
+          \item Apprendre à son propre rythme vs Coursera et cie. 
+
+        \end{itemize}
+      
+     \end{frame}
+     
+
+%%
+
+    \begin{frame}
+    
+      \frametitle{Autres ressources pertinentes} \vspace{1cm}
+      
+       \begin{itemize}
+        \item Livres
+        
+          \begin{itemize}
+            \item Statistiques en sciences humaines avec \R (Guay, 2014)
+            \item Learning \R. A Step-by-Step Function Guide to Data Analysis (Cotton, 2013)
+            \item Hands-On Programming with \R (Grolemund, 2014)
+            \item Advanced \R, 2nd ed. (Wickham, 2019)
+
+        \end{itemize}
+      \end{itemize}
+      
+     \end{frame}
+
+%%
+
+    \begin{frame}
+    
+      \frametitle{Autres ressources pertinentes} \vspace{1cm}
+      
+       \begin{itemize}
+       \item Ressources en ligne
+       
+        \begin{itemize}
+          \item \R Bootcamp
+          \item Quick-\R
+          \item \R-bloggers
+
+        \end{itemize}
+      \end{itemize}
+      
+     \end{frame}
+     
+%%
+
+
+   \begin{frame}
+    
+      \frametitle{Opportunités d'apprentissage} \vspace{1cm}
+
+        \begin{itemize}
+          \item \R à Québec
+          \item Utiliser \R et \LaTeX{} dans ses différents projets, professionnels et personnels
+            
+        \end{itemize}
+
+     \end{frame}
+
+%%
+
+    \begin{frame}
+    
+      \frametitle{Navigation} \vspace{1cm}
+      
+          \begin{center}
+          
+        \includegraphics[width=0.15\textwidth]{../_SharedFolder_workshop-methods/_Graphs/rlogo}
+
+          \end{center}
+          
+    \end{frame}
+
+%%
+
+    \begin{frame}
+    
+      \frametitle{Stack Overflow} \vspace{1cm}
+      
+        \begin{center}
+          
+        \includegraphics[width=0.35\textwidth]{../_SharedFolder_workshop-methods/_Graphs/slackoverflow.png}
+
+         \end{center}
+          
+        \begin{itemize}
+         \item Grand nombre d'usagers spécialisés dans de nombreux domaines
+         \item Multitude de questions et réponses
+         \item Communauté sympathique et dynamique
+            
+        \end{itemize}
+          
+    \end{frame}
+
+%%
+
+\begin{frame}
+
+  \frametitle{Slack} \vspace{1cm}
+  
+    \begin{center}
+      
+    \includegraphics[width=0.15\textwidth]{../_SharedFolder_workshop-methods/_Graphs/slack.png}
+
+     \end{center}
+      
+    \begin{itemize}
+     \item Outils de communication avec différentes chaînes, publiques et privées
+     \item Possibilité d'y joindre d'autres applications telles que Teamline, GitHub, etc.
+     \item Slack \textit{La Fabrique}: Slack du département en science politique de l'UL et de ses collaborateurs
+     \item Possibilité de demander et d'offrir de l'aide: chaîne \textit{clessn-aide}
+    
+        
+    \end{itemize}
+      
+\end{frame}
+
+
+\begin{frame}
+
+  \frametitle{Conseils pour régler ses problèmes de programmation} \vspace{1cm}
+
+    \begin{itemize}
+    
+     \item Google est votre meilleur ami
+     \item Apprendre à débugger dans la console, comprendre la logique du langage
+     \item Relire son code: la plupart du temps, le problème n'est qu'une toute petite erreur
+     \item Lire la documentation des \emph{packages}
+    
+    \end{itemize} 
+    
+  \end{frame}  
+  
+  
+\subsection{ICPSR et conclusion \\ \small\emph{Catherine Ouellet}}
+
+
+\begin{frame}{C'est quoi?}
+\begin{itemize}
+    \item Fondé en 1963 
+    \item Techniques statistiques, méthodologie, analyse de données
+    \item École d'été (2 sessions) annuelle
+    \item Reconnaissance internationale 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{C'est où?}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{../_SharedFolder_workshop-methods/_Graphs/Michigan_map.jpg}
+    %\caption{Caption}
+    \label{fig:my_label1}
+\end{figure}
+\end{frame}
+
+\begin{frame}{C'est où?}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{../_SharedFolder_workshop-methods/_Graphs/campus.jpeg}
+    %\caption{Caption}
+    \label{fig:my_label2}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+     \begin{center}
+          \Huge Démystifier les idées préconçues 
+      \end{center}
+\end{frame}
+
+
+\begin{frame}{Démystifier les idées préconçues}
+\begin{itemize}
+    \item Je ne suis pas assez bon(ne) pour aller là \Large\textbf{\color{red}X}
+    \normalsize\item<2-> Je peux compenser en faisant des cours en ligne \Large\textbf{\color{red}X}
+    \normalsize\item<3-> C'est trop cher pour ce que c'est \Large\textbf{\color{red}X}
+    \normalsize\item<4-> Mais oui mais moi je suis plus <<~quali~>> \Large\textbf{\color{red}X}
+     \normalsize\item<5-> Ça va telllllement être plate \Large\textbf{\color{red}X}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+     \begin{center}
+          \Huge Une fois là-bas 
+      \end{center}
+\end{frame}
+
+
+\begin{frame}{Workshops}
+  \begin{itemize}
+    \item \textbf{Regression II}
+    \item Time Series
+    \item Game Theory 
+    \item Network Analysis
+    \item Maximum Likelihood Estimation
+    \item Multilevel Models 
+    \item Social Choice Theory
+    \item Bayesian Modeling 
+    \item Etc. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Lectures}
+\begin{itemize}
+    \item Maths for Social Scientists II
+    \item Introduction to \R 
+    \item Introduction to \LaTeX 
+    \item Etc. 
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Blalock Lecture Series}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{../_SharedFolder_workshop-methods/_Graphs/SciComm-Arthur-Lupia-XL.jpg}
+    %\caption{Caption}
+    \label{fig:my_label3}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+     \begin{center}
+          \Huge \$\$\$\$
+      \end{center}
+\end{frame}
+
+
+\begin{frame}{Opportunités de financement}
+
+\begin{itemize}
+    \item Bourse de formation en méthodes qualitatives ou quantitatives (Département -- 2~000~\$ -- 15 janvier 2020)
+    \item William G. Jacoby Scholarship (ICPSR -- doctorat en sc. po -- février 2020)
+    \item Warren E. Miller (ICPSR -- comportement électoral -- février 2020)
+    \item Saundra K. Schneider (ICPSR -- affaires publiques -- février 2020)
+    \item Soutien de différents groupes de recherche \newline
+    - GRCP (800~\$ annuel) \newline
+    - CECD (jusqu'à 3~000~\$, 15 déc. et 15 avril)
+\end{itemize}
+
+\end{frame}
+
+    \begin{frame}
+      \frametitle{Retour sur la journée}
+      \begin{itemize}
+        \item \textbf{Bloc 1: philosophie du code source ouvert et introduction à la programmation}
+          \begin{enumerate}
+            \item Présentation générale
+            \item Installation et présentation de RStudio, \R et \LaTeX
+            \item Présentation de Dropbox, GitHub, Git et Vim
+          \end{enumerate}
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Retour sur la journée}
+        \begin{itemize}
+        \item \textbf{Bloc 2: exemples d'utilisation de \R et \LaTeX{} et travail supervisé}
+          \begin{enumerate}
+            \item Exemples pratiques d'utilisation de \LaTeX{} et \R
+            \item Exercice individuel supervisé de codage avec \R
+          \end{enumerate}
+      \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+    \frametitle{Retour sur la journée}
+     \begin{itemize}
+      \item \textbf{Bloc 3: autres méthodes et ouverture vers l'avenir}
+          \begin{enumerate}
+            \item Site web, introduction à WordPress et HTML
+            \item Langages de balisage et R Markdown
+            \item Analyse textuelle
+            \item Shiny, MTurk et scoping
+            \item Stack Overflow, Slack et DataCamp
+            \item ICPSR et conclusion
+          \end{enumerate}
+      \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+     \begin{center}
+          \Huge Merci. \\
+          \vspace{0.5cm}
+          \includegraphics[width=0.5\textwidth]{../_SharedFolder_workshop-methods/_Graphs/CLESSN.png}
+      \end{center}
+    \end{frame}
+    
+
+  
+
+\end{document}
